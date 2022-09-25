@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.function.Consumer;
 
 import icai.dtc.isw.configuration.PropertiesISW;
 import icai.dtc.isw.controler.CustomerControler;
@@ -43,6 +44,9 @@ public class SocketServer extends Thread {
 		    Message mensajeOut=new Message();
 			HashMap<String,Object> session=mensajeIn.getSession();
 			CustomerControler customerControler;
+			String usuario;
+			String contrasena;
+			Customer cu;
 		    switch (mensajeIn.getContext()) {
 		    	case "/getCustomers":
 		    		customerControler=new CustomerControler();
@@ -57,9 +61,30 @@ public class SocketServer extends Thread {
 				case "/getCustomer":
 					int id= (int) session.get("id");
 					customerControler=new CustomerControler();
-					Customer cu=customerControler.getCustomer(id);
-					System.out.println("id:"+cu.getId());
+					cu=customerControler.getCustomer(id);
+					System.out.println("id:"+cu.getUsuario());
 					mensajeOut.setContext("/getCustomerResponse");
+					session.put("Customer",cu);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+				case "/getPassword":
+					usuario= (String) session.get("usuario");
+					customerControler=new CustomerControler();
+					cu=customerControler.getPassword(usuario);
+					System.out.println("usuario:"+cu.getUsuario());
+					mensajeOut.setContext("/getPasswordResponse");
+					session.put("Customer",cu);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+				case "/createAccount":
+					usuario= (String) session.get("usuario");
+					contrasena = (String) session.get("contrasena");
+					customerControler=new CustomerControler();
+					cu = new Customer(usuario,contrasena);
+					customerControler.createAccount(usuario,contrasena);
+					mensajeOut.setContext("/createAccountResponse");
 					session.put("Customer",cu);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);

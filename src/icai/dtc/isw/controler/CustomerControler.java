@@ -12,5 +12,7 @@ public class CustomerControler {
 	}
 	public Customer getCustomer(int id) {return(CustomerDAO.getCliente(id));}
 
-	public Customer checkPassword(String usuario, String contrasena) {return CustomerDAO.checkContrasena(usuario, contrasena);}
+	public Customer getPassword(String usuario) {return CustomerDAO.getContrasena(usuario);}
+
+	public void createAccount(String usuario, String contrasena){CustomerDAO.crearCuenta(usuario, contrasena);};
 }

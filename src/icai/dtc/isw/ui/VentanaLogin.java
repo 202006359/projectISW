@@ -7,13 +7,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 
-public class JVentana extends JFrame {
+public class VentanaLogin extends JFrame {
     public static void main(String[] args) {
-        new JVentana();
+        new VentanaLogin();
     }
     private String usuario;
     private String contrasena;
-    public JVentana() {
+    public static final int WINDOW_HEIGTH = 350;
+    public static final int WINDOW_WIDTH = 500;
+
+    public VentanaLogin() {
         super("SMART PLAN");
 
         PanelLogin pnlLogin = new PanelLogin();
@@ -24,6 +27,7 @@ public class JVentana extends JFrame {
         lblUsr.setBounds(60,60,160,30);
         JTextField txtUsr = new JTextField(50);
         txtUsr.setBounds(60,90,390,30);
+        txtUsr.setText("ivan@gmail.com");
 
         JLabel lblPassword= new JLabel("Contraseña");
         lblPassword.setBounds(60,120,160,30);
@@ -36,51 +40,42 @@ public class JVentana extends JFrame {
         btnLogin.setBackground(Color.BLACK);
 
 
+        JButton btnSignin = new JButton("Registrarse");
+        btnSignin.setBounds(60,260,390,40);
+        btnSignin.setForeground(Color.WHITE);
+        btnSignin.setBackground(Color.GRAY);
+
+
+
+
         pnlLogin.add(lblUsr);
         pnlLogin.add(txtUsr);
         pnlLogin.add(lblPassword);
         pnlLogin.add(txtPassword);
         pnlLogin.add(btnLogin);
+        pnlLogin.add(btnSignin);
 
         btnLogin.addActionListener(e ->{
             usuario = txtUsr.getText();
             contrasena = String.valueOf(txtPassword.getPassword());
 
+            if(contrasena.equals(recuperarContrasena())){
+                JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena correcta");
+                //Me iria a la pagina que esta haciendo Bea
+
+            }else{
+                JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena incorrecta");
+                txtPassword.setText("");
+            }
+
+
         });
 
-        /*
-
-
-        JButton btnInformacion = new JButton("Recibir información");
-        JTextField txtId = new JTextField();
-        txtId.setBounds(new Rectangle(250,150,250,150));
-        txtId.setHorizontalAlignment(JTextField.LEFT);
-        pnlCentro.add(lblUsr);
-        pnlCentro.add(txtId);
-        pnlCentro.add(btnInformacion);
-        pnlCentro.setLayout(new BoxLayout(pnlCentro, BoxLayout.	X_AXIS));
-        this.add(pnlCentro, BorderLayout.CENTER);
-
-        //El Sur lo hago para recoger el resultado
-        JPanel pnlSur = new JPanel();
-        JLabel lblResultado = new JLabel("El resultado obtenido es: ", SwingConstants.CENTER);
-        JTextField txtResultado = new JTextField();
-        txtResultado.setBounds(new Rectangle(250,150,250,150));
-        txtResultado.setEditable(false);
-        txtResultado.setHorizontalAlignment(JTextField.LEFT);
-        pnlSur.add(lblResultado);
-        pnlSur.add(txtResultado);
-        //Añado el listener al botón
-        btnInformacion.addActionListener(actionEvent -> {
-            id=Integer.parseInt(txtId.getText());
-            txtResultado.setText(recuperarInformacion());
+        btnSignin.addActionListener(e->{
+            this.registrarse();
         });
-        pnlSur.setLayout(new BoxLayout(pnlSur, BoxLayout.X_AXIS));
-        this.add(pnlSur,BorderLayout.SOUTH);
 
-        this.setSize(550,120);
 
-         */
         this.pack();
         this.setVisible(true);
         this.setResizable(false);
@@ -89,13 +84,24 @@ public class JVentana extends JFrame {
 
     }
 
-    public String recuperarInformacion() {
+    public void registrarse(){
+        this.exit();
+        new VentanaSignin();
+    }
+
+    private void exit(){
+        this.dispose();
+        new VentanaSignin();
+    }
+
+
+    public String recuperarContrasena() {
         Client cliente=new Client();
         HashMap<String,Object> session=new HashMap<>();
-        String context="/getCustomer";
-        //session.put("id",id);
+        String context="/getPassword";
+        session.put("usuario",usuario);
         session=cliente.sentMessage(context,session);
         Customer cu=(Customer)session.get("Customer");
-        return cu.getName();
+        return cu.getContrasena();
     }
 }

@@ -7,33 +7,32 @@ public class Customer implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String id;
-	private String name;
-
 	private String usuario;
 	private String contrasena;
-	
+
 
 	
-	public Customer(String id, String name) {
-		this.setName(name);
-		this.setId(id);
+
+	
+	public Customer(String usuario, String contrasena) {
+		this.setContrasena(contrasena);
+		this.setUsuario(usuario);
 	}
 
-	public String getId() {
-		return id;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
-	public String getName() {
-		return name;
+	public String getContrasena() {
+		return contrasena;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 	
 	

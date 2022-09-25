@@ -48,21 +48,22 @@ public class CustomerDAO {
 		
 		
 		ArrayList<Customer> lista= new ArrayList<>();
-		CustomerDAO.getClientes(lista);
-		
 		
 		 for (Customer customer : lista) {			
-			System.out.println("He leído el id: "+customer.getId()+" con nombre: "+customer.getName());
+			System.out.println("He leído el usuario: "+customer.getUsuario()+" con contrasena: "+customer.getContrasena());
 		}
+
+
 		
 	
 	}
 
-	public static Customer checkContrasena(String usuario, String contrasena) { //Me interesa para luego comprobar la contraseña y en caso de que sea incorrecta mostrarlo
+
+
+	public static Customer getContrasena(String usuario) { //Me interesa para luego comprobar la contraseña y en caso de que sea incorrecta mostrarlo
 		Connection con=ConnectionDAO.getInstance().getConnection();
 		Customer cu=null;
-
-		try (PreparedStatement pst = con.prepareStatement("SELECT (usuario and contrasena) FROM login WHERE (usuario="+usuario+" AND contrasena="+contrasena+")");
+		try (PreparedStatement pst = con.prepareStatement("SELECT usuario, contrasena FROM login WHERE usuario= '"+usuario+"'");
 			 ResultSet rs = pst.executeQuery()) {
 
 			while (rs.next()) {
@@ -73,7 +74,25 @@ public class CustomerDAO {
 
 			System.out.println(ex.getMessage());
 		}
+
+
 		return cu;
 		//return new Customer("1","Atilano");
+	}
+
+	public static void crearCuenta(String usuario, String contrasena) {
+		Connection con=ConnectionDAO.getInstance().getConnection();
+
+		try (PreparedStatement pst = con.prepareStatement("INSERT INTO login (usuario, contrasena) VALUES ('" + usuario + "'," + "'" + contrasena + "')")) {
+
+
+			pst.executeUpdate();
+
+
+
+		} catch (SQLException ex) {
+
+			System.out.println(ex.getMessage());
+		}
 	}
 }

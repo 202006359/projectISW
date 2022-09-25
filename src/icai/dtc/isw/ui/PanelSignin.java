@@ -3,10 +3,10 @@ package icai.dtc.isw.ui;
 import java.awt.*;
 import javax.swing.*;
 
-public class PanelLogin extends JPanel{
+public class PanelSignin extends JPanel{
 
     private Dimension dimension = new Dimension(VentanaLogin.WINDOW_WIDTH, VentanaLogin.WINDOW_HEIGTH);
-    public PanelLogin(){
+    public PanelSignin(){
         this.init();
     }
 
@@ -20,7 +20,8 @@ public class PanelLogin extends JPanel{
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.BLACK);
-        g.setFont(new Font("Rockwell",Font.BOLD,48));
-        g.drawString("INICIO SESIÓN", 60,50);
+        g.setFont(new Font("Calibri",Font.BOLD,22));
+        g.drawString("Crea una cuenta de Smart Plan", 60,40);
     }
 }
+

@@ -45,19 +45,29 @@ public class Client {
 		mensajeEnvio.setContext(Context);///getCustomer"
 		mensajeEnvio.setSession(session);
 		this.sent(mensajeEnvio,mensajeVuelta);
-		
+		Customer customer;
 		
 		switch (mensajeVuelta.getContext()) {
 			case "/getCustomersResponse":
 				ArrayList<Customer> customerList=(ArrayList<Customer>)(mensajeVuelta.getSession().get("Customer"));
-				 for (Customer customer : customerList) {			
-						System.out.println("He leído el id: "+customer.getId()+" con nombre: "+customer.getName());
+				 for (Customer cu : customerList) {
+						System.out.println("He leído el id: "+cu.getUsuario()+" con nombre: "+cu.getContrasena());
 					} 
 				break;
 			case "/getCustomerResponse":
 				session=mensajeVuelta.getSession();
-				Customer customer =(Customer) (session.get("Customer"));
-				System.out.println("He leído el id: "+customer.getId()+" con nombre: "+customer.getName());
+				 customer =(Customer) (session.get("Customer"));
+				System.out.println("He leído el id: "+customer.getUsuario()+" con nombre: "+customer.getContrasena());
+				break;
+			case "/getPasswordResponse":
+				session=mensajeVuelta.getSession();
+				customer =(Customer) (session.get("Customer"));
+				System.out.println("He leído el usuario: "+customer.getUsuario()+" con contrasena: "+customer.getContrasena());
+				break;
+			case "/createAccountResponse":
+				session = mensajeVuelta.getSession();
+				customer =(Customer) (session.get("Customer"));
+				System.out.println("He creado el usuario: "+customer.getUsuario()+" con contrasena: "+customer.getContrasena());
 				break;
 			default:
 				Logger.getRootLogger().info("Option not found");
