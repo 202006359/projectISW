@@ -95,4 +95,7 @@ public class VentanaSignin extends JFrame {
         return contrasena.matches(n) && contrasena.matches(a);
         //matches("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$") Para que la primera sea mayuscula
     }
+
+
+
 }
