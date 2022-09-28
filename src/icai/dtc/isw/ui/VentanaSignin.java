@@ -1,7 +1,6 @@
 package icai.dtc.isw.ui;
 
 import icai.dtc.isw.client.Client;
-import icai.dtc.isw.domain.Customer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -55,7 +54,7 @@ public class VentanaSignin extends JFrame {
             if(contrasena.equals(String.valueOf(txtPasswordConfirmation.getPassword())) && checkContrasena(contrasena)){
                 crearCuenta();
                 JOptionPane.showMessageDialog(VentanaSignin.this,"Registro completado");
-                //Me iria al cuestionario de Jaime
+                cuestionario();
 
             }else if(!checkContrasena(contrasena)){
                 JOptionPane.showMessageDialog(VentanaSignin.this,"La contraseña no es alfanumérica");
@@ -94,6 +93,18 @@ public class VentanaSignin extends JFrame {
         String a = ".*[A-Za-z].*";
         return contrasena.matches(n) && contrasena.matches(a);
         //matches("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$") Para que la primera sea mayuscula
+    }
+
+    public void cuestionario(){
+        this.exit();
+        new VentanaCuestionario();
+    }
+
+
+
+    private void exit(){
+        this.dispose();
+        this.setVisible(false);
     }
 
 

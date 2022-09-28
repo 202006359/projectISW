@@ -89,9 +89,14 @@ public class VentanaLogin extends JFrame {
         new VentanaSignin();
     }
 
+    /*public void test(){
+        this.exit();
+        new QuizJaime();
+    }*/
+
     private void exit(){
         this.dispose();
-        new VentanaSignin();
+        this.setVisible(false);
     }
 
 
