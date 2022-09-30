@@ -128,6 +128,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             preguntas();
             if (cuenta == 9) {
                 btnSiguiente.setEnabled(false);
+                pasoprincipal();
             }
         }
         // pequeño error a la hora de clicar porque solo guarda la primera pulsacion
@@ -156,9 +157,22 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             System.out.println("JAIME");
     }
 
+    public void pasoprincipal()
+    {
+        this.exit();
+        new PanelActividades();
 
-     /*public static void main(String s[]){
-     new QuizJaime();
-     }*/
+    }
+
+    private void exit(){
+        this.dispose();
+        this.setVisible(false);
+    }
+
+
+    public static void main(String s[])
+     {
+     new VentanaCuestionario();
+     }
 
 }

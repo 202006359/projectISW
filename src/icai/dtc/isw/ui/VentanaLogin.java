@@ -62,6 +62,7 @@ public class VentanaLogin extends JFrame {
             if(contrasena.equals(recuperarContrasena())){
                 JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena correcta");
                 //Me iria a la pagina que esta haciendo Bea
+                abrirPrincipal();
 
             }else{
                 JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena incorrecta");
@@ -109,4 +110,12 @@ public class VentanaLogin extends JFrame {
         Customer cu=(Customer)session.get("Customer");
         return cu.getContrasena();
     }
+
+
+    public void abrirPrincipal()
+    {
+        this.exit();
+        new PanelActividades();
+    }
+
 }

@@ -10,10 +10,11 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
 import org.apache.log4j.Logger;
 
 import icai.dtc.isw.configuration.PropertiesISW;
-import icai.dtc.isw.domain.Customer;
+import icai.dtc.isw.domain.*;
 import icai.dtc.isw.message.Message;
 
 public class Client {
@@ -46,6 +47,7 @@ public class Client {
 		mensajeEnvio.setSession(session);
 		this.sent(mensajeEnvio,mensajeVuelta);
 		Customer customer;
+		Actividad actividad;
 		
 		switch (mensajeVuelta.getContext()) {
 			case "/getCustomersResponse":
@@ -69,6 +71,10 @@ public class Client {
 				customer =(Customer) (session.get("Customer"));
 				System.out.println("He creado el usuario: "+customer.getUsuario()+" con contrasena: "+customer.getContrasena());
 				break;
+			case "/getActividadesResponse":
+				session = mensajeVuelta.getSession();
+				break;
+
 			default:
 				Logger.getRootLogger().info("Option not found");
 				System.out.println("\nError a la vuelta");

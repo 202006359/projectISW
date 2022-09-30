@@ -34,6 +34,7 @@ public class Customer implements Serializable{
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}
-	
+
+
 	
 }

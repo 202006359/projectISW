@@ -1,6 +1,8 @@
 package icai.dtc.isw.message;
 
 import java.io.Serializable;
+import java.lang.reflect.AnnotatedArrayType;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,11 +13,13 @@ public class Message implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String context;
 	private HashMap<String, Object> session;
+	private ArrayList actividades;
 	
 	
 	public Message () {
 		context=new String();
-		session=new HashMap<String, Object>();	
+		session=new HashMap<String, Object>();
+		actividades= new ArrayList();
 		
 	}
 
