@@ -4,7 +4,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class VentanaCuestionario extends JFrame implements ActionListener {
-
     JLabel label;
     JRadioButton radioButton[] = new JRadioButton[5]; // tipo de boton, usuario puede ver si esta pulsado o no
     JButton btnSiguiente;
@@ -38,7 +37,6 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         radioButton[3].setBounds(50, 170, 200, 20);
         btnSiguiente.setBounds(100, 240, 100, 30);
         preguntas();
-        personaje();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
@@ -53,8 +51,8 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             label.setText("PREGUNTA 1: Como seria para ti el plan de cita ideal?");
             radioButton[0].setText("Ir al cine");
             radioButton[1].setText("Comer en el parque");
-            radioButton[2].setText("Ver al Valencia");
-            radioButton[3].setText("Ir a la warner");
+            radioButton[2].setText("Pasear por el centro");
+            radioButton[3].setText("Hacer un escape room");
         }
         if (cuenta == 1) {
             label.setText("PREGUNTA 2: Cual es tu dia favorito de la semana?");
@@ -64,7 +62,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             radioButton[3].setText("Cualquier dia de entre semana");
         }
         if (cuenta == 2) {
-            label.setText("PREGUNTA 3: Que plan de comida te renta mas?");
+            label.setText("PREGUNTA 3: Que plan de comida te gusta mas?");
             radioButton[0].setText("Comida");
             radioButton[1].setText("Desayuno");
             radioButton[2].setText("Cena");
@@ -78,39 +76,18 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             radioButton[3].setText("Las dos");
         }
         if (cuenta == 4) {
-            label.setText("PREGUNTA 5: Cuando ves una peli, que tematica te mola mas?");
+            label.setText("PREGUNTA 5: Cuando ves una peli, que tematica te gusta mas?");
             radioButton[0].setText("Suspense");
             radioButton[1].setText("Comedia");
             radioButton[2].setText("Terror");
             radioButton[3].setText("Accion");
         }
         if (cuenta == 5) {
-            label.setText("PREGUNTA 6: ");
-            radioButton[0].setText("");
-            radioButton[1].setText("");
-            radioButton[2].setText("");
-            radioButton[3].setText("");
-        }
-        if (cuenta == 6) {
-            label.setText("PREGUNTA 7: ");
-            radioButton[0].setText("");
-            radioButton[1].setText("");
-            radioButton[2].setText("");
-            radioButton[3].setText("");
-        }
-        if (cuenta == 7) {
-            label.setText("PREGUNTA 8: ");
-            radioButton[0].setText("");
-            radioButton[1].setText("");
-            radioButton[2].setText("");
-            radioButton[3].setText("");
-        }
-        if (cuenta == 8) {
-            label.setText("PREGUNTA 9: ");
-            radioButton[0].setText("");
-            radioButton[1].setText("");
-            radioButton[2].setText("");
-            radioButton[3].setText("");
+            label.setText("PREGUNTA 6: Que tipo de comida te gusta más?");
+            radioButton[0].setText("Sudamericana");
+            radioButton[1].setText("Norteamericana");
+            radioButton[2].setText("Asiatica");
+            radioButton[3].setText("Española");
         }
 
         label.setBounds(30, 40, 450, 20);
@@ -126,10 +103,20 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         if (e.getSource() == btnSiguiente) {
             cuenta++;
             preguntas();
-            if (cuenta == 9) {
+            if (cuenta == 7) {
                 btnSiguiente.setEnabled(false);
+                if(vecesA >= 5)
+                    System.out.println("Eres AVENTURERO");
+                if(vecesB >= 3)
+                    System.out.println("Eres FIESTERO");
+                if(vecesC >= 2)
+                    System.out.println("Eres CAMPESTRE");
+                if(vecesD >= 5)
+                    System.out.println("Eres PLAYERO");
+
             }
         }
+
         // pequeño error a la hora de clicar porque solo guarda la primera pulsacion
         if (e.getSource() == radioButton[0]) {
             vecesA++;
@@ -143,18 +130,9 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         if (e.getSource() == radioButton[3]) {
             vecesD++;
         }
+
     }
 
-    public void personaje() {
-        if (vecesA >= 1)// logica que queramos para desarrollar numero y tipo de personajes
-            System.out.println("Atrevida");
-        if (vecesB == 4)
-            System.out.println("LOCO");
-        if (vecesC == 5)
-            System.out.println("Atilano");
-        if (vecesD == 2)
-            System.out.println("JAIME");
-    }
 
 
      /*public static void main(String s[]){
