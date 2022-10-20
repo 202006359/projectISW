@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.function.Consumer;
 
 import icai.dtc.isw.configuration.PropertiesISW;
-import icai.dtc.isw.controler.CustomerControler;
+import icai.dtc.isw.controler.*;
 import icai.dtc.isw.domain.Actividad;
 import icai.dtc.isw.domain.Customer;
 import icai.dtc.isw.message.Message;
@@ -92,7 +92,7 @@ public class SocketServer extends Thread {
 					break;
 				case "/getActividades":
 					customerControler =new CustomerControler();
-					ArrayList<Actividad> actividades= customerControler.getActividades();
+					ArrayList<Actividad> actividades= ActivitiesControler.getActividades();
 					mensajeOut.setContext("/getActividadesResponse");
 					session.put("Actividades",actividades);
 					mensajeOut.setSession(session);

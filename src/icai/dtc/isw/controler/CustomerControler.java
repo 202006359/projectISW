@@ -16,5 +16,5 @@ public class CustomerControler {
 
 	public void createAccount(String usuario, String contrasena){CustomerDAO.crearCuenta(usuario, contrasena);}
 
-	public ArrayList<Actividad> getActividades(){CustomerDAO.getActividades(); return CustomerDAO.getActividades();}
+	//public ArrayList<Actividad> getActividades(){CustomerDAO.getActividades(); return CustomerDAO.getActividades();}
 }

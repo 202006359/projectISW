@@ -42,21 +42,21 @@ public class CustomerDAO {
 		//return new Customer("1","Atilano");
 	}
 	
-	public static void main(String[] args) {
+	//public static void main(String[] args) {
 		
 		
-		ArrayList<Actividad> lista= new ArrayList<>();
+	//	ArrayList<Actividad> lista= new ArrayList<>();
 
-		lista=CustomerDAO.getActividades();
+	//	lista=CustomerDAO.getActividades();
 		
-		 for (Actividad act : lista) {
-			System.out.println("He leído el usuario: "+act.getUsuario());
-		}
+	//	 for (Actividad act : lista) {
+	//		System.out.println("He leído el usuario: "+act.getUsuario());
+	//	}
 
 
 		
 	
-	}
+	//}
 
 
 
@@ -96,22 +96,21 @@ public class CustomerDAO {
 		}
 	}
 
-	public static ArrayList<Actividad> getActividades() {
-		ArrayList<Actividad> actividades = new ArrayList<>();
-		Connection con=ConnectionDAO.getInstance().getConnection();
-		Actividad act=null;
-		try (PreparedStatement pst = con.prepareStatement("SELECT * FROM actividades");
-			 ResultSet rs = pst.executeQuery()) {
-
-			while (rs.next()) {
-				act= new Actividad(rs.getString(1),rs.getString(2));
-				actividades.add(act);
-			}
-
-		} catch (SQLException ex) {
-			System.out.println(ex.getMessage());
-		}
-		return actividades;
-		//ME DEVUELVE UN ARRAY CON TODAS LAS ACTIVIDADES EN LA BASE DE DATOS;
+	//public static ArrayList<Actividad> getActividades() {
+	//	ArrayList<Actividad> actividades = new ArrayList<>();
+	//	Connection con=ConnectionDAO.getInstance().getConnection();
+	//	Actividad act=null;
+	//	try (PreparedStatement pst = con.prepareStatement("SELECT * FROM actividades");
+	//		 ResultSet rs = pst.executeQuery()) {
+//
+//			while (rs.next()) {
+//				act= new Actividad(rs.getString(1),rs.getString(2));
+//				actividades.add(act);
+//			}
+//
+//		} catch (SQLException ex) {
+//			System.out.println(ex.getMessage());
+//		}
+//		return actividades;
+//		//ME DEVUELVE UN ARRAY CON TODAS LAS ACTIVIDADES EN LA BASE DE DATOS;
 	}
-}
