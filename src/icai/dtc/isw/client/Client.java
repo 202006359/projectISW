@@ -50,17 +50,6 @@ public class Client {
 		Actividad actividad;
 		
 		switch (mensajeVuelta.getContext()) {
-			case "/getCustomersResponse":
-				ArrayList<Customer> customerList=(ArrayList<Customer>)(mensajeVuelta.getSession().get("Customer"));
-				 for (Customer cu : customerList) {
-						System.out.println("He leído el id: "+cu.getUsuario()+" con nombre: "+cu.getContrasena());
-					} 
-				break;
-			case "/getCustomerResponse":
-				session=mensajeVuelta.getSession();
-				 customer =(Customer) (session.get("Customer"));
-				System.out.println("He leído el id: "+customer.getUsuario()+" con nombre: "+customer.getContrasena());
-				break;
 			case "/getPasswordResponse":
 				session=mensajeVuelta.getSession();
 				customer =(Customer) (session.get("Customer"));
@@ -70,6 +59,11 @@ public class Client {
 				session = mensajeVuelta.getSession();
 				customer =(Customer) (session.get("Customer"));
 				System.out.println("He creado el usuario: "+customer.getUsuario()+" con contrasena: "+customer.getContrasena());
+				break;
+			case "/completeAccountResponse":
+				session = mensajeVuelta.getSession();
+				customer =(Customer) (session.get("Customer"));
+				System.out.println("He añadido al usuario: "+customer.getUsuario()+" el perfil de "+ customer.getPerfil());
 				break;
 			case "/getActividadesResponse":
 				session = mensajeVuelta.getSession();

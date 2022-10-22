@@ -1,6 +1,9 @@
 package icai.dtc.isw.ui;
 
+import icai.dtc.isw.client.Client;
+
 import java.awt.event.*;
+import java.util.HashMap;
 import javax.swing.*;
 
 public class VentanaCuestionario extends JFrame implements ActionListener {
@@ -10,13 +13,18 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     JButton btnSiguiente;
     ButtonGroup bg; // hace que si se pulsa un boton los demás estén bloqueados
     int cuenta;
-    int vecesA;
-    int vecesB;
-    int vecesC;
-    int vecesD;
+    int vecesA, vecesB, vecesC, vecesD;
+    String usuario;
+    String perfil = "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
+    public static void main(String s[])
+    {
+        String usuario = "";
+        new VentanaCuestionario(usuario);
+    }
 
-    public VentanaCuestionario() {
+    public VentanaCuestionario(String usuario) {
         super("SMART PLAN");
+        this.usuario = usuario;
         label = new JLabel();
         add(label);
         bg = new ButtonGroup();
@@ -128,7 +136,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             preguntas();
             if (cuenta == 9) {
                 btnSiguiente.setEnabled(false);
-                pasoprincipal();
+                pasoPrincipal();
             }
         }
         // pequeño error a la hora de clicar porque solo guarda la primera pulsacion
@@ -147,6 +155,8 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     }
 
     public void personaje() {
+        //Necesito que al acabar el cuestionario la variable perfil tenga asignada un valor
+        //EJ: perfil = "Aventurero";
         if (vecesA >= 1)// logica que queramos para desarrollar numero y tipo de personajes
             System.out.println("Atrevida");
         if (vecesB == 4)
@@ -155,9 +165,11 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             System.out.println("Atilano");
         if (vecesD == 2)
             System.out.println("JAIME");
+
+        completarCuenta();
     }
 
-    public void pasoprincipal()
+    public void pasoPrincipal()
     {
         this.exit();
         new PanelActividades();
@@ -170,9 +182,15 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     }
 
 
-    public static void main(String s[])
-     {
-     new VentanaCuestionario();
-     }
+    public void completarCuenta() {
+        Client cliente=new Client();
+        HashMap<String,Object> session=new HashMap<>();
+        String context="/completeAccount";
+        session.put("usuario",usuario);
+        session.put("contrasena",""); //No necesito la contraseña en esta versión
+        session.put("perfil", perfil);
+        cliente.sentMessage(context,session);
+
+    }
 
 }

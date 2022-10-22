@@ -54,7 +54,7 @@ public class VentanaSignin extends JFrame {
             if(contrasena.equals(String.valueOf(txtPasswordConfirmation.getPassword())) && checkContrasena(contrasena)){
                 crearCuenta();
                 JOptionPane.showMessageDialog(VentanaSignin.this,"Registro completado");
-                cuestionario();
+                cuestionario(usuario);
 
             }else if(!checkContrasena(contrasena)){
                 JOptionPane.showMessageDialog(VentanaSignin.this,"La contraseña no es alfanumérica");
@@ -95,9 +95,9 @@ public class VentanaSignin extends JFrame {
         //matches("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$") Para que la primera sea mayuscula
     }
 
-    public void cuestionario(){
+    public void cuestionario(String usuario){
         this.exit();
-        new VentanaCuestionario();
+        new VentanaCuestionario(usuario);
     }
 
 
