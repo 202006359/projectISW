@@ -18,9 +18,9 @@ public class ActivityDAO {
 
         lista = ActivityDAO.getActividades();
 
-        //for (Actividad act : lista) {
-         //   System.out.println("He leído el usuario: " + act.getUsuario());
-        //}
+        for (Actividad act : lista) {
+          System.out.println("He leído el usuario: " + act.getNombre() + "," + act.getLocalizacion());
+        }
     }
 
     public static ArrayList<Actividad> getActividades() {

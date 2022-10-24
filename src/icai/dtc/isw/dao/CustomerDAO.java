@@ -42,16 +42,15 @@ public class CustomerDAO {
 		//return new Customer("1","Atilano");
 	}
 	
-	//public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		
 		
-	//	ArrayList<Actividad> lista= new ArrayList<>();
+	ArrayList<Actividad> lista= new ArrayList<>();
 
-	//	lista=CustomerDAO.getActividades();
-		
-	//	 for (Actividad act : lista) {
-	//		System.out.println("He leído el usuario: "+act.getUsuario());
-	//	}
+	lista=ActivityDAO.getActividades();
+	for (Actividad act : lista) {
+		System.out.println("He leído el usuario: "+act.getUsuario());
+	}*/
 
 
 		

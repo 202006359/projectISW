@@ -15,10 +15,18 @@ public class Actividad implements Serializable{
      this.setLocalizacion(localizacion);
     }
 
-    public String getUsuario() {
+    public String getNombre() {
         return nombre;
     }
 
+    public String getLocalizacion() {
+        return localizacion;
+    }
+
+
+    public String getUsuario() {
+        return nombre;
+    }
     public void setLocalizacion(String localizacion) {
         this.localizacion=localizacion;
     }
