@@ -9,31 +9,33 @@ public class Customer implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String usuario;
 	private String contrasena;
-
-
-	
+	private String perfil;
 
 	
 	public Customer(String usuario, String contrasena) {
-		this.setContrasena(contrasena);
-		this.setUsuario(usuario);
+		this.contrasena = contrasena;
+		this.usuario = usuario;
+	}
+
+	public Customer(String usuario, String contrasena, String perfil) {
+		this.usuario = usuario;
+		this.contrasena = contrasena;
+		this.perfil = perfil;
 	}
 
 	public String getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
 
 	public String getContrasena() {
 		return contrasena;
 	}
 
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
+	public String getPerfil() {
+		return perfil;
 	}
+
 
 
 	
