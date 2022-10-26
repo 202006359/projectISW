@@ -1,14 +1,10 @@
 package icai.dtc.isw.dao;
 import icai.dtc.isw.domain.Actividad;
 import java.util.ArrayList;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
-import icai.dtc.isw.domain.*;
 
 public class ActivityDAO {
 
@@ -27,7 +23,7 @@ public class ActivityDAO {
         ArrayList<Actividad> actividades = new ArrayList<>();
         Connection con=ConnectionDAO.getInstance().getConnection();
         Actividad act=null;
-        try (PreparedStatement pst = con.prepareStatement("SELECT * FROM actividades");
+        try (PreparedStatement pst = con.prepareStatement("SELECT * FROM planes;");
              ResultSet rs = pst.executeQuery()) {
 
             while (rs.next()) {

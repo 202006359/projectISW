@@ -62,7 +62,7 @@ public class PanelActividades extends JFrame{
         activi.add(img);
         activi.setPreferredSize(new Dimension(700, 2000));
 
-        JButton[] btnActividades = new JButton[30];
+        JButton[] btnActividades = new JButton[60];
         scrollPane.add(activi);
 
         for (int i = 0; i < actividades.toArray().length; i++) {
@@ -77,7 +77,6 @@ public class PanelActividades extends JFrame{
         }
 
         scrollPane.setViewportView(activi);
-        //this.drawObjects(g);
         this.add(scrollPane);
         this.setForeground(Color.BLUE);
         this.add(principal);
@@ -88,16 +87,6 @@ public class PanelActividades extends JFrame{
 
 
     }
-
-    /*@Override
-    public void paintComponents(Graphics g){
-        super.paintComponents(g);
-        drawObjects(g);
-    }
-
-   /* public void drawObjects(Graphics g){
-        g.drawImage(fondo, 0, 0, this);
-    }*/
 
     class RoundedBorder implements Border {
         private int radius;
