@@ -1,8 +1,8 @@
-package test.domain;
+package test.java;
 
 import main.domain.Customer;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import java.io.Serializable;
 
 
@@ -18,15 +18,15 @@ public class CustomerTest implements Serializable{
 	@org.junit.Test
 	public void getUsuario() { //Verifico usuario
 		assertEquals("Ivan", customer.getUsuario());
-	}
+	} //Verifico el usuario
 	@org.junit.Test
 	public void getContrasena() { //Verifico contrasena
 		assertEquals("IvanPass", customer.getContrasena());
-	}
+	} //Verifico la contrasena
 	@org.junit.Test
 	public void getPerfil() { //Verifico el perfil
 		assertEquals("Aventurero", customer.getPerfil());
-	}
+	} //Verifico el perfil
 
 	
 }
