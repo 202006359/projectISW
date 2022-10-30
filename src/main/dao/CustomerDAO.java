@@ -1,11 +1,11 @@
-package icai.dtc.isw.dao;
+package main.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import icai.dtc.isw.domain.*;
+import main.domain.*;
 
 public class CustomerDAO {
 

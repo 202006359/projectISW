@@ -1,6 +1,6 @@
-package icai.dtc.isw.ui;
+package main.ui;
 
-import icai.dtc.isw.client.Client;
+import main.client.Client;
 
 import java.awt.event.*;
 import java.util.HashMap;

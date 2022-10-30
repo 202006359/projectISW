@@ -1,4 +1,4 @@
-package icai.dtc.isw.message;
+package main.message;
 
 import java.io.Serializable;
 import java.lang.reflect.AnnotatedArrayType;

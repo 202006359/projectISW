@@ -1,4 +1,4 @@
-package icai.dtc.isw.server;
+package main.server;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.Consumer;
 
-import icai.dtc.isw.configuration.PropertiesISW;
-import icai.dtc.isw.controler.*;
-import icai.dtc.isw.domain.Actividad;
-import icai.dtc.isw.domain.Customer;
-import icai.dtc.isw.message.Message;
+import main.configuration.PropertiesISW;
+import main.controler.*;
+import main.domain.Actividad;
+import main.domain.Customer;
+import main.message.Message;
 
 public class SocketServer extends Thread {
 	public static int port = 8081; //Valor por defecto
