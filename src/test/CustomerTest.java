@@ -1,4 +1,4 @@
-package test.java;
+package test;
 
 import main.domain.Customer;
 import org.testng.annotations.Test;
