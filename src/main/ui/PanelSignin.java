@@ -2,7 +2,9 @@ package main.ui;
 
 import java.awt.*;
 import javax.swing.*;
-
+/**
+ * Clase para crear el panel que se implementará en la ventana de SignIn
+ */
 public class PanelSignin extends JPanel{
 
     private Dimension dimension = new Dimension(VentanaLogin.WINDOW_WIDTH, VentanaLogin.WINDOW_HEIGTH);

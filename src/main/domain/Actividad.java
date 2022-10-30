@@ -9,7 +9,11 @@ public class Actividad implements Serializable{
 
 
     public Actividad(String nombre) {
-     this.setNombre(nombre);
+     this.nombre = nombre;
+    }
+    public Actividad(String nombre, String categoria) {
+        this.nombre = nombre;
+        this.categoria = categoria;
     }
 
     public String getNombre() {
@@ -19,7 +23,5 @@ public class Actividad implements Serializable{
         return categoria;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre=nombre;
-    }
+
 }

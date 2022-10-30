@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class PanelActividades extends JFrame{
+public class VentanaActividades extends JFrame{
 
     public String usuario;
     public String contrasena;
@@ -19,10 +19,10 @@ public class PanelActividades extends JFrame{
 
 
     public static void main(String[] args) {
-        PanelActividades game = new PanelActividades();
+        VentanaActividades game = new VentanaActividades();
     }
 
-    public PanelActividades() {
+    public VentanaActividades() {
         this.setSize(700, 700);
         //fondo = Toolkit.getDefaultToolkit().getImage("resources/fotoFondo.jpg").getScaledInstance(700,680, Image.SCALE_SMOOTH);
         //Color rosa = new Color(236,112,99 );

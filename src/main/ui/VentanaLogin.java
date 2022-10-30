@@ -6,7 +6,9 @@ import main.domain.Customer;
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
-
+/**
+ * Clase para visualizar en pantalla la ventana de Inicio de Sesión
+ */
 public class VentanaLogin extends JFrame {
     public static void main(String[] args) {
         new VentanaLogin();
@@ -27,12 +29,13 @@ public class VentanaLogin extends JFrame {
         lblUsr.setBounds(60,60,160,30);
         JTextField txtUsr = new JTextField(50);
         txtUsr.setBounds(60,90,390,30);
-        txtUsr.setText("ivan@gmail.com");
+        txtUsr.setText("admin@gmail.com"); //Valor por defecto para pruebas
 
         JLabel lblPassword= new JLabel("Contraseña");
         lblPassword.setBounds(60,120,160,30);
         JPasswordField txtPassword = new JPasswordField(20);
         txtPassword.setBounds(60,150,390,30);
+        txtPassword.setText("admin1");//Valor por defecto para pruebas
 
         JButton btnLogin = new JButton("Iniciar Sesión");
         btnLogin.setBounds(60,200,390,40);
@@ -59,42 +62,31 @@ public class VentanaLogin extends JFrame {
             usuario = txtUsr.getText();
             contrasena = String.valueOf(txtPassword.getPassword());
 
-            if(contrasena.equals(recuperarContrasena())){
+            if(contrasena.equals(recuperarContrasena())){ //Verifico que la contraseña introducida coincida con la de la base de datos
                 JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena correcta");
-                //Me iria a la pagina que esta haciendo Bea
-                abrirPrincipal();
-
+                abrirPrincipal(); //Me voy a la ventana principal
             }else{
                 JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena incorrecta");
                 txtPassword.setText("");
             }
-
-
         });
 
         btnSignin.addActionListener(e->{
-            this.registrarse();
+            this.registrarse(); //Si no tengo cuenta, me voy a la ventana de Sign In
         });
-
 
         this.pack();
         this.setVisible(true);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 
 
-    public void registrarse(){
+    public void registrarse() { //Me voy a la ventana de Registro
         this.exit();
         new VentanaSignin();
     }
-
-    /*public void test(){
-        this.exit();
-        new QuizJaime();
-    }*/
 
     private void exit(){
         this.dispose();
@@ -102,7 +94,7 @@ public class VentanaLogin extends JFrame {
     }
 
 
-    public String recuperarContrasena() {
+    public String recuperarContrasena() { //Metodo utilizado para obtener de la base de datos la contrasena guardada del usuario
         Client cliente=new Client();
         HashMap<String,Object> session=new HashMap<>();
         String context="/getPassword";
@@ -113,10 +105,10 @@ public class VentanaLogin extends JFrame {
     }
 
 
-    public void abrirPrincipal()
+    public void abrirPrincipal() //ME voy a la ventana principal de planes
     {
         this.exit();
-        new PanelActividades();
+        new VentanaActividades();
     }
 
 }

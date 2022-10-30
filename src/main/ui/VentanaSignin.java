@@ -5,7 +5,9 @@ import main.client.Client;
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
-
+/**
+ * Clase para visualizar en pantalla la ventana de Registrar Usuario
+ */
 public class VentanaSignin extends JFrame {
     public static void main(String[] args) {
         new VentanaSignin();
@@ -51,12 +53,12 @@ public class VentanaSignin extends JFrame {
             usuario = txtUsr.getText();
             contrasena = String.valueOf(txtPassword.getPassword());
 
-            if(contrasena.equals(String.valueOf(txtPasswordConfirmation.getPassword())) && checkContrasena(contrasena)){
+            if(contrasena.equals(String.valueOf(txtPasswordConfirmation.getPassword())) && checkContrasena(contrasena)){ //Veo si la contraseña tiene el formato correcto
                 crearCuenta();
                 JOptionPane.showMessageDialog(VentanaSignin.this,"Registro completado");
-                cuestionario(usuario);
+                cuestionario(usuario); //Me manda a rellenar el cuestionario que usaremos para obtener las preferencias de los planes del usuario
 
-            }else if(!checkContrasena(contrasena)){
+            }else if(!checkContrasena(contrasena)){ //Verifico que la contraseña cumpla todos los requisitos
                 JOptionPane.showMessageDialog(VentanaSignin.this,"La contraseña no es alfanumérica");
                 txtPassword.setText("");
                 txtPasswordConfirmation.setText("");
@@ -77,7 +79,7 @@ public class VentanaSignin extends JFrame {
 
     }
 
-    public void crearCuenta() {
+    public void crearCuenta() { //Metodo para guardar en la base de datos mi usuario y contrasena
         Client cliente=new Client();
         HashMap<String,Object> session=new HashMap<>();
         //String context="/getPassword";
@@ -95,7 +97,7 @@ public class VentanaSignin extends JFrame {
         //matches("^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]+$") Para que la primera sea mayuscula
     }
 
-    public void cuestionario(String usuario){
+    public void cuestionario(String usuario){ //Me manda a la ventana del cuestionario
         this.exit();
         new VentanaCuestionario(usuario);
     }

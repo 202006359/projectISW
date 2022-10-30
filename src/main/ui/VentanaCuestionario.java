@@ -5,7 +5,6 @@ import main.client.Client;
 import java.awt.event.*;
 import java.util.HashMap;
 import javax.swing.*;
-import main.ui.*;
 
 public class VentanaCuestionario extends JFrame implements ActionListener {
 
@@ -173,7 +172,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     public void pasoPrincipal()
     {
         this.exit();
-        new PanelActividades();
+        new VentanaActividades();
 
     }
 
