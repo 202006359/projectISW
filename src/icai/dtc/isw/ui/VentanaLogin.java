@@ -85,6 +85,7 @@ public class VentanaLogin extends JFrame {
 
     }
 
+
     public void registrarse(){
         this.exit();
         new VentanaSignin();

@@ -8,16 +8,16 @@ import java.sql.SQLException;
 
 public class ActivityDAO {
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
 
         ArrayList<Actividad> lista = new ArrayList<>();
 
         lista = ActivityDAO.getActividades();
 
         for (Actividad act : lista) {
-          System.out.println("He leído el usuario: " + act.getNombre() + "," + act.getLocalizacion());
+          System.out.println("He leído el usuario: " + act.getNombre();
         }
-    }
+    }*/
 
     public static ArrayList<Actividad> getActividades() {
         ArrayList<Actividad> actividades = new ArrayList<>();
@@ -27,7 +27,7 @@ public class ActivityDAO {
              ResultSet rs = pst.executeQuery()) {
 
             while (rs.next()) {
-                act= new Actividad(rs.getString(1),rs.getString(2));
+                act= new Actividad(rs.getString(1));
                 actividades.add(act);
             }
 
