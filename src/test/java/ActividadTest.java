@@ -1,6 +1,10 @@
-package test;
+package test.java;
+
+import org.testng.annotations.Test;
 
 import java.io.Serializable;
+
+@Test
 
 public class ActividadTest implements Serializable{
     /**

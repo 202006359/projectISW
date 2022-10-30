@@ -1,11 +1,12 @@
-package test;
+package test.java;
 
 import main.domain.Customer;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import java.io.Serializable;
 
-
+@Test
 public class CustomerTest implements Serializable{
 	/**
 	 * Clase para verificar el correcto funcionamiento de los metodos de la clase Customer
