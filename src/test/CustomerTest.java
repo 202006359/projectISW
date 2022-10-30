@@ -1,4 +1,4 @@
-package test.resources;
+package test;
 
 import main.domain.Customer;
 

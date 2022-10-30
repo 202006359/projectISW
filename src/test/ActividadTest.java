@@ -1,4 +1,4 @@
-package test.resources;
+package test;
 
 import java.io.Serializable;
 
