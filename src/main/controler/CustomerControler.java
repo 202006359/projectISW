@@ -1,9 +1,9 @@
-package icai.dtc.isw.controler;
+package main.controler;
 
 import java.util.ArrayList;
 
-import icai.dtc.isw.dao.CustomerDAO;
-import icai.dtc.isw.domain.*;
+import main.dao.CustomerDAO;
+import main.domain.*;
 
 public class CustomerControler {
 

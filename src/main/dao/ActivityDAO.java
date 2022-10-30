@@ -1,5 +1,5 @@
-package icai.dtc.isw.dao;
-import icai.dtc.isw.domain.Actividad;
+package main.dao;
+import main.domain.Actividad;
 import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

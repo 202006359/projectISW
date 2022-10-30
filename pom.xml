@@ -18,7 +18,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.6.0</version>
             <configuration>
-                <mainClass>icai.dtc.isw.server.SocketServer</mainClass>
+                <mainClass>main.server.SocketServer</mainClass>
             </configuration>
         </plugin>
     </plugins>
@@ -40,6 +40,12 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

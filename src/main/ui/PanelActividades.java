@@ -1,6 +1,6 @@
-package icai.dtc.isw.ui;
-import icai.dtc.isw.client.Client;
-import icai.dtc.isw.domain.Actividad;
+package main.ui;
+import main.client.Client;
+import main.domain.Actividad;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;

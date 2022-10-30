@@ -3,8 +3,8 @@
 <properties>
 <comment>This is easy!</comment>
 	<entry key="ddbb.connection">jdbc:postgresql://localhost:5432/smartplan</entry>
-	<entry key="ddbb.user">beatriz</entry>
-	<entry key="ddbb.password">Beatriz01</entry>
+	<entry key="ddbb.user">postgres</entry>
+	<entry key="ddbb.password">postgres</entry>
 	<entry key="host">127.0.0.1</entry>
 	<entry key="port">8081</entry>
 </properties>

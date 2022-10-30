@@ -1,4 +1,4 @@
-package icai.dtc.isw.client;
+package main.client;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,9 +13,9 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
-import icai.dtc.isw.configuration.PropertiesISW;
-import icai.dtc.isw.domain.*;
-import icai.dtc.isw.message.Message;
+import main.configuration.PropertiesISW;
+import main.domain.*;
+import main.message.Message;
 
 public class Client {
 	private String host;

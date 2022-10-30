@@ -1,4 +1,5 @@
-package icai.dtc.isw.domain;
+package test.domain;
+import static org.junit.Assert.*;
 
 import java.io.Serializable;
 
