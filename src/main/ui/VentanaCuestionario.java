@@ -15,11 +15,13 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     int cuenta;
     int vecesA, vecesB, vecesC, vecesD;
     String usuario;
-    static String perfil = "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
+    static String perfil = "Aventuras;Gastronomía;Deportes"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
     public static void main(String s[])
     {
-        String usuario = "";
-        new VentanaCuestionario(usuario);
+        //String usuario = "";
+        //new VentanaCuestionario(usuario);
+        String per = getPerfil();
+        System.out.println(per);
     }
 
     public VentanaCuestionario(String usuario) {

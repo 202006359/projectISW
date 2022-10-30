@@ -6,6 +6,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
+import main.ui.VentanaCuestionario;
 
 
 public class VentanaActividades extends JFrame{
@@ -23,10 +25,9 @@ public class VentanaActividades extends JFrame{
     }
 
     public VentanaActividades() {
+
+
         this.setSize(700, 700);
-        //fondo = Toolkit.getDefaultToolkit().getImage("resources/fotoFondo.jpg").getScaledInstance(700,680, Image.SCALE_SMOOTH);
-        //Color rosa = new Color(236,112,99 );
-        //Color naranja = new Color(245,176,99);
         ArrayList<Actividad> actividades = ObtenActividades();
         principal.setForeground(Color.BLUE);
 
@@ -51,11 +52,13 @@ public class VentanaActividades extends JFrame{
         principal.add(btnInfoUsuario, BorderLayout.NORTH);
 
 
-        //OBTENGO PERFIL USUARIO
-        String[] perfil =  getPerfil();
-        String perfil1 = perfil[0];
-        String perfil2 = perfil[1];
-        String perfil3 = perfil[2];
+        //OBTENGO PERFIL USUARIO, sus tres categorias favoritas segun el cuestionario rellenado
+
+        String perfil =  VentanaCuestionario.getPerfil();
+        String[] perfilUsuario = perfil.split(";");
+        String perfil1 = perfilUsuario[0];
+        String perfil2 = perfilUsuario[1];
+        String perfil3 =perfilUsuario[2];
 
 
         //Scroll actividades
@@ -68,34 +71,70 @@ public class VentanaActividades extends JFrame{
         activi.add(img);
         activi.setPreferredSize(new Dimension(700, 2000));
 
+
+        //CREAMOS EL GRID LAYOUT CORRESPONDIENTE AL TIPO DE PLANES QUE QUIERE EL QUIERE ~ ASOCIADO A SU PERFIL
+
         JButton[] btnActividades = new JButton[60];
         scrollPane.add(activi);
 
+        //de su primera favorita categoria ponemos 9 actividades
+        int j = 0;
         for (int i = 0; i < actividades.toArray().length; i++) {
-            if (actividades.get(i).getCategoria()==perfil1)
-                btnActividades[i] = new JButton(actividades.get(i).getNombre());
-                btnActividades[i].setPreferredSize(new Dimension(200, 100));
-                btnActividades[i].setBorder(new RoundedBorder(50));
-                activi.add(btnActividades[i]);
-                btnActividades[i].setFont(font1);
-        }
-        for (int i = 0; i < 5; i++) {
-            if (actividades.get(i).getCategoria()==perfil2)
-                btnActividades[i] = new JButton(actividades.get(i).getNombre());
-                btnActividades[i].setPreferredSize(new Dimension(200, 100));
-                btnActividades[i].setBorder(new RoundedBorder(50));
-                activi.add(btnActividades[i]);
-                btnActividades[i].setFont(font1);
+            System.out.println(actividades.get(i).getCategoria());
+            System.out.println(actividades.get(i).getNombre());
+            System.out.println(Objects.equals(actividades.get(i).getCategoria(), perfil1));
+            if ((Objects.equals(actividades.get(i).getCategoria(), perfil1)) == true) {
+                btnActividades[j] = new JButton(actividades.get(i).getNombre());
+                btnActividades[j].setPreferredSize(new Dimension(200, 100));
+                btnActividades[j].setBorder(new RoundedBorder(50));
+                activi.add(btnActividades[j]);
+                btnActividades[j].setFont(font1);
+                j++;
+            }
         }
 
-        for (int i = 0; i < 2; i++) {
-            if (actividades.get(i).getCategoria()==perfil3)
-                btnActividades[i] = new JButton(actividades.get(i).getNombre());
-                btnActividades[i].setPreferredSize(new Dimension(200, 100));
-                btnActividades[i].setBorder(new RoundedBorder(50));
-                activi.add(btnActividades[i]);
-                btnActividades[i].setFont(font1);
+        //de su segunda categoria favorita ponemos 6 actividades
+        int k = 0;
+        for (int i = 0; i < actividades.toArray().length; i++) {
+            System.out.println(actividades.get(i).getCategoria());
+            System.out.println(perfil2);
+            System.out.println(actividades.get(i).getNombre());
+
+            System.out.println(Objects.equals(actividades.get(i).getCategoria(), perfil2));
+            if ((Objects.equals(actividades.get(i).getCategoria(), perfil2)) == true)
+                if (k<6){
+                btnActividades[k] = new JButton(actividades.get(i).getNombre());
+                btnActividades[k].setPreferredSize(new Dimension(200, 100));
+                btnActividades[k].setBorder(new RoundedBorder(50));
+                activi.add(btnActividades[k]);
+                btnActividades[k].setFont(font1);
+                k++;
+            }
         }
+
+        //de su tercera categoria favorita ponemos 3 actividades
+        int p = 0;
+        for (int i = 0; i < actividades.toArray().length; i++) {
+            System.out.println(actividades.get(i).getCategoria());
+            System.out.println(perfil2);
+            System.out.println(actividades.get(i).getNombre());
+
+            System.out.println(Objects.equals(actividades.get(i).getCategoria(), perfil2));
+
+            if ((Objects.equals(actividades.get(i).getCategoria(), perfil3)) == true)  {
+                if (p<3) {
+                    btnActividades[p] = new JButton(actividades.get(i).getNombre());
+                    btnActividades[p].setPreferredSize(new Dimension(200, 100));
+                    btnActividades[p].setBorder(new RoundedBorder(50));
+                    activi.add(btnActividades[p]);
+                    btnActividades[p].setFont(font1);
+                    p++;
+                }
+            }
+        }
+        //del resto de categorias que no se ajustan a su perfil no pongo ninguna actividad
+
+
 
 
         scrollPane.setViewportView(activi);
@@ -110,6 +149,7 @@ public class VentanaActividades extends JFrame{
 
     }
 
+    //En este metodo intento hacer los botones redondos
     class RoundedBorder implements Border {
         private int radius;
         RoundedBorder(int radius) {
@@ -126,7 +166,7 @@ public class VentanaActividades extends JFrame{
         }
     }
 
-
+    //Obtengo las actividades disponibles de la base de datos
     public ArrayList<Actividad> ObtenActividades() {
         Client cliente = new Client();
         HashMap<String, Object> session = new HashMap<>();
@@ -136,12 +176,6 @@ public class VentanaActividades extends JFrame{
         return actividades;
     }
 
-    public String[] getPerfil()
-    {
-        String perfil = VentanaCuestionario.getPerfil();
-        String[] perfilUsuario = perfil.split(";");
-        return perfilUsuario;
-    }
 }
 
 

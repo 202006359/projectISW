@@ -1,21 +1,17 @@
 package main.server;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import main.configuration.PropertiesISW;
+import main.controler.ActivitiesControler;
+import main.controler.CustomerControler;
+import main.domain.Actividad;
+import main.domain.Customer;
+import main.message.Message;
+
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.function.Consumer;
-
-import main.configuration.PropertiesISW;
-import main.controler.*;
-import main.domain.Actividad;
-import main.domain.Customer;
-import main.message.Message;
 
 public class SocketServer extends Thread {
 	public static int port = 8081; //Valor por defecto
@@ -92,8 +88,8 @@ public class SocketServer extends Thread {
 					objectOutputStream.writeObject(mensajeOut);
 					break;
 
-		    	
-		    	default:
+
+				default:
 		    		System.out.println("\nParámetro no encontrado");
 		    		break;
 		    }

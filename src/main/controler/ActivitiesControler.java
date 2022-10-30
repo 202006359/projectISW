@@ -14,4 +14,6 @@ public class ActivitiesControler {
         ActivityDAO.getActividades();
         return ActivityDAO.getActividades();
     }
+
+
 }

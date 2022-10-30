@@ -1,5 +1,7 @@
 package main.dao;
 import main.domain.Actividad;
+import main.domain.Customer;
+
 import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,33 +10,33 @@ import java.sql.SQLException;
 
 public class ActivityDAO {
 
-   /* public static void main(String[] args) {
+   /*public static void main(String[] args) {
 
         ArrayList<Actividad> lista = new ArrayList<>();
 
         lista = ActivityDAO.getActividades();
+        System.out.println(lista);
 
-        for (Actividad act : lista) {
-          System.out.println("He leído el usuario: " + act.getNombre();
-        }
     }*/
 
+	//Obtengo un arrayList con cada actividad, cada una de ellas asociada a una categoria
     public static ArrayList<Actividad> getActividades() {
-        ArrayList<Actividad> actividades = new ArrayList<>();
-        Connection con=ConnectionDAO.getInstance().getConnection();
-        Actividad act=null;
-        try (PreparedStatement pst = con.prepareStatement("SELECT * FROM planes;");
-             ResultSet rs = pst.executeQuery()) {
+    	ArrayList<Actividad> actividades = new ArrayList<>();
+    	Connection con=ConnectionDAO.getInstance().getConnection();
+    	Actividad act=null;
+    	try (PreparedStatement pst = con.prepareStatement("SELECT * FROM planes");
+    		 ResultSet rs = pst.executeQuery()) {
 
-            while (rs.next()) {
-                act= new Actividad(rs.getString(1));
-                actividades.add(act);
-            }
+			//la columna 4 me da la categoria
+			while (rs.next()) {
+				act= new Actividad(rs.getString(1),rs.getString(4));
+				actividades.add(act);
+			}
 
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return actividades;
-        //ME DEVUELVE UN ARRAY CON TODAS LAS ACTIVIDADES EN LA BASE DE DATOS;
-    }
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return actividades;
 }
+}
+
