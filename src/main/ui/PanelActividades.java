@@ -1,6 +1,6 @@
-package icai.dtc.isw.ui;
-import icai.dtc.isw.client.Client;
-import icai.dtc.isw.domain.Actividad;
+package main.ui;
+import main.client.Client;
+import main.domain.Actividad;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -51,6 +51,13 @@ public class PanelActividades extends JFrame{
         principal.add(btnInfoUsuario, BorderLayout.NORTH);
 
 
+        //OBTENGO PERFIL USUARIO
+        String[] perfil =  getPerfil();
+        String perfil1 = perfil[0];
+        String perfil2 = perfil[1];
+        String perfil3 = perfil[2];
+
+
         //Scroll actividades
         ImageIcon fondo = new ImageIcon("resources/fotoFondo.jpg");
         JLabel img = new JLabel(fondo,0);
@@ -58,7 +65,6 @@ public class PanelActividades extends JFrame{
         scrollPane.setBounds(5,100, 700, 600);
         GridLayout grid3 = new GridLayout();
         JPanel activi = new JPanel();
-        //activi.setLayout(grid3);
         activi.add(img);
         activi.setPreferredSize(new Dimension(700, 2000));
 
@@ -66,15 +72,31 @@ public class PanelActividades extends JFrame{
         scrollPane.add(activi);
 
         for (int i = 0; i < actividades.toArray().length; i++) {
-            btnActividades[i] = new JButton(actividades.get(i).getNombre());
-            btnActividades[i].setPreferredSize(new Dimension(200, 100));
-            btnActividades[i].setBorder(new RoundedBorder(50));
-            activi.add(btnActividades[i]);
-            btnActividades[i].setFont(font1);
-
-
-
+            if (actividades.get(i).getCategoria()==perfil1)
+                btnActividades[i] = new JButton(actividades.get(i).getNombre());
+                btnActividades[i].setPreferredSize(new Dimension(200, 100));
+                btnActividades[i].setBorder(new RoundedBorder(50));
+                activi.add(btnActividades[i]);
+                btnActividades[i].setFont(font1);
         }
+        for (int i = 0; i < 5; i++) {
+            if (actividades.get(i).getCategoria()==perfil2)
+                btnActividades[i] = new JButton(actividades.get(i).getNombre());
+                btnActividades[i].setPreferredSize(new Dimension(200, 100));
+                btnActividades[i].setBorder(new RoundedBorder(50));
+                activi.add(btnActividades[i]);
+                btnActividades[i].setFont(font1);
+        }
+
+        for (int i = 0; i < 2; i++) {
+            if (actividades.get(i).getCategoria()==perfil3)
+                btnActividades[i] = new JButton(actividades.get(i).getNombre());
+                btnActividades[i].setPreferredSize(new Dimension(200, 100));
+                btnActividades[i].setBorder(new RoundedBorder(50));
+                activi.add(btnActividades[i]);
+                btnActividades[i].setFont(font1);
+        }
+
 
         scrollPane.setViewportView(activi);
         this.add(scrollPane);
@@ -112,6 +134,13 @@ public class PanelActividades extends JFrame{
        session = cliente.sentMessage(context, session);
        ArrayList<Actividad> actividades= (ArrayList<Actividad>) session.get("Actividades");
         return actividades;
+    }
+
+    public String[] getPerfil()
+    {
+        String perfil = VentanaCuestionario.getPerfil();
+        String[] perfilUsuario = perfil.split(";");
+        return perfilUsuario;
     }
 }
 

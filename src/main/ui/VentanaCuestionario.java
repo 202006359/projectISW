@@ -5,6 +5,7 @@ import main.client.Client;
 import java.awt.event.*;
 import java.util.HashMap;
 import javax.swing.*;
+import main.ui.*;
 
 public class VentanaCuestionario extends JFrame implements ActionListener {
 
@@ -15,7 +16,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     int cuenta;
     int vecesA, vecesB, vecesC, vecesD;
     String usuario;
-    String perfil = "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
+    static String perfil = "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
     public static void main(String s[])
     {
         String usuario = "";
@@ -191,6 +192,11 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         session.put("perfil", perfil);
         cliente.sentMessage(context,session);
 
+    }
+
+    public static String getPerfil()
+    {
+        return perfil;
     }
 
 }
