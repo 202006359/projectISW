@@ -13,5 +13,8 @@ public class CustomerControler {
 
 	public void completeAccount(String usuario, String perfil){CustomerDAO.completarCuenta(usuario, perfil);}
 
+	public Customer getPerfil(String usuario) {return CustomerDAO.getPerfil(usuario);}
+
+
 	//public ArrayList<Actividad> getActividades(){CustomerDAO.getActividades(); return CustomerDAO.getActividades();}
 }

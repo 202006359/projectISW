@@ -7,6 +7,8 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
+
+import main.domain.Customer;
 import main.ui.VentanaCuestionario;
 
 
@@ -54,7 +56,7 @@ public class VentanaActividades extends JFrame{
 
         //OBTENGO PERFIL USUARIO, sus tres categorias favoritas segun el cuestionario rellenado
 
-        String perfil =  VentanaCuestionario.getPerfil();
+        String perfil =  ObtenPerfil();
         String[] perfilUsuario = perfil.split(";");
         String perfil1 = perfilUsuario[0];
         String perfil2 = perfilUsuario[1];
@@ -176,6 +178,15 @@ public class VentanaActividades extends JFrame{
         return actividades;
     }
 
+    public String ObtenPerfil() {
+        Client cliente = new Client();
+        HashMap<String, Object> session = new HashMap<>();
+        String context = "/getPerfil";
+        session.put("usuario",usuario);
+        session=cliente.sentMessage(context,session);
+        Customer cu=(Customer)session.get("Customer");
+        return cu.getPerfil();
+    }
 }
 
 

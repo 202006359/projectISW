@@ -8,7 +8,6 @@ public class Actividad implements Serializable{
     private String categoria;
 
 
-
     public Actividad(String nombre, String categoria) {
         this.nombre = nombre;
         this.categoria = categoria;

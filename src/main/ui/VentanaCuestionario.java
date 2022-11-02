@@ -1,4 +1,6 @@
 package main.ui;
+import main.client.Client;
+
 import java.awt.event.*;
 import java.util.HashMap;
 import javax.swing.*;
@@ -14,7 +16,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     int cuenta;
     int vecesA, vecesB, vecesC, vecesD;
     String usuario;
-    String perfil = "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
+    String perfil; //= "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
 
     public VentanaCuestionario(String usuario) {
         super("SMART PLAN");
@@ -47,6 +49,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         labelTexto[3].setBounds(80, 170, 600, 20);
         btnSiguiente.setBounds(100, 240, 200, 30);
         preguntas();
+        completarCuenta();
         exit();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -180,8 +183,8 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             }
         }
 
-
     }
+
 
     public void completarCuenta() {
         Client cliente=new Client();
@@ -198,6 +201,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     private void exit(){
         this.dispose();
         this.setVisible(false);
+        new VentanaActividades();
     }
 
 

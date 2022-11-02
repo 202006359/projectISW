@@ -42,22 +42,17 @@ public class CustomerDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-
-	//public static ArrayList<Actividad> getActividades() {
-	//	ArrayList<Actividad> actividades = new ArrayList<>();
-	//	Connection con=ConnectionDAO.getInstance().getConnection();
-	//	Actividad act=null;
-	//	try (PreparedStatement pst = con.prepareStatement("SELECT * FROM actividades");
-	//		 ResultSet rs = pst.executeQuery()) {
-//
-//			while (rs.next()) {
-//				act= new Actividad(rs.getString(1),rs.getString(2));
-//				actividades.add(act);
-//			}
-//
-//		} catch (SQLException ex) {
-//			System.out.println(ex.getMessage());
-//		}
-//		return actividades;
-//		//ME DEVUELVE UN ARRAY CON TODAS LAS ACTIVIDADES EN LA BASE DE DATOS;
+	public static Customer getPerfil(String usuario) {
+		Connection con=ConnectionDAO.getInstance().getConnection();
+		Customer cu=null;
+		try (PreparedStatement pst = con.prepareStatement("SELECT perfil FROM login WHERE usuario= '"+usuario+"'");
+			 ResultSet rs = pst.executeQuery()) {
+			while (rs.next()) {
+				cu= new Customer(rs.getString(1),rs.getString(2),rs.getString(3));
+			}
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return cu;
 	}
+}

@@ -88,6 +88,17 @@ public class SocketServer extends Thread {
 					objectOutputStream.writeObject(mensajeOut);
 					break;
 
+				case "/getPerfil":
+					usuario= (String) session.get("usuario");
+					customerControler=new CustomerControler();
+					cu=customerControler.getPerfil(usuario);
+					System.out.println("usuario:"+cu.getUsuario());
+					mensajeOut.setContext("/getPerfilResponse");
+					session.put("Customer",cu);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+
 
 				default:
 		    		System.out.println("\nParámetro no encontrado");
