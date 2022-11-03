@@ -1,7 +1,7 @@
-package main.ui;
+package ui;
 
-import main.client.Client;
-import main.domain.Customer;
+import client.Client;
+import domain.Customer;
 
 import javax.swing.*;
 import java.awt.*;

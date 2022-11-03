@@ -1,6 +1,5 @@
-package main.dao;
-import main.domain.Actividad;
-import main.domain.Customer;
+package dao;
+import domain.Actividad;
 
 import java.util.ArrayList;
 import java.sql.Connection;

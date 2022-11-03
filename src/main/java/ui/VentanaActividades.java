@@ -1,6 +1,6 @@
-package main.ui;
-import main.client.Client;
-import main.domain.Actividad;
+package ui;
+import client.Client;
+import domain.Actividad;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
-import main.domain.Customer;
-import main.ui.VentanaCuestionario;
+import domain.Customer;
 
 
 public class VentanaActividades extends JFrame{

@@ -1,11 +1,11 @@
-package main.server;
+package server;
 
-import main.configuration.PropertiesISW;
-import main.controler.ActivitiesControler;
-import main.controler.CustomerControler;
-import main.domain.Actividad;
-import main.domain.Customer;
-import main.message.Message;
+import configuration.PropertiesISW;
+import controler.ActivitiesControler;
+import controler.CustomerControler;
+import domain.Actividad;
+import domain.Customer;
+import message.Message;
 
 import java.io.*;
 import java.net.ServerSocket;

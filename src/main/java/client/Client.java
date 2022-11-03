@@ -1,4 +1,4 @@
-package main.client;
+package client;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,15 +7,14 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 
 import org.apache.log4j.Logger;
 
-import main.configuration.PropertiesISW;
-import main.domain.*;
-import main.message.Message;
+import configuration.PropertiesISW;
+import domain.*;
+import message.Message;
 
 public class Client {
 	private String host;
