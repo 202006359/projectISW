@@ -119,17 +119,17 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         }
         if (cuenta == 8) {
             label.setText("PREGUNTA 9: ¿Qué te gustaría hacer si te jubilaras mañana? (te sobra el dinero)");
-            labelTexto[0].setText("");//juerguista y aventurero
-            labelTexto[1].setText("");//chill
-            labelTexto[2].setText("");//comidista
-            labelTexto[3].setText("");//rafa nadal
+            labelTexto[0].setText("Viajar por todo el mundo.");//juerguista y aventurero
+            labelTexto[1].setText("Dedicarme a los demás, ya que tengo mucho tiempo libre.");//chill
+            labelTexto[2].setText("Me apuntaría a mogollón de cursos de cocina y aprender de ese mundillo.");//comidista
+            labelTexto[3].setText("Trataria de seguir haciendo ejercicio para mantenerme en forma y envejecer mejor.");//rafa nadal
         }
         if (cuenta == 9) {
             label.setText("PREGUNTA 10: ¿Cuál de estas culturas admiras más?");
-            labelTexto[0].setText("");//juerguista y aventurero
-            labelTexto[1].setText("");//chill
-            labelTexto[2].setText("");//comidista
-            labelTexto[3].setText("");//rafa nadal
+            labelTexto[0].setText("Estadounidense.");//juerguista y aventurero
+            labelTexto[1].setText("Japonesa.");//chill
+            labelTexto[2].setText("Española.");//comidista
+            labelTexto[3].setText("Africana.");//rafa nadal
         }
 
         label.setBounds(30, 40, 450, 20);
