@@ -91,10 +91,10 @@ public class SocketServer extends Thread {
 				case "/getPerfil":
 					usuario= (String) session.get("usuario");
 					customerControler=new CustomerControler();
-					cu=customerControler.getPerfil(usuario);
-					System.out.println("usuario:"+cu.getUsuario());
+					Customer c = customerControler.getPer(usuario);
+					System.out.println("usuario:"+c.getUsuario());
 					mensajeOut.setContext("/getPerfilResponse");
-					session.put("Customer",cu);
+					session.put("Customer",c);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;
