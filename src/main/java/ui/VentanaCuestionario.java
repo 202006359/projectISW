@@ -8,7 +8,6 @@ import javax.swing.*;
 /**
  * Clase para visualizar en pantalla la ventana del Cuestionario incial
  */
-
 public class VentanaCuestionario extends JFrame implements ActionListener {
 
     JLabel label;
@@ -20,6 +19,10 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     int vecesA, vecesB, vecesC, vecesD; //contador de veces de cada pregunta
     String usuario;
     String perfil = ""; //Variable de salida para asociar el perfil a 3 categorias de la base de datos
+
+    public static void main(String[] args) {
+        new VentanaCuestionario(" ");
+    }
 
     public VentanaCuestionario(String usuario) {
         super("SMART PLAN");
@@ -52,16 +55,15 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         labelTexto[3].setBounds(80, 170, 600, 20);
         btnSiguiente.setBounds(100, 240, 200, 30);
         preguntas();
-        exit();
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocation(250, 100);
         setVisible(true);
         setSize(600, 350);
+
+
     }
 
-    //Metodo mostrar preguntas con sus respuestas y botones para respuesta y boton siguiente
     public void preguntas() {
         radioButton[4].setSelected(true);
         if (cuenta == 0) {
@@ -146,72 +148,73 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == radioButton[0]) {
-            vecesA++; //cuenta numero de veces opcion A
+            vecesA++;
         }
         if (e.getSource() == radioButton[1]) {
-            vecesB++; //cuenta numero de veces opcion B
+            vecesB++;
         }
         if (e.getSource() == radioButton[2]) {
-            vecesC++; //cuenta numero de veces opcion C
+            vecesC++;
         }
         if (e.getSource() == radioButton[3]) {
-            vecesD++; //cuenta numero de veces opcion D
+            vecesD++;
         }
         if (e.getSource() == btnSiguiente) {
             cuenta++;
             preguntas();
             if (cuenta == 10) {
                 btnSiguiente.setEnabled(false);
-                switch(vecesA){
-                    case 9:
-                        perfil = "Ocio Cultural;Aventuras;Gastronomia";
-                        break;
-                    case 8:
-                        perfil = "Ocio Cultural;Aventuras;Espiritual";
-                        break;
-                    case 7:
-                        perfil = "Aventuras;Ocio Cultural;Gastronomia";
-                        break;
-                    case 6:
-                        perfil = "Aventuras;Gastronomia;Espiritual";
-                        break;
-                    case 5:
-                        perfil = "Ocio Cultural;Deportes;Gastronomia";
-                        break;
-                    case 4:
-                        perfil = "Gastronomia;Espiritual;Aventuras";
-                        break;
-                    case 3:
-                        perfil = "Gastronomia;Ocio Nocturno;Deportes";
-                        break;
-                    case 2:
-                        perfil = "Aventuras;Ocio Cultural;Deportes";
-                        break;
-                    case 1:
-                        perfil = "Ocio Nocturno;Espiritual;Gastronomia";
-                        break;
-                    default:
-                        perfil = "Aventuras;Espiritual;Ocio Cultural";
-
-                }
+                if(vecesA == 9)
+                    perfil = "Ocio Cultural;Aventuras;Gastronomia";
+                if(vecesA == 8)
+                    perfil = "Ocio Cultural;Aventuras;Espiritual";
+                if(vecesA == 7)
+                    perfil = "Aventuras;Ocio Cultural;Gastronomia";
+                if(vecesA == 6)
+                    perfil = "Aventuras;Gastronomia;Espiritual";
+                if(vecesA == 5)
+                    perfil = "Ocio Cultural;Deportes;Gastronomia";
+                if(vecesA == 4)
+                    perfil = "Gastronomia;Espiritual;Aventuras";
+                if(vecesA == 3)
+                    perfil = "Gastronomia;Ocio Nocturno;Deportes";
+                if(vecesA == 2)
+                    perfil = "Aventuras;Ocio Cultural;Deportes";
+                if(vecesA == 1)
+                    perfil = "Ocio Nocturno;Espiritual;Gastronomia";
+                if(vecesA == 0)
+                    perfil = "Aventuras;Espiritual;Ocio Cultural";
+                completarCuenta();
+                panelactivi(usuario);
             }
         }
+
+
     }
 
     public void completarCuenta() {
-            Client cliente=new Client();
-            HashMap<String,Object> session=new HashMap<>();
-            String context="/completeAccount";
-            session.put("usuario",usuario);
-            session.put("contrasena",""); //No necesito la contraseña en esta versión
-            session.put("perfil", perfil);
-            cliente.sentMessage(context,session);
+        Client cliente=new Client();
+        HashMap<String,Object> session=new HashMap<>();
+        String context="/completeAccount";
+        session.put("usuario",usuario);
+        session.put("contrasena",""); //No necesito la contraseña en esta versión
+        session.put("perfil", perfil);
+        cliente.sentMessage(context,session);
+
+    }
+
+    public void panelactivi(String usuario){ //Me manda a la ventana del cuestionario
+        this.exit();
+        new VentanaActividades(usuario);
     }
 
     private void exit(){
         this.dispose();
         this.setVisible(false);
+
+
     }
+
 
 }
 
