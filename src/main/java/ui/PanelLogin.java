@@ -1,14 +1,15 @@
-package main.ui;
+package ui;
 
 import java.awt.*;
 import javax.swing.*;
+
 /**
- * Clase para crear el panel que se implementará en la ventana de SignIn
+ * Clase para crear el panel que se implementará en la ventana de Login
  */
-public class PanelSignin extends JPanel{
+public class PanelLogin extends JPanel{
 
     private Dimension dimension = new Dimension(VentanaLogin.WINDOW_WIDTH, VentanaLogin.WINDOW_HEIGTH);
-    public PanelSignin(){
+    public PanelLogin(){
         this.init();
     }
 
@@ -22,8 +23,7 @@ public class PanelSignin extends JPanel{
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.BLACK);
-        g.setFont(new Font("Calibri",Font.BOLD,22));
-        g.drawString("Crea una cuenta de Smart Plan", 60,40);
+        g.setFont(new Font("Rockwell",Font.BOLD,48));
+        g.drawString("INICIO SESIÓN", 60,50);
     }
 }
-

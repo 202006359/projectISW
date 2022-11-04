@@ -1,10 +1,10 @@
-package main.dao;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import main.configuration.PropertiesISW;
+import configuration.PropertiesISW;
 
 public class ConnectionDAO {
 	private static ConnectionDAO connectionDAO;

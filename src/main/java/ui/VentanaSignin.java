@@ -1,6 +1,6 @@
-package main.ui;
+package ui;
 
-import main.client.Client;
+import client.Client;
 
 import javax.swing.*;
 import java.awt.*;

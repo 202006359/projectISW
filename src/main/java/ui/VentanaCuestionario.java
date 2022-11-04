@@ -1,5 +1,5 @@
-package main.ui;
-import main.client.Client;
+package ui;
+import client.Client;
 
 import java.awt.event.*;
 import java.util.HashMap;

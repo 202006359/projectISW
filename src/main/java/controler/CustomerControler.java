@@ -1,9 +1,7 @@
-package main.controler;
+package controler;
 
-import java.util.ArrayList;
-
-import main.dao.CustomerDAO;
-import main.domain.*;
+import dao.CustomerDAO;
+import domain.*;
 
 public class CustomerControler {
 

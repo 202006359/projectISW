@@ -1,11 +1,8 @@
-package main.controler;
+package controler;
 
-import main.dao.ActivityDAO;
-import main.dao.CustomerDAO;
-import main.domain.Actividad;
-import main.domain.Customer;
-import main.dao.CustomerDAO;
-import main.domain.*;
+import dao.ActivityDAO;
+import domain.Actividad;
+
 import java.util.ArrayList;
 
 public class ActivitiesControler {

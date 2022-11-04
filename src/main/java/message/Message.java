@@ -1,10 +1,8 @@
-package main.message;
+package message;
 
 import java.io.Serializable;
-import java.lang.reflect.AnnotatedArrayType;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Message implements Serializable {
 	/**

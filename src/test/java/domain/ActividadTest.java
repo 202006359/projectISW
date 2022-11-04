@@ -1,10 +1,8 @@
-package test.java;
+package domain;
 
-import main.domain.Actividad;
+import junit.framework.TestCase;
 
-import static org.junit.Assert.assertEquals;
-
-public class ActividadTest {
+public class ActividadTest extends TestCase {
     /**
      * Clase para verificar el correcto funcionamiento de los metodos de la clase Actividad
      */
@@ -21,6 +19,4 @@ public class ActividadTest {
     public void getCategoria() { //Verifico la categoria del plan
         assertEquals("Ocio Nocturno", actividad.getCategoria());
     }
-
-
 }
