@@ -162,6 +162,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             preguntas();
             if (cuenta == 10) {
                 btnSiguiente.setEnabled(false);
+                completarCuenta();
                 switch(vecesA){
                     case 9:
                         perfil = "Ocio Cultural;Aventuras;Gastronomia";
