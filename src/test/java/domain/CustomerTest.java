@@ -2,7 +2,9 @@ package domain;
 
 import junit.framework.TestCase;
 
-public class CustomerTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+public class CustomerTest {
 
     /**
      * Clase para verificar el correcto funcionamiento de los metodos de la clase Customer
