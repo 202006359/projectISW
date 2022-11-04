@@ -163,31 +163,42 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
             preguntas();
             if (cuenta == 10) {
                 btnSiguiente.setEnabled(false);
-                if(vecesA == 9)
-                    perfil = "Ocio Cultural;Aventuras;Gastronomia";
-                if(vecesA == 8)
-                    perfil = "Ocio Cultural;Aventuras;Espiritual";
-                if(vecesA == 7)
-                    perfil = "Aventuras;Ocio Cultural;Gastronomia";
-                if(vecesA == 6)
-                    perfil = "Aventuras;Gastronomia;Espiritual";
-                if(vecesA == 5)
-                    perfil = "Ocio Cultural;Deportes;Gastronomia";
-                if(vecesA == 4)
-                    perfil = "Gastronomia;Espiritual;Aventuras";
-                if(vecesA == 3)
-                    perfil = "Gastronomia;Ocio Nocturno;Deportes";
-                if(vecesA == 2)
-                    perfil = "Aventuras;Ocio Cultural;Deportes";
-                if(vecesA == 1)
-                    perfil = "Ocio Nocturno;Espiritual;Gastronomia";
-                if(vecesA == 0)
-                    perfil = "Aventuras;Espiritual;Ocio Cultural";
+                switch(vecesA){
+                    case 9:
+                        perfil = "Ocio Cultural;Aventuras;Gastronomia";
+                        break;
+                    case 8:
+                        perfil = "Ocio Cultural;Aventuras;Espiritual";
+                        break;
+                    case 7:
+                        perfil = "Aventuras;Ocio Cultural;Gastronomia";
+                        break;
+                    case 6:
+                        perfil = "Aventuras;Gastronomia;Espiritual";
+                        break;
+                    case 5:
+                        perfil = "Ocio Cultural;Deportes;Gastronomia";
+                        break;
+                    case 4:
+                        perfil = "Gastronomia;Espiritual;Aventuras";
+                        break;
+                    case 3:
+                        perfil = "Gastronomia;Ocio Nocturno;Deportes";
+                        break;
+                    case 2:
+                        perfil = "Aventuras;Ocio Cultural;Deportes";
+                        break;
+                    case 1:
+                        perfil = "Ocio Nocturno;Espiritual;Gastronomia";
+                        break;
+                    default:
+                        perfil = "Aventuras;Espiritual;Ocio Cultural";
+
+                }
                 completarCuenta();
-                panelactivi(usuario);
+                ventanaActivi(usuario);
             }
         }
-
 
     }
 
@@ -202,7 +213,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
 
     }
 
-    public void panelactivi(String usuario){ //Me manda a la ventana del cuestionario
+    public void ventanaActivi(String usuario){ //Me manda a la ventana del cuestionario
         this.exit();
         new VentanaActividades(usuario);
     }
