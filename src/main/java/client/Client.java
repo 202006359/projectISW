@@ -68,9 +68,16 @@ public class Client {
 				session = mensajeVuelta.getSession();
 				break;
 
+
 			default:
 				Logger.getRootLogger().info("Option not found");
 				System.out.println("\nError a la vuelta");
+				break;
+
+			case "/getPerfilResponse":
+				session=mensajeVuelta.getSession();
+				customer =(Customer) (session.get("Customer"));
+				System.out.println("He leído el usuario: "+customer.getUsuario()+" con perfil: "+customer.getPerfil());
 				break;
 		
 		}

@@ -58,6 +58,7 @@ public class VentanaSignin extends JFrame {
                 JOptionPane.showMessageDialog(VentanaSignin.this,"Registro completado");
                 cuestionario(usuario); //Me manda a rellenar el cuestionario que usaremos para obtener las preferencias de los planes del usuario
 
+
             }else if(!checkContrasena(contrasena)){ //Verifico que la contraseña cumpla todos los requisitos
                 JOptionPane.showMessageDialog(VentanaSignin.this,"La contraseña no es alfanumérica");
                 txtPassword.setText("");
@@ -101,7 +102,6 @@ public class VentanaSignin extends JFrame {
         this.exit();
         new VentanaCuestionario(usuario);
     }
-
 
 
     private void exit(){

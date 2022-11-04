@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import domain.*;
+import ui.VentanaActividades;
 
 public class CustomerDAO {
 
@@ -42,17 +43,29 @@ public class CustomerDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
-	public static Customer getPerfil(String usuario) {
+	public static Customer getPerfilUsuario(String usuario) {
 		Connection con=ConnectionDAO.getInstance().getConnection();
-		Customer cu=null;
-		try (PreparedStatement pst = con.prepareStatement("SELECT perfil FROM login WHERE usuario= '"+usuario+"'");
+		Customer c=null;
+		//Customer cu;
+		System.out.println("La sentencia es> "+"SELECT usuario, contrasena, perfil FROM login WHERE usuario= '"+usuario+"'");
+		try (PreparedStatement pst = con.prepareStatement("SELECT usuario, contrasena, perfil FROM login WHERE usuario= '"+usuario+"'");
 			 ResultSet rs = pst.executeQuery()) {
 			while (rs.next()) {
-				cu= new Customer(rs.getString(1),rs.getString(2),rs.getString(3));
+				c= new Customer(rs.getString(1),rs.getString(2),rs.getString(3));
 			}
 		} catch (SQLException ex) {
 			System.out.println(ex.getMessage());
 		}
-		return cu;
+		return c;
 	}
+
+
+	public static void main(String[] args) {
+		CustomerDAO cu = new CustomerDAO();
+		Customer c = cu.getPerfilUsuario("beatrizorbe");
+		System.out.println(c.getPerfil());
+
+
+	}
+
 }

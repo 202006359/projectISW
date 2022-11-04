@@ -22,11 +22,12 @@ public class VentanaActividades extends JFrame{
 
 
     public static void main(String[] args) {
-        VentanaActividades game = new VentanaActividades();
+        VentanaActividades game = new VentanaActividades("beatrizorbe");
     }
 
-    public VentanaActividades() {
+    public VentanaActividades(String usuario) {
 
+        this.usuario=usuario;
 
         this.setSize(700, 700);
         ArrayList<Actividad> actividades = ObtenActividades();
@@ -54,8 +55,9 @@ public class VentanaActividades extends JFrame{
 
 
         //OBTENGO PERFIL USUARIO, sus tres categorias favoritas segun el cuestionario rellenado
-
         String perfil =  ObtenPerfil();
+      // String perfil =  "Aventura;Gastronomia;Deportes";
+
         String[] perfilUsuario = perfil.split(";");
         String perfil1 = perfilUsuario[0];
         String perfil2 = perfilUsuario[1];
@@ -177,15 +179,18 @@ public class VentanaActividades extends JFrame{
         return actividades;
     }
 
-    public String ObtenPerfil() {
+    public String ObtenPerfil()  {
         Client cliente = new Client();
         HashMap<String, Object> session = new HashMap<>();
         String context = "/getPerfil";
-        session.put("usuario",usuario);
+        session.put("usuario",this.usuario);
         session=cliente.sentMessage(context,session);
         Customer cu=(Customer)session.get("Customer");
         return cu.getPerfil();
     }
+//COMO AQUI
+
+
 }
 
 

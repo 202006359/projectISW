@@ -108,7 +108,7 @@ public class VentanaLogin extends JFrame {
     public void abrirPrincipal() //ME voy a la ventana principal de planes
     {
         this.exit();
-        new VentanaActividades();
+        new VentanaActividades(usuario);
     }
 
 }
