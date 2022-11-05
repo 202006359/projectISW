@@ -222,7 +222,6 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
         this.dispose();
         this.setVisible(false);
 
-
     }
 
 

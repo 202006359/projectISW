@@ -34,6 +34,7 @@ public class CustomerDAO {
 		}
 	}
 
+	//ESTE METODO ACTUALIZA LA BASE DE DATOS, ASOCIANDO UNA CATEGORIA A CADA USUARIO TRAS LA REALIZACION DEL CUESTIONARIO
 	public static void completarCuenta(String usuario, String perfil) { //Me añade el tipo de perfil al usuario
 		Connection con=ConnectionDAO.getInstance().getConnection();
 
@@ -43,6 +44,8 @@ public class CustomerDAO {
 			System.out.println(ex.getMessage());
 		}
 	}
+
+	//ESTE METODO OBTIENE DE LA BASE DE DATOS LA CATEGORIA ASOCIADA AL USUARIO (perfil) QUE SE HA GUARDADO EL METODO ANTERIOR.
 	public static Customer getPerfilUsuario(String usuario) {
 		Connection con=ConnectionDAO.getInstance().getConnection();
 		Customer c=null;

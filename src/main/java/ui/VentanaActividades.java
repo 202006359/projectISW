@@ -54,9 +54,8 @@ public class VentanaActividades extends JFrame{
         principal.add(btnInfoUsuario, BorderLayout.NORTH);
 
 
-        //OBTENGO PERFIL USUARIO, sus tres categorias favoritas segun el cuestionario rellenado
+        //OBTENGO PERFIL USUARIO, sus tres categorias favoritas segun el cuestionario rellenado y lo separo para poder trabajr con las categorias.
         String perfil =  ObtenPerfil();
-      // String perfil =  "Aventura;Gastronomia;Deportes";
 
         String[] perfilUsuario = perfil.split(";");
         String perfil1 = perfilUsuario[0];
@@ -81,6 +80,7 @@ public class VentanaActividades extends JFrame{
         scrollPane.add(activi);
 
         //de su primera favorita categoria ponemos 9 actividades
+        //recorremos la base de datos buscando aquellas actividades que correspondan con la categoria buscada
         int j = 0;
         for (int i = 0; i < actividades.toArray().length; i++) {
             System.out.println(actividades.get(i).getCategoria());
@@ -179,6 +179,7 @@ public class VentanaActividades extends JFrame{
         return actividades;
     }
 
+    //Obtengo perfil del usuario (tres categorias de preferencia)
     public String ObtenPerfil()  {
         Client cliente = new Client();
         HashMap<String, Object> session = new HashMap<>();
@@ -188,8 +189,6 @@ public class VentanaActividades extends JFrame{
         Customer cu=(Customer)session.get("Customer");
         return cu.getPerfil();
     }
-//COMO AQUI
-
 
 }
 

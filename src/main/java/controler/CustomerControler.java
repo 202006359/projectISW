@@ -13,6 +13,4 @@ public class CustomerControler {
 
 	public Customer getPer(String usuario) {return CustomerDAO.getPerfilUsuario(usuario);}
 
-
-	//public ArrayList<Actividad> getActividades(){CustomerDAO.getActividades(); return CustomerDAO.getActividades();}
 }
