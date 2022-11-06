@@ -4,6 +4,9 @@ import client.Client;
 import java.awt.event.*;
 import java.util.HashMap;
 import javax.swing.*;
+/**
+ * Clase para visualizar en pantalla la ventana del Cuestionario
+ */
 
 /**
  * Clase para visualizar en pantalla la ventana del Cuestionario incial
