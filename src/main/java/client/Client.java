@@ -73,7 +73,6 @@ public class Client {
 				Logger.getRootLogger().info("Option not found");
 				System.out.println("\nError a la vuelta");
 				break;
-
 			case "/getPerfilResponse":
 				session=mensajeVuelta.getSession();
 				customer =(Customer) (session.get("Customer"));

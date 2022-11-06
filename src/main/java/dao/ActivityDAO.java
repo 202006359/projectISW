@@ -7,7 +7,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ *  Esta clase obtiene las actividades de la base de datos
+ */
+
 public class ActivityDAO {
+
 
    /*public static void main(String[] args) {
 
@@ -18,7 +23,7 @@ public class ActivityDAO {
 
     }*/
 
-	//Obtengo un arrayList con cada actividad, cada una de ellas asociada a una categoria
+	//Obtengo un arrayList con cada actividad, cada una de ellas asociada a una categoria (columna 4 en la base de datos).
     public static ArrayList<Actividad> getActividades() {
     	ArrayList<Actividad> actividades = new ArrayList<>();
     	Connection con=ConnectionDAO.getInstance().getConnection();

@@ -3,6 +3,9 @@ package controler;
 import dao.CustomerDAO;
 import domain.*;
 
+/**
+ * Esta clase gestiona la informacion de los usuarios guardada en la base de datos.
+ */
 public class CustomerControler {
 
 	public Customer getPassword(String usuario) {return CustomerDAO.getContrasena(usuario);}
@@ -13,6 +16,4 @@ public class CustomerControler {
 
 	public Customer getPer(String usuario) {return CustomerDAO.getPerfilUsuario(usuario);}
 
-
-	//public ArrayList<Actividad> getActividades(){CustomerDAO.getActividades(); return CustomerDAO.getActividades();}
 }
