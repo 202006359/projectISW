@@ -1,0 +1,418 @@
+Index: .idea/dictionaries/ivan.xml
+===================================================================
+diff --git a/.idea/dictionaries/ivan.xml b/.idea/dictionaries/ivan.xml
+deleted file mode 100644
+--- a/.idea/dictionaries/ivan.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,3 +0,0 @@
+-<component name="ProjectDictionaryState">
+-  <dictionary name="ivan" />
+-</component>
+\ No newline at end of file
+Index: .idea/artifacts/cliente_jar.xml
+===================================================================
+diff --git a/.idea/artifacts/cliente_jar.xml b/.idea/artifacts/cliente_jar.xml
+deleted file mode 100644
+--- a/.idea/artifacts/cliente_jar.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,14 +0,0 @@
+-<component name="ArtifactManager">
+-  <artifact type="jar" name="cliente:jar">
+-    <output-path>$PROJECT_DIR$/out/artifacts/cliente_jar</output-path>
+-    <root id="archive" name="projectISW19.jar">
+-      <element id="directory" name="META-INF">
+-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+-      </element>
+-      <element id="module-output" name="projectISW19" />
+-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar" path-in-jar="/" />
+-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar" path-in-jar="/" />
+-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar" path-in-jar="/" />
+-    </root>
+-  </artifact>
+-</component>
+\ No newline at end of file
+Index: .idea/artifacts/projectISW19_jar.xml
+===================================================================
+diff --git a/.idea/artifacts/projectISW19_jar.xml b/.idea/artifacts/projectISW19_jar.xml
+deleted file mode 100644
+--- a/.idea/artifacts/projectISW19_jar.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,14 +0,0 @@
+-<component name="ArtifactManager">
+-  <artifact type="jar" name="projectISW19:jar">
+-    <output-path>$PROJECT_DIR$/out/artifacts/projectISW19_jar</output-path>
+-    <root id="archive" name="projectISW19.jar">
+-      <element id="directory" name="META-INF">
+-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+-      </element>
+-      <element id="module-output" name="projectISW19" />
+-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar" path-in-jar="/" />
+-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar" path-in-jar="/" />
+-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar" path-in-jar="/" />
+-    </root>
+-  </artifact>
+-</component>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+deleted file mode 100644
+--- a/.idea/uiDesigner.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,124 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Palette2">
+-    <group name="Swing">
+-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+-      </item>
+-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+-        <initial-values>
+-          <property name="text" value="Button" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="RadioButton" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="CheckBox" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="Label" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+-          <preferred-size width="-1" height="20" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+-      </item>
+-    </group>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/artifacts/cliente.xml
+===================================================================
+diff --git a/.idea/artifacts/cliente.xml b/.idea/artifacts/cliente.xml
+deleted file mode 100644
+--- a/.idea/artifacts/cliente.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,6 +0,0 @@
+-<component name="ArtifactManager">
+-  <artifact type="jar" name="cliente">
+-    <output-path>$PROJECT_DIR$/out/artifacts/cliente</output-path>
+-    <root id="archive" name="cliente.jar" />
+-  </artifact>
+-</component>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/Project_Default.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,10 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+-      <option name="processCode" value="true" />
+-      <option name="processLiterals" value="true" />
+-      <option name="processComments" value="true" />
+-    </inspection_tool>
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ /dev/null	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: src/test/java/domain/CustomerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package domain;\r\n\r\nimport junit.framework.TestCase;\r\n\r\npublic class CustomerTest extends TestCase {\r\n\r\n    /**\r\n     * Clase para verificar el correcto funcionamiento de los metodos de la clase Customer\r\n     */\r\n    private Customer customer;\r\n    @org.junit.Before\r\n    public void setUp() throws Exception { //Me creo mi Customer\r\n        customer=new Customer(\"Ivan\", \"IvanPass\", \"Aventurero\");\r\n    }\r\n    @org.junit.Test\r\n    public void getUsuario() { //Verifico usuario\r\n        assertEquals(\"Ivan\", customer.getUsuario());\r\n    }\r\n    @org.junit.Test\r\n    public void getContrasena() { //Verifico contrasena\r\n        assertEquals(\"IvanPass\", customer.getContrasena());\r\n    }\r\n    @org.junit.Test\r\n    public void getPerfil() { //Verifico el perfil\r\n        assertEquals(\"Aventurero\", customer.getPerfil());\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/domain/CustomerTest.java b/src/test/java/domain/CustomerTest.java
+--- a/src/test/java/domain/CustomerTest.java	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ b/src/test/java/domain/CustomerTest.java	(date 1667573837611)
+@@ -2,7 +2,9 @@
+ 
+ import junit.framework.TestCase;
+ 
+-public class CustomerTest extends TestCase {
++import static org.junit.Assert.assertEquals;
++
++public class CustomerTest {
+ 
+     /**
+      * Clase para verificar el correcto funcionamiento de los metodos de la clase Customer
+Index: src/test/java/domain/ActividadTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package domain;\r\n\r\nimport junit.framework.TestCase;\r\n\r\npublic class ActividadTest extends TestCase {\r\n    /**\r\n     * Clase para verificar el correcto funcionamiento de los metodos de la clase Actividad\r\n     */\r\n    private Actividad actividad;\r\n    @org.junit.Before\r\n    public void setUp() throws Exception { //Me creo mi Customer\r\n        actividad = new Actividad(\"Discoteca Liberty\", \"Ocio Nocturno\");\r\n    }\r\n    @org.junit.Test\r\n    public void getNombre() { //Verifico usuario\r\n        assertEquals(\"Discoteca Liberty\", actividad.getNombre());\r\n    } //Verifico el nombre del plan\r\n    @org.junit.Test\r\n    public void getCategoria() { //Verifico la categoria del plan\r\n        assertEquals(\"Ocio Nocturno\", actividad.getCategoria());\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/domain/ActividadTest.java b/src/test/java/domain/ActividadTest.java
+--- a/src/test/java/domain/ActividadTest.java	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ b/src/test/java/domain/ActividadTest.java	(date 1667573837610)
+@@ -1,20 +1,20 @@
+ package domain;
+ 
+-import junit.framework.TestCase;
++import static org.junit.Assert.assertEquals;
+ 
+-public class ActividadTest extends TestCase {
++public class ActividadTest {
+     /**
+      * Clase para verificar el correcto funcionamiento de los metodos de la clase Actividad
+      */
+     private Actividad actividad;
+     @org.junit.Before
+-    public void setUp() throws Exception { //Me creo mi Customer
++    public void setUp() throws Exception { //Me creo mi Actividad
+         actividad = new Actividad("Discoteca Liberty", "Ocio Nocturno");
+     }
+     @org.junit.Test
+-    public void getNombre() { //Verifico usuario
++    public void getNombre() { ////Verifico el nombre del plan
+         assertEquals("Discoteca Liberty", actividad.getNombre());
+-    } //Verifico el nombre del plan
++    }
+     @org.junit.Test
+     public void getCategoria() { //Verifico la categoria del plan
+         assertEquals("Ocio Nocturno", actividad.getCategoria());
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ b/.idea/vcs.xml	(date 1667583266662)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n  <modelVersion>4.0.0</modelVersion>\r\n  <groupId>org.example</groupId>\r\n  <artifactId>Smartplan</artifactId>\r\n  <version>0.0.1-SNAPSHOT</version>\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-compiler-plugin</artifactId>\r\n                <version>3.8.1</version>\r\n                <configuration>\r\n                    <release>11</release>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.codehaus.mojo</groupId>\r\n                <artifactId>exec-maven-plugin</artifactId>\r\n                <version>1.6.0</version>\r\n                <configuration>\r\n                    <mainClass>main.server.SocketServer</mainClass>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n    <name>ISW2019</name>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.postgresql</groupId>\r\n            <artifactId>postgresql</artifactId>\r\n            <version>42.5.0</version>\r\n        </dependency>\r\n        <dependency>\r\n    \t\t<groupId>log4j</groupId>\r\n    \t\t<artifactId>log4j</artifactId>\r\n    \t\t<version>1.2.17</version>\r\n\t\t</dependency>\r\n        <dependency>\r\n            <groupId>junit</groupId>\r\n            <artifactId>junit</artifactId>\r\n            <version>4.13.2</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.testng</groupId>\r\n            <artifactId>testng</artifactId>\r\n            <version>7.6.1</version>\r\n            <scope>compile</scope>\r\n        </dependency>\r\n\r\n    </dependencies>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ b/pom.xml	(date 1667573837610)
+@@ -3,7 +3,13 @@
+   <groupId>org.example</groupId>
+   <artifactId>Smartplan</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
++    <properties>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
++    </properties>
++
+     <build>
++
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+@@ -20,6 +26,23 @@
+                 <configuration>
+                     <mainClass>main.server.SocketServer</mainClass>
+                 </configuration>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-surefire-plugin</artifactId>
++                <version>2.21.0</version>
++                <dependencies>
++                    <dependency>
++                        <groupId>org.junit.platform</groupId>
++                        <artifactId>junit-platform-surefire-provider</artifactId>
++                        <version>1.2.0-M1</version>
++                    </dependency>
++                    <dependency>
++                        <groupId>org.junit.jupiter</groupId>
++                        <artifactId>junit-jupiter-engine</artifactId>
++                        <version>5.2.0</version>
++                    </dependency>
++                </dependencies>
+             </plugin>
+         </plugins>
+     </build>
+@@ -40,12 +63,24 @@
+             <groupId>junit</groupId>
+             <artifactId>junit</artifactId>
+             <version>4.13.2</version>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>org.junit.platform</groupId>
++            <artifactId>junit-platform-launcher</artifactId>
++            <version>1.9.0</version>
++            <scope>test</scope>
+         </dependency>
+         <dependency>
+-            <groupId>org.testng</groupId>
+-            <artifactId>testng</artifactId>
+-            <version>7.6.1</version>
+-            <scope>compile</scope>
++            <groupId>org.junit.platform</groupId>
++            <artifactId>junit-platform-engine</artifactId>
++            <version>1.9.0</version>
++        </dependency>
++        <dependency>
++            <groupId>org.junit.vintage</groupId>
++            <artifactId>junit-vintage-engine</artifactId>
++            <version>5.9.0</version>
++            <scope>test</scope>
+         </dependency>
+ 
+     </dependencies>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"projectISW-master\" />\r\n        <module name=\"projectISW19\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 001f8c77b6886ef39b641ce0030908d1ab0fe62e)
++++ b/.idea/compiler.xml	(date 1667583266672)
+@@ -6,7 +6,6 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+-        <module name="projectISW-master" />
+         <module name="projectISW19" />
+       </profile>
+     </annotationProcessing>
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1667582837339)
++++ b/.idea/encodings.xml	(date 1667582837339)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
