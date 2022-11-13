@@ -1,7 +1,9 @@
 package controler;
 
 import dao.ActivityDAO;
+import dao.CustomerDAO;
 import domain.Actividad;
+import domain.Customer;
 
 import java.util.ArrayList;
 
@@ -15,6 +17,8 @@ public class ActivitiesControler {
         ActivityDAO.getActividades();
         return ActivityDAO.getActividades();
     }
+    public Actividad getDescription(String nombre) {return ActivityDAO.getDescripcion(nombre);}
+    public Actividad getLocation(String nombre) {return ActivityDAO.getUbicacion(nombre);}
 
 
 }

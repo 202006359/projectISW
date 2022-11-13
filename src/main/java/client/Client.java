@@ -67,17 +67,27 @@ public class Client {
 			case "/getActividadesResponse":
 				session = mensajeVuelta.getSession();
 				break;
-
-
-			default:
-				Logger.getRootLogger().info("Option not found");
-				System.out.println("\nError a la vuelta");
+			case "/getDescriptionResponse":
+				session=mensajeVuelta.getSession();
+				actividad =(Actividad) (session.get("Actividad"));
+				System.out.println("He leído la actividad: "+actividad.getNombre()+" con descripcion: "+actividad.getDescripcion());
 				break;
+			case "/getLocationResponse":
+				session=mensajeVuelta.getSession();
+				actividad =(Actividad) (session.get("Actividad"));
+				System.out.println("He leído la actividad: "+actividad.getNombre()+" con ubicacion: "+actividad.getUbicacion());
+				break;
+
 			case "/getPerfilResponse":
 				session=mensajeVuelta.getSession();
 				customer =(Customer) (session.get("Customer"));
 				System.out.println("He leído el usuario: "+customer.getUsuario()+" con perfil: "+customer.getPerfil());
 				break;
+			default:
+				Logger.getRootLogger().info("Option not found");
+				System.out.println("\nError a la vuelta");
+				break;
+
 		
 		}
 		//System.out.println("3.- En Main.- El valor devuelto es: "+((String)mensajeVuelta.getSession().get("Nombre")));

@@ -45,6 +45,11 @@ public class SocketServer extends Thread {
 			String contrasena;
 			String perfil;
 			Customer cu;
+			ActivitiesControler activitiesControler;
+			Actividad act;
+			String nombre;
+			String descripcion;
+			String ubicacion;
 		    switch (mensajeIn.getContext()) {
 				case "/getPassword":
 					usuario= (String) session.get("usuario");
@@ -95,6 +100,26 @@ public class SocketServer extends Thread {
 					System.out.println("usuario:"+c.getUsuario());
 					mensajeOut.setContext("/getPerfilResponse");
 					session.put("Customer",c);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+				case "/getDescription":
+					nombre = (String) session.get("nombre");
+					activitiesControler =new ActivitiesControler();
+					act = activitiesControler.getDescription(nombre);
+					System.out.println("nombre:"+act.getNombre());
+					mensajeOut.setContext("/getDescriptionResponse");
+					session.put("Actividad",act);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+				case "/getLocation":
+					nombre = (String) session.get("nombre");
+					activitiesControler = new ActivitiesControler();
+					act = activitiesControler.getLocation(nombre);
+					System.out.println("nombre:"+act.getNombre());
+					mensajeOut.setContext("/getLocationResponse");
+					session.put("Actividad",act);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;
