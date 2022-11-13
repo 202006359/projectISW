@@ -15,8 +15,8 @@ public class VentanaLogin extends JFrame {
     }
     private String usuario;
     private String contrasena;
-    public static final int WINDOW_HEIGTH = 350;
-    public static final int WINDOW_WIDTH = 500;
+    public static final int WINDOW_HEIGTH = 700;
+    public static final int WINDOW_WIDTH = 1000;
 
     public VentanaLogin() {
         super("SMART PLAN");

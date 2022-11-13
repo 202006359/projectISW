@@ -24,6 +24,7 @@ public class PanelSignin extends JPanel{
         g.setColor(Color.BLACK);
         g.setFont(new Font("Calibri",Font.BOLD,22));
         g.drawString("Crea una cuenta de Smart Plan", 60,40);
+
     }
 }
 

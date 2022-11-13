@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="Comentarios ivan + pom">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ivan.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_82.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controler/ActivitiesControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controler/ActivitiesControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ActivityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ActivityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Actividad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Actividad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelSignin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelSignin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +67,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VentanaReservas">
+  <component name="RunManager" selected="Application.VentanaLogin">
     <configuration name="SocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.SocketServer" />
       <module name="Smartplan" />
@@ -170,9 +153,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.VentanaReservas" />
         <item itemvalue="Application.SocketServer" />
-        <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.VentanaActividades" />
         <item itemvalue="Application.VentanaSignin" />
       </list>
@@ -215,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667685239240</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos">
+      <created>1668365234926</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668365234926</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +223,8 @@
     <MESSAGE value="subo pruebas y nueva organizacion de carpetas" />
     <MESSAGE value="actualizo pom" />
     <MESSAGE value="Comentarios ivan +" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentarios ivan +" />
+    <MESSAGE value="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
