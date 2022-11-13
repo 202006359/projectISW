@@ -71,7 +71,6 @@ public class VentanaSignin extends JFrame {
         });
 
 
-
         this.pack();
         this.setVisible(true);
         this.setResizable(false);

@@ -18,7 +18,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     int cuenta;
     int vecesA, vecesB, vecesC, vecesD; //contador de veces de cada pregunta
     String usuario;
-    String perfil = ""; //Variable de salida para asociar el perfil a 3 categorias de la base de datos
+    String perfil; //Variable de salida para asociar el perfil a 3 categorias de la base de datos
 
     public static void main(String[] args) {
         new VentanaCuestionario(" ");

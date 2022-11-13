@@ -49,8 +49,6 @@ public class VentanaLogin extends JFrame {
         btnSignin.setBackground(Color.GRAY);
 
 
-
-
         pnlLogin.add(lblUsr);
         pnlLogin.add(txtUsr);
         pnlLogin.add(lblPassword);

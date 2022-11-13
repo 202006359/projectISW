@@ -63,12 +63,12 @@ public class CustomerDAO {
 	}
 
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		CustomerDAO cu = new CustomerDAO();
 		Customer c = cu.getPerfilUsuario("beatrizorbe");
 		System.out.println(c.getPerfil());
 
 
-	}
+	}*/
 
 }
