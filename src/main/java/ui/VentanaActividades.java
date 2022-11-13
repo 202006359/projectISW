@@ -10,7 +10,9 @@ import java.util.Objects;
 
 import domain.Customer;
 
-
+/**
+ * Clase para visualizar en pantalla la ventana de Actividades
+ */
 public class VentanaActividades extends JFrame{
 
     public String usuario;

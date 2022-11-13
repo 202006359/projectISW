@@ -7,12 +7,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ *  Esta clase obtiene las actividades de la base de datos
+ */
+
 public class ActivityDAO {
 
-
-	/**
-	 *  Esta clase obtiene las actividades de la base de datos
-	 */
 
    /*public static void main(String[] args) {
 

@@ -1,11 +1,12 @@
 package domain;
 
 import java.io.Serializable;
+/**
+ *	Clase para definir el objeto Customer
+ */
 
 public class Customer implements Serializable{
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private String usuario;
 	private String contrasena;

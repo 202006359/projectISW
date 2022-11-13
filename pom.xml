@@ -49,6 +49,10 @@
                 <executions>
                     <execution>
                         <id>SocketServer</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
                         <configuration>
                             <archive>
                                 <manifest>
@@ -63,6 +67,10 @@
                     </execution>
                     <execution>
                         <id>VentanaLogin</id>
+                        <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
                         <configuration>
                             <archive>
                                 <manifest>

@@ -1,0 +1,66 @@
+Index: src/main/ui/VentanaCuestionario.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.ui;\r\nimport java.awt.event.*;\r\nimport java.util.HashMap;\r\nimport javax.swing.*;\r\n\r\npublic class VentanaCuestionario extends JFrame implements ActionListener {\r\n\r\n    JLabel label;\r\n    JLabel label1;\r\n    JRadioButton radioButton[] = new JRadioButton[5]; // tipo de boton, usuario puede ver si esta pulsado o no\r\n    JLabel labelTexto[] = new JLabel[5];\r\n    JButton btnSiguiente;\r\n    ButtonGroup bg; // hace que si se pulsa un boton los demás estén bloqueados\r\n    int cuenta;\r\n    int vecesA, vecesB, vecesC, vecesD;\r\n    String usuario;\r\n    String perfil = \"Aventurero\"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil\r\n\r\n    public VentanaCuestionario(String usuario) {\r\n        super(\"SMART PLAN\");\r\n        this.usuario = usuario;\r\n        label = new JLabel();\r\n        add(label);\r\n\r\n        bg = new ButtonGroup();\r\n        for (int i = 0; i < 5; i++) {\r\n            radioButton[i] = new JRadioButton();\r\n            labelTexto[i] = new JLabel();\r\n            add(labelTexto[i]);\r\n            add(radioButton[i]);\r\n            bg.add(radioButton[i]);\r\n        }\r\n\r\n        btnSiguiente = new JButton(\"Siguiente\");\r\n        btnSiguiente.addActionListener(this);\r\n        add(btnSiguiente);\r\n        radioButton[0].addActionListener(this);\r\n\r\n        label.setBounds(30, 40, 650, 20);\r\n        radioButton[0].setBounds(50, 80, 0, 0);\r\n        radioButton[1].setBounds(50, 110, 0, 0);\r\n        radioButton[2].setBounds(50, 140, 0, 0);\r\n        radioButton[3].setBounds(50, 170, 0, 0);\r\n        labelTexto[0].setBounds(80, 80, 600, 20);\r\n        labelTexto[1].setBounds(80, 110, 600, 20);\r\n        labelTexto[2].setBounds(80, 140, 600, 20);\r\n        labelTexto[3].setBounds(80, 170, 600, 20);\r\n        btnSiguiente.setBounds(100, 240, 200, 30);\r\n        preguntas();\r\n        exit();\r\n\r\n        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        setLayout(null);\r\n        setLocation(250, 100);\r\n        setVisible(true);\r\n        setSize(600, 350);\r\n    }\r\n\r\n    public void preguntas() {\r\n        radioButton[4].setSelected(true);\r\n        //Ocio nocturno -> juerguista, Ocio cultural -> aristoteles, Aventuras -> indiana Jones, Gastronomia -> El Comidista, Deportes -> Rafa Nadal, Espiritual -> chill\r\n        if (cuenta == 0) {\r\n            label.setText(\"PREGUNTA 1: ¿Qué sueles hacer antes y después de salir del trabajo/clase?\");\r\n            labelTexto[0].setText(\"Me voy a casa esperando a que sea viernes y no hago nada.\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"Vuelvo a casa lo antes posible para alejarme del estres del curro.\");//chill\r\n            labelTexto[2].setText(\"Compro el café cerca e intento comer/cenar en algún bar de la zona.\");//comidista\r\n            labelTexto[3].setText(\"Voy al gimnasio para despejarme después de un día intenso.\");//rafa nadal\r\n        }\r\n        if (cuenta == 1) {\r\n            label.setText(\"PREGUNTA 2: Erasmus, vienen tus amigos a tu ciudad, ¿qué haces con ellos?\");\r\n            labelTexto[0].setText(\"Me los llevo a la discoteca más grande de la ciudad.\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"Les digo de ir a los mejores museos y conocer cultura.\");//aristoteles\r\n            labelTexto[2].setText(\"Aprovecho para hacer una comida todos juntos.\");//comidista\r\n            labelTexto[3].setText(\"Jugamos un partido de selecciones contra italianos.\");//rafa nadal\r\n        }\r\n        if (cuenta == 2) {\r\n            label.setText(\"PREGUNTA 3: ¿Qué te habría gustado hacer el dia que cumpliste 18?\");\r\n            labelTexto[0].setText(\"Salir de fiesta con los amigos que hayan cumplido 18.\");//juerguista\r\n            labelTexto[1].setText(\"Hacer el examen práctico de conducir y poder hacer viajes con amigos.\");//aventurero\r\n            labelTexto[2].setText(\"Invitaría a mis amigos a cenar para enseñarles mi restaurante favorito.\");//comidista\r\n            labelTexto[3].setText(\"Organizar un torneo de padel por parejas con todos mis amigos.\");//rafa nadal\r\n        }\r\n        if (cuenta == 3) {\r\n            label.setText(\"PREGUNTA 4: Cuando acabas los examens del 2ºCuatri, ¿qué sueles hacer?\");\r\n            labelTexto[0].setText(\"Me voy de fiesta con mis compañeros de clase al sitio de moda.\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"Intento volver a la cama para dormir una super siesta y liberar tensiones.\");//chill\r\n            labelTexto[2].setText(\"Ceno en el sitio más lujuso que conozco porque me lo merezco.\");//comidista\r\n            labelTexto[3].setText(\"Trato de recuperar la forma física que he perdido en examenes yendo al gym.\");//rafa nadal\r\n        }\r\n        if (cuenta == 4) {\r\n            label.setText(\"PREGUNTA 5: Te regalan un viaje a Nueva York, ¿qué es lo primero que haces al llegar?\");\r\n            labelTexto[0].setText(\"Salir a alguna discoteca en la azotea de un rascacielos.\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"Visito el museo de historia natural.\");//aristoteles\r\n            labelTexto[2].setText(\"Voy al restaurante con mas estrellas michelin de la ciudad.\");//comidista\r\n            labelTexto[3].setText(\"Voy a ver un partido de baloncesto de los famososo New York Knicks.\");//rafa nadal\r\n        }\r\n        if (cuenta == 5) {\r\n            label.setText(\"PREGUNTA 6: ¿Qué querías ser de pequeño?\");\r\n            labelTexto[0].setText(\"Quería ser el domador de leones del circo y poder trabajar en un zoo.\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"Ayudar a los demás en una ONG por el mundo.\");//chill\r\n            labelTexto[2].setText(\"Chef.\");//comidista\r\n            labelTexto[3].setText(\"Deportista profesional.\");//rafa nadal\r\n        }\r\n        if (cuenta == 6) {\r\n            label.setText(\"PREGUNTA 7: ¿Cuál de los siguientes planes elegirías para pasar un dia festivo?\");\r\n            labelTexto[0].setText(\"Pasar el día en el Parque de atracciones.\");//aventurero\r\n            labelTexto[1].setText(\"Hora Santa con el grupo cristiano HAKUNA.\");//chill\r\n            labelTexto[2].setText(\"Ir de tapas por Malasaña.\");//comidista\r\n            labelTexto[3].setText(\"Pasear en bicicleta por El Retiro.\");//rafa nadal\r\n        }\r\n        if (cuenta == 7) {\r\n            label.setText(\"PREGUNTA 8: ¿Cuál es el rasgo de tu personalidad del que te sientes más orgulloso?\");\r\n            labelTexto[0].setText(\"El entusiasta, busco pasármelo bien en grupo y ser impetuoso en todo momento.\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"El sociable, soy atento e intento ser buen compañero.\");//chill\r\n            labelTexto[2].setText(\"El integrado, me gusta disfrutal de las pequeñas cosas y trato de controlar mi imagen.\");//comidista\r\n            labelTexto[3].setText(\"El inquieto, activo y animado.\");//rafa nadal\r\n        }\r\n        if (cuenta == 8) {\r\n            label.setText(\"PREGUNTA 9: ¿Qué te gustaría hacer si te jubilaras mañana? (te sobra el dinero)\");\r\n            labelTexto[0].setText(\"\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"\");//chill\r\n            labelTexto[2].setText(\"\");//comidista\r\n            labelTexto[3].setText(\"\");//rafa nadal\r\n        }\r\n        if (cuenta == 9) {\r\n            label.setText(\"PREGUNTA 10: ¿Cuál de estas culturas admiras más?\");\r\n            labelTexto[0].setText(\"\");//juerguista y aventurero\r\n            labelTexto[1].setText(\"\");//chill\r\n            labelTexto[2].setText(\"\");//comidista\r\n            labelTexto[3].setText(\"\");//rafa nadal\r\n        }\r\n\r\n        label.setBounds(30, 40, 450, 20);\r\n        for (int i = 0, j = 0; i <= 90; i += 30, j++){\r\n            radioButton[j].setBounds(50, 80 + i, 20, 20);\r\n            labelTexto[j].setBounds(80,80 + i, 650, 20);\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void actionPerformed(ActionEvent e) {\r\n\r\n        if (e.getSource() == radioButton[0]) {\r\n            vecesA++;\r\n        }\r\n        if (e.getSource() == radioButton[1]) {\r\n            vecesB++;\r\n        }\r\n        if (e.getSource() == radioButton[2]) {\r\n            vecesC++;\r\n        }\r\n        if (e.getSource() == radioButton[3]) {\r\n            vecesD++;\r\n        }\r\n        if (e.getSource() == btnSiguiente) {\r\n            cuenta++;\r\n            preguntas();\r\n            if (cuenta == 10) {\r\n                btnSiguiente.setEnabled(false);\r\n                if(vecesA == 9)\r\n                    perfil = \"Ocio Cultural;Aventuras;Gastronomia\";\r\n                if(vecesA == 8)\r\n                    perfil = \"Ocio Cultural;Aventuras;Espiritual\";\r\n                if(vecesA == 7)\r\n                    perfil = \"Aventuras;Ocio Cultural;Gastronomia\";\r\n                if(vecesA == 6)\r\n                    perfil = \"Aventuras;Gastronomia;Espiritual\";\r\n                if(vecesA == 5)\r\n                    perfil = \"Ocio Cultural;Deportes;Gastronomia\";\r\n                if(vecesA == 4)\r\n                    perfil = \"Gastronomia;Espiritual;Aventuras\";\r\n                if(vecesA == 3)\r\n                    perfil = \"Gastronomia;Ocio Nocturno;Deportes\";\r\n                if(vecesA == 2)\r\n                    perfil = \"Aventuras;Ocio Cultural;Deportes\";\r\n                if(vecesA == 1)\r\n                    perfil = \"Ocio Nocturno;Espiritual;Gastronomia\";\r\n                if(vecesA == 0)\r\n                    perfil = \"Aventuras;Espiritual;Ocio Cultural\";\r\n            }\r\n        }\r\n\r\n\r\n    }\r\n\r\n    public void completarCuenta() {\r\n        Client cliente=new Client();\r\n        HashMap<String,Object> session=new HashMap<>();\r\n        String context=\"/completeAccount\";\r\n        session.put(\"usuario\",usuario);\r\n        session.put(\"contrasena\",\"\"); //No necesito la contraseña en esta versión\r\n        session.put(\"perfil\", perfil);\r\n        cliente.sentMessage(context,session);\r\n\r\n    }\r\n\r\n\r\n    private void exit(){\r\n        this.dispose();\r\n        this.setVisible(false);\r\n    }\r\n\r\n\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/ui/VentanaCuestionario.java b/src/main/ui/VentanaCuestionario.java
+--- a/src/main/ui/VentanaCuestionario.java	(revision 5ada004b668490625929a29d26eef81c8af0ea49)
++++ b/src/main/ui/VentanaCuestionario.java	(date 1667413369648)
+@@ -1,4 +1,6 @@
+ package main.ui;
++import main.client.Client;
++
+ import java.awt.event.*;
+ import java.util.HashMap;
+ import javax.swing.*;
+@@ -14,7 +16,7 @@
+     int cuenta;
+     int vecesA, vecesB, vecesC, vecesD;
+     String usuario;
+-    String perfil = "Aventurero"; //String perfil; Dejarlo asi cuando Jaime termine la funcionalidad de asignar el perfil
++    String perfil = "";
+ 
+     public VentanaCuestionario(String usuario) {
+         super("SMART PLAN");
+Index: src/main/dao/ProfileDAO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/dao/ProfileDAO.java b/src/main/dao/ProfileDAO.java
+new file mode 100644
+--- /dev/null	(date 1667414959749)
++++ b/src/main/dao/ProfileDAO.java	(date 1667414959749)
+@@ -0,0 +1,30 @@
++package main.dao;
++import main.domain.Actividad;
++import main.domain.Customer;
++
++import java.util.ArrayList;
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.ResultSet;
++import java.sql.SQLException;
++
++
++public class ProfileDAO {
++
++    public static ArrayList<Perfil> getPerfil(){
++        ArrayList<Perfil> perfiles = new ArrayList<>();
++        Connection con = ConnectionDAO.getInstance().getConnection();
++        Perfil perf = null;
++        try (PreparedStatement pst = con.prepareStatement("SELECT * FROM perfiles");
++             ResultSet rs = pst.executeQuery(); {
++
++            while (rs.next()) {
++                act = new Perfile(rs.getString(1), rs.getString(4));
++                perfiles.add(perf);
++            }
++        } catch (SQLException ex){
++                 System.out.println(ex.getMessage());
++        }
++        return perfiles;
++    }
++}
