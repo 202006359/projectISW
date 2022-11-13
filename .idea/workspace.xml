@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos">
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="mejora login V1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelSignin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelSignin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668365234926</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mejora login V1">
+      <created>1668370067497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668370067497</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +230,8 @@
     <MESSAGE value="actualizo pom" />
     <MESSAGE value="Comentarios ivan +" />
     <MESSAGE value="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos" />
+    <MESSAGE value="mejora login V1" />
+    <option name="LAST_COMMIT_MESSAGE" value="mejora login V1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

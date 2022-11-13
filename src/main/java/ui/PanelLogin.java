@@ -28,9 +28,7 @@ public class PanelLogin extends JPanel{
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.setColor(Color.BLACK);
-        g.setFont(new Font("Rockwell",Font.BOLD,48));
-        g.drawString("INICIO SESIÓN", 60,50);
+
         g.setColor(Color.WHITE);
         g.fillRoundRect(100,100,800,500,50,50);
         try {
@@ -40,6 +38,7 @@ public class PanelLogin extends JPanel{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
     }
 }

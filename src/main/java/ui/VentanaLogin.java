@@ -25,26 +25,34 @@ public class VentanaLogin extends JFrame {
         this.add(pnlLogin);
 
 
-        JLabel lblUsr = new JLabel("Usuario");
-        lblUsr.setBounds(60,60,160,30);
+        JLabel lblIn = new JLabel("INICIO SESIÓN");
+        lblIn.setBounds(340,220,500,50);
+        lblIn.setFont(new Font("Serif", Font.PLAIN, 40));
+        lblIn.setForeground(new Color(30,46,64));
+        pnlLogin.add(lblIn);
+
+
+        JLabel lblUsr = new JLabel("Nombre de usuario");
+        lblUsr.setBounds(180,260,160,30);
+        lblUsr.setFont(new Font("Serif", Font.PLAIN, 15));
         JTextField txtUsr = new JTextField(50);
-        txtUsr.setBounds(60,90,390,30);
+        txtUsr.setBounds(180,290,390,30);
         txtUsr.setText("admin@gmail.com"); //Valor por defecto para pruebas
 
         JLabel lblPassword= new JLabel("Contraseña");
-        lblPassword.setBounds(60,120,160,30);
+        lblPassword.setBounds(180,320,160,30);
         JPasswordField txtPassword = new JPasswordField(20);
-        txtPassword.setBounds(60,150,390,30);
+        txtPassword.setBounds(180,350,390,30);
         txtPassword.setText("admin1");//Valor por defecto para pruebas
 
         JButton btnLogin = new JButton("Iniciar Sesión");
-        btnLogin.setBounds(60,200,390,40);
+        btnLogin.setBounds(180,400,390,40);
         btnLogin.setForeground(Color.WHITE);
         btnLogin.setBackground(Color.BLACK);
 
 
         JButton btnSignin = new JButton("Registrarse");
-        btnSignin.setBounds(60,260,390,40);
+        btnSignin.setBounds(180,460,390,40);
         btnSignin.setForeground(Color.WHITE);
         btnSignin.setBackground(Color.GRAY);
 
