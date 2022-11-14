@@ -23,8 +23,7 @@ public class PanelLogin extends JPanel{
         this.setLayout(null);
     }
 
-    //public static final int WINDOW_HEIGTH = 700;
-    //public static final int WINDOW_WIDTH = 1000;
+
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);

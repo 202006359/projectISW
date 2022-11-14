@@ -3,7 +3,10 @@ package ui;
 import client.Client;
 
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.HashMap;
 /**
  * Clase para visualizar en pantalla la ventana de Registrar Usuario
@@ -20,26 +23,50 @@ public class VentanaSignin extends JFrame {
         PanelSignin pnlSignin = new PanelSignin();
         this.add(pnlSignin);
 
-        JLabel lblUsr = new JLabel("Dirección de correo electrónico");
-        lblUsr.setBounds(60,60,300,30);
-        JTextField txtUsr = new JTextField(50);
-        txtUsr.setBounds(60,90,390,30);
-        txtUsr.setText("ivan@gmail.com");
+        JLabel lblIn = new JLabel("CREAR CUENTA");
+        lblIn.setBounds(320,220,500,50);
+        lblIn.setFont(new Font("Serif", Font.PLAIN, 40));
+        lblIn.setForeground(new Color(30,46,64));
+        pnlSignin.add(lblIn);
 
-        JLabel lblPassword= new JLabel("Introduzca una contraseña alfanumérica");
-        lblPassword.setBounds(60,120,300,30);
+        JLabel lblUsr = new JLabel("Nombre de usuario");
+        lblUsr.setBounds(200,290,300,30);
+        lblUsr.setFont(new Font("Serif", Font.BOLD, 16));
+        JTextField txtUsr = new JTextField(50);
+        txtUsr.setBounds(200,320,600,30);
+        txtUsr.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+        txtUsr.setText("Inserte un correo electrónico");
+
+        JLabel lblPassword= new JLabel("Contraseña");
+        lblPassword.setBounds(200,360,300,30);
+        lblPassword.setFont(new Font("Serif", Font.BOLD, 16));
         JPasswordField txtPassword = new JPasswordField(20);
-        txtPassword.setBounds(60,150,390,30);
+        txtPassword.setBounds(200,390,600,30);
+        txtPassword.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+        txtPassword.setText("Inserte una contraseña alfanumérica");
+        txtPassword.setEchoChar((char)0);;
 
         JLabel lblPasswordConfirmation= new JLabel("Confirme la contraseña");
-        lblPasswordConfirmation.setBounds(60,180,300,30);
+        lblPasswordConfirmation.setBounds(200,430,300,30);
+        lblPasswordConfirmation.setFont(new Font("Serif", Font.BOLD, 16));
         JPasswordField txtPasswordConfirmation = new JPasswordField(20);
-        txtPasswordConfirmation.setBounds(60,210,390,30);
+        txtPasswordConfirmation.setBounds(200,460,600,30);
+        txtPasswordConfirmation.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+        txtPasswordConfirmation.setText("Inserte la misma contraseña alfanumérica");
+        txtPasswordConfirmation.setEchoChar((char)0);;
 
         JButton btnSignin = new JButton("Crear Cuenta");
-        btnSignin.setBounds(60,270,390,40);
+        btnSignin.setBounds(200,510,600,40);
         btnSignin.setForeground(Color.WHITE);
-        btnSignin.setBackground(Color.BLACK);
+        btnSignin.setFont(new Font("Calibri", Font.BOLD, 16));
+        btnSignin.setBackground(new Color(30,46,64));
+
+        JButton btnVolver = new JButton("Volver a la ventana de inicio de sesión");
+        btnVolver.setBounds(200,550,600,40);
+        btnVolver.setForeground(Color.GRAY);
+        btnVolver.setBackground(Color.white);
+        btnVolver.setFont(new Font("Serif", Font.BOLD, 16));
+        btnVolver.setBorder(null);
 
         pnlSignin.add(lblUsr);
         pnlSignin.add(txtUsr);
@@ -48,6 +75,36 @@ public class VentanaSignin extends JFrame {
         pnlSignin.add(lblPasswordConfirmation);
         pnlSignin.add(txtPasswordConfirmation);
         pnlSignin.add(btnSignin);
+        pnlSignin.add(btnVolver);
+
+        txtUsr.addMouseListener(new MouseAdapter(){ //Para ocultar el texto al pinchar en el JTextField
+            @Override
+            public void mouseClicked(MouseEvent event){
+                if(txtUsr.getText().equals("Inserte un correo electrónico"))
+                    txtUsr.setText("");
+
+            }
+        });
+        txtPassword.addMouseListener(new MouseAdapter() { //Para ocultar el texto al pinchar en el JTextField
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                if(String.valueOf(txtPassword.getPassword()).equals("Inserte una contraseña alfanumérica")){
+                    txtPassword.setText("");
+                    txtPassword.setEchoChar('*');
+                }
+            }
+        });
+        txtPasswordConfirmation.addMouseListener(new MouseAdapter() { //Para ocultar el texto al pinchar en el JTextField
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                if(String.valueOf(txtPasswordConfirmation.getPassword()).equals("Inserte la misma contraseña alfanumérica")){
+                    txtPasswordConfirmation.setText("");
+                    txtPasswordConfirmation.setEchoChar('*');
+                }
+            }
+        });
 
         btnSignin.addActionListener(e->{
             usuario = txtUsr.getText();
@@ -68,6 +125,10 @@ public class VentanaSignin extends JFrame {
                 txtPassword.setText("");
                 txtPasswordConfirmation.setText("");
             }
+        });
+
+        btnVolver.addActionListener(e->{
+            volverInicioSesion();
         });
 
 
@@ -100,6 +161,11 @@ public class VentanaSignin extends JFrame {
     public void cuestionario(String usuario){ //Me manda a la ventana del cuestionario
         this.exit();
         new VentanaCuestionario(usuario);
+    }
+
+    public void volverInicioSesion(){ //Me manda a la ventana del cuestionario
+        this.exit();
+        new VentanaLogin();
     }
 
 

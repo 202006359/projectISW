@@ -4,7 +4,10 @@ import client.Client;
 import domain.Customer;
 
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.HashMap;
 /**
  * Clase para visualizar en pantalla la ventana de Inicio de Sesión
@@ -33,28 +36,35 @@ public class VentanaLogin extends JFrame {
 
 
         JLabel lblUsr = new JLabel("Nombre de usuario");
-        lblUsr.setBounds(180,260,160,30);
-        lblUsr.setFont(new Font("Serif", Font.PLAIN, 15));
+        lblUsr.setBounds(200,290,300,30);
+        lblUsr.setFont(new Font("Serif", Font.BOLD, 16));
         JTextField txtUsr = new JTextField(50);
-        txtUsr.setBounds(180,290,390,30);
-        txtUsr.setText("admin@gmail.com"); //Valor por defecto para pruebas
+        txtUsr.setBounds(200,320,600,30);
+        txtUsr.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+        txtUsr.setText("Inserte el correo electrónico");
 
         JLabel lblPassword= new JLabel("Contraseña");
-        lblPassword.setBounds(180,320,160,30);
+        lblPassword.setBounds(200,360,300,30);
+        lblPassword.setFont(new Font("Serif", Font.BOLD, 16));
         JPasswordField txtPassword = new JPasswordField(20);
-        txtPassword.setBounds(180,350,390,30);
-        txtPassword.setText("admin1");//Valor por defecto para pruebas
+        txtPassword.setBounds(200,390,600,30);
+        txtPassword.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
+        txtPassword.setText("Inserte la contraseña");//Valor por defecto para pruebas
+        txtPassword.setEchoChar((char)0);;
 
         JButton btnLogin = new JButton("Iniciar Sesión");
-        btnLogin.setBounds(180,400,390,40);
+        btnLogin.setBounds(200,445,600,40);
         btnLogin.setForeground(Color.WHITE);
-        btnLogin.setBackground(Color.BLACK);
+        btnLogin.setFont(new Font("Calibri", Font.BOLD, 16));
+        btnLogin.setBackground(new Color(30,46,64));
 
 
-        JButton btnSignin = new JButton("Registrarse");
-        btnSignin.setBounds(180,460,390,40);
-        btnSignin.setForeground(Color.WHITE);
-        btnSignin.setBackground(Color.GRAY);
+        JButton btnSignin = new JButton("¿Eres nuevo? Únete a la mejor plataforma de planes");
+        btnSignin.setBounds(200,490,600,40);
+        btnSignin.setForeground(Color.GRAY);
+        btnSignin.setBackground(Color.white);
+        btnSignin.setFont(new Font("Serif", Font.BOLD, 16));
+        btnSignin.setBorder(null);
 
 
         pnlLogin.add(lblUsr);
@@ -64,12 +74,31 @@ public class VentanaLogin extends JFrame {
         pnlLogin.add(btnLogin);
         pnlLogin.add(btnSignin);
 
+        txtUsr.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent event){ //Para ocultar el texto al pinchar en el JTextField
+                if(txtUsr.getText().equals("Inserte el correo electrónico"))
+                    txtUsr.setText("");
+
+            }
+        });
+        txtPassword.addMouseListener(new MouseAdapter() { //Para ocultar el texto al pinchar en el JTextField
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                if(String.valueOf(txtPassword.getPassword()).equals("Inserte la contraseña")){
+                    txtPassword.setText("");
+                    txtPassword.setEchoChar('*');
+                }
+            }
+        });
+
+
         btnLogin.addActionListener(e ->{
             usuario = txtUsr.getText();
             contrasena = String.valueOf(txtPassword.getPassword());
 
             if(contrasena.equals(recuperarContrasena())){ //Verifico que la contraseña introducida coincida con la de la base de datos
-                JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena correcta");
                 abrirPrincipal(); //Me voy a la ventana principal
             }else{
                 JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena incorrecta");
