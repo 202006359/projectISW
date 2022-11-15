@@ -24,7 +24,7 @@ public class VentanaLogin extends JFrame {
     public VentanaLogin() {
         super("SMART PLAN");
 
-        PanelLogin pnlLogin = new PanelLogin();
+        PanelInicio pnlLogin = new PanelInicio();
         this.add(pnlLogin);
 
 

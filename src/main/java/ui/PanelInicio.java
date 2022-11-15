@@ -9,10 +9,10 @@ import javax.swing.*;
 /**
  * Clase para crear el panel que se implementará en la ventana de Login
  */
-public class PanelLogin extends JPanel{
+public class PanelInicio extends JPanel{
 
     private Dimension dimension = new Dimension(VentanaLogin.WINDOW_WIDTH, VentanaLogin.WINDOW_HEIGTH);
-    public PanelLogin(){
+    public PanelInicio(){
         this.init();
     }
 

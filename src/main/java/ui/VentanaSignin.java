@@ -20,7 +20,7 @@ public class VentanaSignin extends JFrame {
     private String contrasena;
     public VentanaSignin(){
         super("SMART PLAN");
-        PanelSignin pnlSignin = new PanelSignin();
+        PanelInicio pnlSignin = new PanelInicio();
         this.add(pnlSignin);
 
         JLabel lblIn = new JLabel("CREAR CUENTA");
