@@ -10,8 +10,5 @@
         <module name="projectISW19" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="projectISW19" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

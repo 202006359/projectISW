@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="mejora login V1.2">
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="mejora login V1.1">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelSignin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaCuestionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaCuestionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaSignin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaSignin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +67,10 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VentanaCuestionario">
+  <component name="RunManager" selected="Application.VentanaActividades">
     <configuration name="SocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.SocketServer" />
-      <module name="Smartplan" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="server.*" />
@@ -82,9 +81,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VentanaCuestionario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.VentanaCuestionario" />
-      <module name="Smartplan" />
+    <configuration name="VentanaActividades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.VentanaActividades" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -97,7 +96,7 @@
     </configuration>
     <configuration name="VentanaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.VentanaLogin" />
-      <module name="Smartplan" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -110,7 +109,7 @@
     </configuration>
     <configuration name="VentanaReservas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.VentanaReservas" />
-      <module name="Smartplan" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -123,7 +122,7 @@
     </configuration>
     <configuration name="VentanaSignin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.VentanaSignin" />
-      <module name="Smartplan" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -146,7 +145,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.VentanaCuestionario" />
+      <item itemvalue="Application.VentanaActividades" />
       <item itemvalue="Application.VentanaReservas" />
       <item itemvalue="Application.VentanaSignin" />
       <item itemvalue="Application.SocketServer" />
@@ -154,9 +153,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VentanaCuestionario" />
-        <item itemvalue="Application.VentanaLogin" />
+        <item itemvalue="Application.VentanaActividades" />
         <item itemvalue="Application.SocketServer" />
+        <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.VentanaSignin" />
         <item itemvalue="Application.VentanaReservas" />
       </list>
@@ -220,14 +219,7 @@
       <option name="project" value="LOCAL" />
       <updated>1668371556072</updated>
     </task>
-    <task id="LOCAL-00008" summary="mejora login V1.2">
-      <created>1668427938887</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1668427938887</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,8 +240,7 @@
     <MESSAGE value="meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos" />
     <MESSAGE value="mejora login V1" />
     <MESSAGE value="mejora login V1.1" />
-    <MESSAGE value="mejora login V1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejora login V1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="mejora login V1.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
