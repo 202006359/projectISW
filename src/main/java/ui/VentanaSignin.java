@@ -5,6 +5,8 @@ import client.Client;
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.HashMap;
@@ -83,6 +85,13 @@ public class VentanaSignin extends JFrame {
                 if(txtUsr.getText().equals("Inserte un correo electrónico"))
                     txtUsr.setText("");
 
+            }
+        });
+        txtUsr.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(txtUsr.getText().equals("Inserte un correo electrónico"))
+                    txtUsr.setText("");
             }
         });
         txtPassword.addMouseListener(new MouseAdapter() { //Para ocultar el texto al pinchar en el JTextField

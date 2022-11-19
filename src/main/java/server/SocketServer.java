@@ -85,8 +85,8 @@ public class SocketServer extends Thread {
 					objectOutputStream.writeObject(mensajeOut);
 					break;
 				case "/getActividades":
-					customerControler =new CustomerControler();
-					ArrayList<Actividad> actividades= ActivitiesControler.getActividades();
+					activitiesControler =new ActivitiesControler();
+					ArrayList<Actividad> actividades= activitiesControler.getActividades();
 					mensajeOut.setContext("/getActividadesResponse");
 					session.put("Actividades",actividades);
 					mensajeOut.setSession(session);

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class ActivitiesControler {
 
-    public static ArrayList<Actividad> getActividades() {
+    public ArrayList<Actividad> getActividades() {
         ActivityDAO.getActividades();
         return ActivityDAO.getActividades();
     }

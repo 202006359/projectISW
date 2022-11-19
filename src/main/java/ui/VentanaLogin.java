@@ -1,13 +1,17 @@
 package ui;
 
 import client.Client;
+import dao.ActivityDAO;
 import domain.Customer;
 
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.util.HashMap;
 /**
  * Clase para visualizar en pantalla la ventana de Inicio de Sesión
@@ -26,6 +30,8 @@ public class VentanaLogin extends JFrame {
 
         PanelInicio pnlLogin = new PanelInicio();
         this.add(pnlLogin);
+
+        //ActivityDAO.addImagen("Teatro Barceló",new File("src/main/java/resources/barcelo.jpg"));
 
 
         JLabel lblIn = new JLabel("INICIO SESIÓN");
@@ -80,6 +86,13 @@ public class VentanaLogin extends JFrame {
                 if(txtUsr.getText().equals("Inserte el correo electrónico"))
                     txtUsr.setText("");
 
+            }
+        });
+        txtUsr.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(txtUsr.getText().equals("Inserte el correo electrónico"))
+                    txtUsr.setText("");
             }
         });
         txtPassword.addMouseListener(new MouseAdapter() { //Para ocultar el texto al pinchar en el JTextField

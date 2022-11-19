@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.*;
+import java.io.File;
 import java.io.Serializable;
 
 /**
@@ -13,12 +15,19 @@ public class Actividad implements Serializable{
     private String descripcion;
     private String ubicacion;
 
+    private Image imagen;
+
     private static final long serialVersionUID = 1L;
 
 
     public Actividad(String nombre, String categoria) {
         this.nombre = nombre;
         this.categoria = categoria;
+    }
+    public Actividad(String nombre, String categoria, Image imagen) {
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.imagen = imagen;
     }
     public Actividad(String nombre, String valor, boolean tipo) { //Si tipo = true, tengo descripcion. Si tipo = false, tengo ubicacion
         this.nombre = nombre;
@@ -27,6 +36,11 @@ public class Actividad implements Serializable{
         else
             this.ubicacion = valor;
 
+    }
+
+    public Actividad(String nombre, Image imagen){
+        this.nombre = nombre;
+        this.imagen = imagen;
     }
 
     public String getNombre() {
@@ -41,6 +55,7 @@ public class Actividad implements Serializable{
     public String getDescripcion() {
         return descripcion;
     }
+    public Image getImagen(){return imagen;}
 
 
 }
