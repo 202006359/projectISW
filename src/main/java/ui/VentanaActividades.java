@@ -166,7 +166,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
         scrollPane.setBounds(5,150, 1300, 600);
         GridLayout grid3 = new GridLayout(10,3,20,20    );
         activi.setPreferredSize(new Dimension(700, 2000));
-        activi.setBackground(amarilloo);
+        activi.setBackground(oscuro);
         //activi.add(icn);
         //CREAMOS EL GRID LAYOUT CORRESPONDIENTE AL TIPO DE PLANES QUE QUIERE EL QUIERE ~ ASOCIADO A SU PERFIL
         scrollPane.add(activi);
@@ -189,6 +189,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     }
                 });
                 JPanel aux = new JPanel();
+                aux.setBackground(oscuro);
+                JPanel aux2 = new JPanel();
+                aux2.setPreferredSize(new Dimension(10,300));
+                aux2.setBackground(oscuro);
                 aux.setPreferredSize(new Dimension(400,300));
                 aux.add(btnActividades[j]);
                 if (perfil1.compareTo("Deporte")==0){ JButton X = new JButton(); X.setIcon(ic0); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
@@ -197,11 +201,11 @@ public class VentanaActividades extends JFrame implements ActionListener {
                 else if (perfil1.compareTo("Aventuras")==0){JButton X= new JButton();  X.setIcon(ic3); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
                 else if (perfil1.compareTo("Gastronomia")==0){ JButton X= new JButton();  X.setIcon(ic4); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
                 else if (perfil1.compareTo("Ocio Nocturno")==0){ JButton X= new JButton();  X.setIcon(ic6); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
-
                 //aux.add(new JButton(im2));
                 //btnActividades[j].add(icn);
                 aux.revalidate();
                 activi.add(aux);
+                activi.add(aux2);
                 btnActividades[j].setFont(font1);
                 j++;
             }
@@ -210,6 +214,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
         int k = 0;
         for (int i = 0; i < actividades.toArray().length; i++) {
             JPanel aux = new JPanel();
+            aux.setBackground(oscuro);
             if ((Objects.equals(actividades.get(i).getCategoria(), perfil2)) == true)
                 if (k<6){
                     btnActividades[k] = new JButton(actividades.get(i).getNombre());
@@ -224,7 +229,9 @@ public class VentanaActividades extends JFrame implements ActionListener {
                             new VentanaReservas(nombre);
                         }
                     });
-
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.setBackground(amarillo);
                     aux.add(btnActividades[k]);
@@ -235,6 +242,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     else if (perfil2.compareTo("Gastronomia")==0){ JButton X= new JButton();  X.setIcon(ic4); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
                     else if (perfil2.compareTo("Ocio Nocturno")==0){ JButton X= new JButton();  X.setIcon(ic6); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
                     activi.add(aux);
+                    activi.add(aux2);
                     btnActividades[k].setFont(font1);
                     k++;
                 }
@@ -258,6 +266,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[p]);
                     if (perfil1.compareTo("Deporte")==0){ JButton X = new JButton(); X.setIcon(ic0); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
@@ -268,6 +280,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     else if (perfil3.compareTo("Ocio Nocturno")==0){ JButton X= new JButton();  X.setIcon(ic6); aux.add(X); X.setPreferredSize(new Dimension(400,200));}
 
                     activi.add(aux);
+                    activi.add(aux2);
                     btnActividades[p].setFont(font1);
                     p++;
                 }
@@ -324,6 +337,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
                     JButton X= new JButton();
@@ -332,6 +349,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     aux.add(X);
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2);
                     btnActividades[j].setFont(font1);
                     j++;
                 }
@@ -358,6 +376,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
                     JButton X= new JButton();
@@ -367,6 +389,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
 
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2);
                     btnActividades[j].setFont(font1);
                     j++;
                 }
@@ -393,6 +416,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
                     JButton X= new JButton();
@@ -402,6 +429,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
 
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2);
                     btnActividades[j].setFont(font1);
                     j++;
                 }
@@ -428,6 +456,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
 
@@ -438,6 +470,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
 
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2); 
                     btnActividades[j].setFont(font1);
                     j++;
                 }
@@ -464,6 +497,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
                     JButton X= new JButton();
@@ -472,6 +509,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     aux.add(X);
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2);
                     btnActividades[j].setFont(font1);
                     j++;
                 }
@@ -498,6 +536,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
                     JButton X= new JButton();
@@ -506,6 +548,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     aux.add(X);
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2);
                     btnActividades[j].setFont(font1);
                     j++;
                 }
@@ -532,6 +575,10 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         }
                     });
                     JPanel aux = new JPanel();
+                    aux.setBackground(oscuro);
+                    JPanel aux2 = new JPanel();
+                    aux2.setPreferredSize(new Dimension(10,300));
+                    aux2.setBackground(oscuro);
                     aux.setPreferredSize(new Dimension(400,300));
                     aux.add(btnActividades[j]);
                     JButton X= new JButton();
@@ -541,6 +588,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
 
                     //activi.add(aux);
                     nuevoScroll.add(aux);
+                    nuevoScroll.add(aux2);
                     btnActividades[j].setFont(font1);
                     j++;
                 }
