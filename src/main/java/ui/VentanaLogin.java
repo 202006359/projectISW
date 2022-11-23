@@ -4,6 +4,7 @@ import client.Client;
 import dao.ActivityDAO;
 import domain.Customer;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
@@ -12,6 +13,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 /**
  * Clase para visualizar en pantalla la ventana de Inicio de Sesión
@@ -28,10 +31,9 @@ public class VentanaLogin extends JFrame {
     public VentanaLogin() {
         super("SMART PLAN");
 
+
         PanelInicio pnlLogin = new PanelInicio();
         this.add(pnlLogin);
-
-        //ActivityDAO.addImagen("Teatro Barceló",new File("src/main/java/resources/barcelo.jpg"));
 
 
         JLabel lblIn = new JLabel("INICIO SESIÓN");

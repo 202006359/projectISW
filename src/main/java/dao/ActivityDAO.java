@@ -119,6 +119,20 @@ public class ActivityDAO {
 		return act;
 	}
 
+	public static ArrayList<String> getNombres() {//Obtengo todos los nombres
+		Connection con=ConnectionDAO.getInstance().getConnection();
+		ArrayList<String> nombres = new ArrayList<>();
+		try (PreparedStatement pst = con.prepareStatement("SELECT nombre FROM planes;" );
+			 ResultSet rs = pst.executeQuery()) {
+			while (rs.next()) {
+				nombres.add(rs.getString(1));
+			}
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return nombres;
+	}
+
 
 }
 
