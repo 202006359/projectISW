@@ -36,6 +36,9 @@ public class PanelInicio extends JPanel{
         try {
             Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
             g.drawImage(img,400,30,196,185,null);
+            Actividad act = ActivityDAO.getImagen("Teatro Barceló");
+            Image image = act.getImagen();
+            g.drawImage(image,100,30,196,185,null);
 
         } catch (IOException e) {
             e.printStackTrace();
