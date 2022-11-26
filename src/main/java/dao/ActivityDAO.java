@@ -41,23 +41,23 @@ public class ActivityDAO {
 			while (rs.next()) {
 
 
-				/*if(rs.getBinaryStream(5)!=null){
+				if(rs.getBinaryStream(5)!=null){
 					InputStream inputStream = rs.getBinaryStream(5);
 					Image image = ImageIO.read(inputStream);
 					act= new Actividad(rs.getString(1),rs.getString(4),image);
-				}*/
-				//else{
+				}
+				else{
 					act= new Actividad(rs.getString(1),rs.getString(4));
-				//}
+				}
 
 				actividades.add(act);
 			}
 
 		} catch (SQLException ex) {
 			System.out.println(ex.getMessage());
-		} /*catch (IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
-		}*/
+		}
 		return actividades;
 	}
 
