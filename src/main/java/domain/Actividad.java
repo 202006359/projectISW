@@ -15,10 +15,12 @@ public class Actividad implements Serializable{
     private String descripcion;
     private String ubicacion;
 
+    private float precio;
+    private float descuento;
+
     private Image imagen;
 
     private static final long serialVersionUID = 1L;
-
 
     public Actividad(String nombre, String categoria) {
         this.nombre = nombre;
@@ -28,6 +30,13 @@ public class Actividad implements Serializable{
         this.nombre = nombre;
         this.categoria = categoria;
         this.imagen = imagen;
+    }
+
+    public Actividad(String nombre, String categoria, Image imagen, float precio) {
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.imagen = imagen;
+        this.precio = precio;
     }
     public Actividad(String nombre, String valor, boolean tipo) { //Si tipo = true, tengo descripcion. Si tipo = false, tengo ubicacion
         this.nombre = nombre;
@@ -43,6 +52,18 @@ public class Actividad implements Serializable{
         this.imagen = imagen;
     }
 
+    public Actividad(String nombre, float descuento){
+        this.nombre = nombre;
+        this.descuento = descuento;
+    }
+
+    public Actividad(String nombre, int descuento)
+    {
+        this.nombre = nombre;
+        this.descuento= descuento;
+    }
+
+
     public String getNombre() {
         return nombre;
     }
@@ -56,6 +77,7 @@ public class Actividad implements Serializable{
         return descripcion;
     }
     public Image getImagen(){return imagen;}
-
+    public Float getPrecio(){return precio;}
+    public Float getDescuento(){return descuento;}
 
 }

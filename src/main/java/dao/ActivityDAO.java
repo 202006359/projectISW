@@ -44,7 +44,7 @@ public class ActivityDAO {
 				if(rs.getBinaryStream(5)!=null){
 					InputStream inputStream = rs.getBinaryStream(5);
 					Image image = ImageIO.read(inputStream);
-					act= new Actividad(rs.getString(1),rs.getString(4),image);
+					act= new Actividad(rs.getString(1),rs.getString(4),image,rs.getFloat(6));
 				}
 				else{
 					act= new Actividad(rs.getString(1),rs.getString(4));
@@ -133,6 +133,16 @@ public class ActivityDAO {
 		return nombres;
 	}
 
+
+	public static void completarActividad(String nombre , float descuento) { //Me añade el tipo de perfil al usuario
+		Connection con=ConnectionDAO.getInstance().getConnection();
+
+		try (PreparedStatement pst = con.prepareStatement("update descuentos set descuento = '" + descuento + "' where nombre_plan = '" + nombre + "'")) {
+			pst.executeUpdate();
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
 
 }
 

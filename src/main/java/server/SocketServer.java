@@ -44,6 +44,7 @@ public class SocketServer extends Thread {
 			String usuario;
 			String contrasena;
 			String perfil;
+			Float descuento;
 			Customer cu;
 			ActivitiesControler activitiesControler;
 			Actividad act;
@@ -103,6 +104,7 @@ public class SocketServer extends Thread {
 					session.put("Actividades",actividades);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
+					System.out.println("ESTOY AQUIIII");
 					break;
 
 				case "/getPerfil":
@@ -131,6 +133,17 @@ public class SocketServer extends Thread {
 					act = activitiesControler.getLocation(nombre);
 					System.out.println("nombre:"+act.getNombre());
 					mensajeOut.setContext("/getLocationResponse");
+					session.put("Actividad",act);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+				case "/completeActivity":
+					nombre = (String) session.get("nombre");
+					descuento = (float) session.get("descuento");
+					activitiesControler=new ActivitiesControler();
+					act = new Actividad(nombre, descuento);
+					activitiesControler.completeActivity(nombre,descuento);
+					mensajeOut.setContext("/completeActivityResponse");
 					session.put("Actividad",act);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);

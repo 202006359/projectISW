@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="prueba bea">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controler/ActivitiesControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controler/ActivitiesControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controler/CustomerControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controler/CustomerControler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/ActivityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ActivityDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Actividad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Actividad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaCuestionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaCuestionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/projectISW/src/test/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "last_opened_file_path": "/home/ivan/IdeaProjects/projectISW/src/test/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
@@ -63,23 +76,10 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VentanaLogin">
-    <configuration name="SendEmailThroughGmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sendemail.SendEmailThroughGmail" />
-      <module name="Smartplan" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sendemail.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.VentanaActividades">
     <configuration name="SocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.SocketServer" />
-      <module name="Smartplan" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="server.*" />
@@ -90,9 +90,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VentanaActividades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.VentanaActividades" />
+      <module name="projectISW19" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VentanaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.VentanaLogin" />
-      <module name="Smartplan" />
+      <module name="projectISW19" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -141,19 +154,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.VentanaActividades" />
       <item itemvalue="Application.VentanaReservas" />
       <item itemvalue="Application.prueba" />
-      <item itemvalue="Application.SendEmailThroughGmail" />
       <item itemvalue="Application.SocketServer" />
       <item itemvalue="Application.VentanaLogin" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VentanaActividades" />
+        <item itemvalue="Application.SocketServer" />
         <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.prueba" />
-        <item itemvalue="Application.SocketServer" />
         <item itemvalue="Application.VentanaReservas" />
-        <item itemvalue="Application.SendEmailThroughGmail" />
       </list>
     </recent_temporary>
   </component>

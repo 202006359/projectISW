@@ -1,6 +1,8 @@
 package domain;
 
 import java.io.Serializable;
+import java.util.Date;
+
 /**
  *	Clase para definir el objeto Customer
  */
@@ -12,6 +14,8 @@ public class Customer implements Serializable{
 	private String contrasena;
 	private String perfil;
 
+	private Date descuento;
+
 	
 	public Customer(String usuario, String contrasena) {
 		this.contrasena = contrasena;
@@ -22,6 +26,13 @@ public class Customer implements Serializable{
 		this.usuario = usuario;
 		this.contrasena = contrasena;
 		this.perfil = perfil;
+	}
+
+	public Customer(String usuario, String contrasena, String perfil, Date descuento) {
+		this.usuario = usuario;
+		this.contrasena = contrasena;
+		this.perfil = perfil;
+		this.descuento=descuento;
 	}
 
 	public String getUsuario() {
@@ -36,6 +47,12 @@ public class Customer implements Serializable{
 	public String getPerfil() {
 		return perfil;
 	}
+
+	public Date getDescuento(){ return descuento;}
+
+	public void setDescuento(Date descuento)
+	{this.descuento = descuento;}
+
 
 
 

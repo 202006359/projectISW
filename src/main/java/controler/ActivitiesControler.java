@@ -18,6 +18,10 @@ public class ActivitiesControler {
     }
     public Actividad getDescription(String nombre) {return ActivityDAO.getDescripcion(nombre);}
     public Actividad getLocation(String nombre) {return ActivityDAO.getUbicacion(nombre);}
+
+    public static void completeActivity(String nombre, float descuento){ActivityDAO.completarActividad(nombre, descuento);}
+
+
     //public Actividad getImagen(String nombre) {return ActivityDAO.getImagen(nombre);}
     //public Actividad getDescuento(String nombre) {return ActivityDAO.getDescuento(nombre);}
     //public void addDescuento(String nombre, int descuento) {ActivityDAO.addDescuento(nombre,descuento);}

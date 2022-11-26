@@ -86,6 +86,13 @@ public class Client {
 				customer =(Customer) (session.get("Customer"));
 				System.out.println("He leído el usuario: "+customer.getUsuario()+" con perfil: "+customer.getPerfil());
 				break;
+
+			case "/completeActivityResponse":
+				session=mensajeVuelta.getSession();
+				actividad =(Actividad) (session.get("Actividad"));
+				System.out.println("He leído el descuento: "+actividad.getDescuento()+" de la actividad: "+actividad.getNombre());
+				break;
+
 			default:
 				Logger.getRootLogger().info("Option not found");
 				System.out.println("\nError a la vuelta");
@@ -96,7 +103,6 @@ public class Client {
 		//System.out.println("3.- En Main.- El valor devuelto es: "+((String)mensajeVuelta.getSession().get("Nombre")));
 		return session;
 	}
-	
 
 
 	public void sent(Message messageOut, Message messageIn) {

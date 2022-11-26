@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 import domain.*;
 import ui.VentanaActividades;
@@ -80,6 +81,17 @@ public class CustomerDAO {
 		}
 		return c;
 	}
+
+
+	/*public static void includeDescuento(String usuario, Date descuento) { //Me añade el tipo de perfil al usuario
+		Connection con=ConnectionDAO.getInstance().getConnection();
+
+		try (PreparedStatement pst = con.prepareStatement("update login set descuento = '" + descuento + "' where usuario = '" + usuario + "'")) {
+			pst.executeUpdate();
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+	}*/
 
 
 	/*public static void main(String[] args) {

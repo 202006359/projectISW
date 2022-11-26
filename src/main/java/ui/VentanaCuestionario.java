@@ -231,6 +231,7 @@ public class VentanaCuestionario extends JFrame implements ActionListener {
     }
 
     public void ventanaActivi(String usuario){ //Me manda a la ventana del cuestionario
+        System.out.println("HE LLEGADO");
         this.exit();
         new VentanaActividades(usuario);
     }

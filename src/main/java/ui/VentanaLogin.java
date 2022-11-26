@@ -168,6 +168,15 @@ public class VentanaLogin extends JFrame {
     }
 
 
+    public String recuperarCustomer() { //Metodo utilizado para obtener de la base de datos la contrasena guardada del usuario
+        Client cliente=new Client();
+        HashMap<String,Object> session=new HashMap<>();
+        String context="/getPassword";
+        session.put("usuario",usuario);
+        session=cliente.sentMessage(context,session);
+        Customer cu=(Customer)session.get("Customer");
+        return cu.getContrasena();
+    }
     public void abrirPrincipal() //ME voy a la ventana principal de planes
     {
         this.exit();

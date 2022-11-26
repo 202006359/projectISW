@@ -3,6 +3,8 @@ package controler;
 import dao.CustomerDAO;
 import domain.*;
 
+import java.util.Date;
+
 /**
  * Esta clase gestiona la informacion de los usuarios guardada en la base de datos.
  */
@@ -17,5 +19,7 @@ public class CustomerControler {
 	public Customer getPer(String usuario) {return CustomerDAO.getPerfilUsuario(usuario);}
 
 	public boolean checkUser(String usuario){return CustomerDAO.checkUsuario(usuario);};
+
+	//public void includeDescuentos(String usuario, Date descuento){CustomerDAO.includeDescuento(usuario, descuento);};
 
 }

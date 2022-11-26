@@ -1,8 +1,6 @@
 package ui;
-
 import dao.ActivityDAO;
 import domain.Actividad;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -41,6 +39,7 @@ public class PanelInicio extends JPanel{
 
             Actividad a = actividades.get(2);
             Image image = a.getImagen();
+            System.out.println(image);
             g.drawImage(image,100,30,196,185,null);
 
 
