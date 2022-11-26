@@ -112,8 +112,13 @@ public class VentanaLogin extends JFrame {
         btnLogin.addActionListener(e ->{
             usuario = txtUsr.getText();
             contrasena = String.valueOf(txtPassword.getPassword());
+            if(!isUserValido()){
+                JOptionPane.showMessageDialog(VentanaLogin.this,"El usuario introducido no existe");
+                txtUsr.setText("");
+                txtPassword.setText("");
+            }
 
-            if(contrasena.equals(recuperarContrasena())){ //Verifico que la contraseña introducida coincida con la de la base de datos
+            else if(contrasena.equals(recuperarContrasena())){ //Verifico que la contraseña introducida coincida con la de la base de datos
                 abrirPrincipal(); //Me voy a la ventana principal
             }else{
                 JOptionPane.showMessageDialog(VentanaLogin.this,"Contrasena incorrecta");
@@ -152,6 +157,14 @@ public class VentanaLogin extends JFrame {
         session=cliente.sentMessage(context,session);
         Customer cu=(Customer)session.get("Customer");
         return cu.getContrasena();
+    }
+    public boolean isUserValido() { //Me devuelve true si el usuario existe en la base de datos
+        Client cliente=new Client();
+        HashMap<String,Object> session=new HashMap<>();
+        String context="/checkUser";
+        session.put("usuario",usuario);
+        session=cliente.sentMessage(context,session);
+        return (boolean) session.get("Customer");
     }
 
 

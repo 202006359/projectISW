@@ -16,4 +16,6 @@ public class CustomerControler {
 
 	public Customer getPer(String usuario) {return CustomerDAO.getPerfilUsuario(usuario);}
 
+	public boolean checkUser(String usuario){return CustomerDAO.checkUsuario(usuario);};
+
 }

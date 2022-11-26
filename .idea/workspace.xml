@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="logica leer imagenes">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22_12_48_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_22_12_48__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controler/CustomerControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controler/CustomerControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +70,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SendEmailThroughGmail">
+  <component name="RunManager" selected="Application.VentanaLogin">
     <configuration name="SendEmailThroughGmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sendemail.SendEmailThroughGmail" />
       <module name="Smartplan" />
@@ -103,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VentanaActividades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.VentanaActividades" />
+    <configuration name="VentanaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.VentanaLogin" />
       <module name="Smartplan" />
       <extension name="coverage">
         <pattern>
@@ -116,8 +123,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VentanaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.VentanaLogin" />
+    <configuration name="VentanaReservas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.VentanaReservas" />
       <module name="Smartplan" />
       <extension name="coverage">
         <pattern>
@@ -141,19 +148,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.VentanaReservas" />
       <item itemvalue="Application.SendEmailThroughGmail" />
       <item itemvalue="Application.SendMail" />
-      <item itemvalue="Application.VentanaActividades" />
       <item itemvalue="Application.SocketServer" />
       <item itemvalue="Application.VentanaLogin" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SendEmailThroughGmail" />
-        <item itemvalue="Application.SendMail" />
         <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.SocketServer" />
-        <item itemvalue="Application.VentanaActividades" />
+        <item itemvalue="Application.VentanaReservas" />
+        <item itemvalue="Application.SendEmailThroughGmail" />
+        <item itemvalue="Application.SendMail" />
       </list>
     </recent_temporary>
   </component>

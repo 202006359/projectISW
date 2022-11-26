@@ -61,6 +61,18 @@ public class SocketServer extends Thread {
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;
+				case "/checkUser":
+					boolean existe;
+					usuario= (String) session.get("usuario");
+					customerControler = new CustomerControler();
+					existe = customerControler.checkUser(usuario);
+					mensajeOut.setContext("/checkUserResponse");
+					session.put("Customer",existe);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+
+
 				case "/createAccount":
 					usuario= (String) session.get("usuario");
 					contrasena = (String) session.get("contrasena");

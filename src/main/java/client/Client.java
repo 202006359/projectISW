@@ -54,6 +54,9 @@ public class Client {
 				customer =(Customer) (session.get("Customer"));
 				System.out.println("He leído el usuario: "+customer.getUsuario()+" con contrasena: "+customer.getContrasena());
 				break;
+			case "/checkUserResponse":
+				session=mensajeVuelta.getSession();
+				break;
 			case "/createAccountResponse":
 				session = mensajeVuelta.getSession();
 				customer =(Customer) (session.get("Customer"));

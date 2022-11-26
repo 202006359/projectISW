@@ -24,6 +24,25 @@ public class CustomerDAO {
 		return cu;
 	}
 
+	public static boolean checkUsuario(String usuario){ //Me devuelve true si el usuario existe en la base de datos
+		Connection con=ConnectionDAO.getInstance().getConnection();
+		boolean existe = false;
+		try (PreparedStatement pst = con.prepareStatement("SELECT usuario FROM login WHERE usuario= '"+usuario+"'");
+			 ResultSet rs = pst.executeQuery()) {
+			while (rs.next()) {
+				if(rs.getString(1).equals(usuario)){
+					existe = true;
+				}else{
+					existe = false;
+				}
+			}
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}
+		return existe;
+
+	}
+
 	public static void crearCuenta(String usuario, String contrasena) { //Me crea usuario y contraseña
 		Connection con=ConnectionDAO.getInstance().getConnection();
 
