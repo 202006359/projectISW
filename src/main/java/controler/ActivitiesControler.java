@@ -10,7 +10,6 @@ import java.util.ArrayList;
 /**
  * Esta clase gestiona las actividades guardadas en la base de datos.
  */
-
 public class ActivitiesControler {
 
     public ArrayList<Actividad> getActividades() {
@@ -19,6 +18,8 @@ public class ActivitiesControler {
     }
     public Actividad getDescription(String nombre) {return ActivityDAO.getDescripcion(nombre);}
     public Actividad getLocation(String nombre) {return ActivityDAO.getUbicacion(nombre);}
-
+    //public Actividad getImagen(String nombre) {return ActivityDAO.getImagen(nombre);}
+    //public Actividad getDescuento(String nombre) {return ActivityDAO.getDescuento(nombre);}
+    //public void addDescuento(String nombre, int descuento) {ActivityDAO.addDescuento(nombre,descuento);}
 
 }
