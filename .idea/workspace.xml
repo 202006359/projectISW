@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="logica leer imagenes">
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="prueba bea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controler/ActivitiesControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controler/ActivitiesControler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/ActivityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ActivityDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,19 +77,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SendMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sendemail.SendMail" />
-      <module name="Smartplan" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sendemail.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="server.SocketServer" />
       <module name="Smartplan" />
@@ -105,9 +90,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VentanaActividades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.VentanaActividades" />
-      <module name="projectISW19" />
+    <configuration name="VentanaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.VentanaLogin" />
+      <module name="Smartplan" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -118,9 +103,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VentanaLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.VentanaLogin" />
-      <module name="projectISW19" />
+    <configuration name="VentanaReservas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.VentanaReservas" />
+      <module name="Smartplan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.prueba" />
+      <module name="Smartplan" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ui.*" />
@@ -143,19 +141,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.VentanaReservas" />
+      <item itemvalue="Application.prueba" />
       <item itemvalue="Application.SendEmailThroughGmail" />
-      <item itemvalue="Application.SendMail" />
-      <item itemvalue="Application.VentanaActividades" />
       <item itemvalue="Application.SocketServer" />
       <item itemvalue="Application.VentanaLogin" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.VentanaLogin" />
-        <item itemvalue="Application.VentanaActividades" />
-        <item itemvalue="Application.SendEmailThroughGmail" />
-        <item itemvalue="Application.SendMail" />
+        <item itemvalue="Application.prueba" />
         <item itemvalue="Application.SocketServer" />
+        <item itemvalue="Application.VentanaReservas" />
+        <item itemvalue="Application.SendEmailThroughGmail" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669201615146</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="logica check user en base datos">
+      <created>1669487074310</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669487074310</updated>
+    </task>
+    <task id="LOCAL-00013" summary="prueba bea">
+      <created>1669487283526</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669487283526</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,7 +282,9 @@
     <MESSAGE value="mejora cuestionario V1.0" />
     <MESSAGE value="fotos base de datos BETA" />
     <MESSAGE value="logica leer imagenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="logica leer imagenes" />
+    <MESSAGE value="logica check user en base datos" />
+    <MESSAGE value="prueba bea" />
+    <option name="LAST_COMMIT_MESSAGE" value="prueba bea" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

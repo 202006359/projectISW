@@ -6,6 +6,7 @@ import domain.Actividad;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -36,9 +37,12 @@ public class PanelInicio extends JPanel{
         try {
             Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
             g.drawImage(img,400,30,196,185,null);
-            Actividad act = ActivityDAO.getImagen("Teatro Barceló");
-            Image image = act.getImagen();
+            ArrayList<Actividad> actividades = ActivityDAO.getActividades();
+
+            Actividad a = actividades.get(2);
+            Image image = a.getImagen();
             g.drawImage(image,100,30,196,185,null);
+
 
         } catch (IOException e) {
             e.printStackTrace();

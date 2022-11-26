@@ -18,41 +18,47 @@ import java.sql.SQLException;
 public class ActivityDAO {
 
 
-   public static void main(String[] args) {
+   /*public static void main(String[] args) {
 
         ArrayList<Actividad> lista = new ArrayList<>();
+
         lista = ActivityDAO.getActividades();
         System.out.println(lista);
-    }
+
+    }*/
+
+
 
 	//Obtengo un arrayList con cada actividad, cada una de ellas asociada a una categoria (columna 4 en la base de datos).
-	public static ArrayList<Actividad> getActividades() {
-		ArrayList<Actividad> actividades = new ArrayList<>();
-		Connection con = ConnectionDAO.getInstance().getConnection();
-		Actividad act = null;
-		try (PreparedStatement pst = con.prepareStatement("SELECT * FROM planes");
-			 ResultSet rs = pst.executeQuery()) {
+    public static ArrayList<Actividad> getActividades() {
+    	ArrayList<Actividad> actividades = new ArrayList<>();
+    	Connection con=ConnectionDAO.getInstance().getConnection();
+    	Actividad act=null;
+    	try (PreparedStatement pst = con.prepareStatement("SELECT * FROM planes");
+    		 ResultSet rs = pst.executeQuery()) {
 
 			//la columna 4 me da la categoria
 			while (rs.next()) {
+
+
 				if(rs.getBinaryStream(5)!=null){
 					InputStream inputStream = rs.getBinaryStream(5);
 					Image image = ImageIO.read(inputStream);
-				act= new Actividad(rs.getString(1),rs.getString(4),image);
+					act= new Actividad(rs.getString(1),rs.getString(4),image);
 				}
 				else{
-				act = new Actividad(rs.getString(1), rs.getString(4));
-				System.out.println(act);
+					act= new Actividad(rs.getString(1),rs.getString(4));
 				}
+
 				actividades.add(act);
 			}
 
 		} catch (SQLException ex) {
 			System.out.println(ex.getMessage());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			return actividades;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return actividades;
 	}
 
 	public static Actividad getDescripcion(String nombre) { //Me interesa para luego comprobar la contraseña y en caso de que sea incorrecta mostrarlo
@@ -81,8 +87,7 @@ public class ActivityDAO {
 		}
 		return act;
 	}
-
-	/*public static void addImagen(String nombre, File file) { //Me guarda una imagen en la base de datos
+	public static void addImagen(String nombre, File file) { //Me guarda una imagen en la base de datos
 		Connection con=ConnectionDAO.getInstance().getConnection();
 
 		try (PreparedStatement pst = con.prepareStatement("UPDATE planes SET imagen = ? WHERE nombre ='" + nombre + "';")) {
@@ -95,8 +100,7 @@ public class ActivityDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}*/
-
+	}
 	public static Actividad getImagen(String nombre) {//Obtengo la imagen de la base de datos
 		Connection con=ConnectionDAO.getInstance().getConnection();
 		Actividad act=null;
@@ -115,7 +119,7 @@ public class ActivityDAO {
 		return act;
 	}
 
-	/*public static ArrayList<String> getNombres() {//Obtengo todos los nombres
+	public static ArrayList<String> getNombres() {//Obtengo todos los nombres
 		Connection con=ConnectionDAO.getInstance().getConnection();
 		ArrayList<String> nombres = new ArrayList<>();
 		try (PreparedStatement pst = con.prepareStatement("SELECT nombre FROM planes;" );
@@ -127,34 +131,8 @@ public class ActivityDAO {
 			System.out.println(ex.getMessage());
 		}
 		return nombres;
-	}*/
+	}
 
-	//me lee los descuentos de la base de datos
-	/*public static Actividad getDescuento(String nombre)
-	{
-			Connection con=ConnectionDAO.getInstance().getConnection();
-			Actividad act=null;
-			try (PreparedStatement pst = con.prepareStatement("SELECT descuento FROM descuentos WHERE nombre= '"+nombre+"'");
-				 ResultSet rs = pst.executeQuery()) {
-				while (rs.next()) {
-					act= new Actividad(rs.getString(1),rs.getString(2));
-				}
-			} catch (SQLException ex) {
-				System.out.println(ex.getMessage());
-			}
-			return act;
-		}*/
 
-		//Me guarda el descuento en la base de datos
-	/*public static void addDescuento(String nombre, int descuento) {
-		Connection con=ConnectionDAO.getInstance().getConnection();
-		try (PreparedStatement pst = con.prepareStatement("UPDATE descuentos SET descuento ="+descuento+" WHERE nombre ='" + nombre + "';")) {
-			pst.executeUpdate();
-		} catch (SQLException ex) {
-			System.out.println(ex.getMessage());
-		}
-	}*/
 }
-
-
 
