@@ -16,6 +16,9 @@ public class Customer implements Serializable{
 
 	private Date descuento;
 
+	public Customer(String usuario) {
+		this.usuario = usuario;
+	}
 	
 	public Customer(String usuario, String contrasena) {
 		this.contrasena = contrasena;

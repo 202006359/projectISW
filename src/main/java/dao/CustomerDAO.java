@@ -10,6 +10,9 @@ import domain.*;
 import ui.VentanaActividades;
 
 public class CustomerDAO {
+	/**
+	 *  Esta clase gestiona los usuarios de la base de datos
+	 */
 
 	public static Customer getContrasena(String usuario) { //Me interesa para luego comprobar la contraseña y en caso de que sea incorrecta mostrarlo
 		Connection con=ConnectionDAO.getInstance().getConnection();

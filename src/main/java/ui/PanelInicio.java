@@ -35,8 +35,8 @@ public class PanelInicio extends JPanel{
         try {
             Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
             g.drawImage(img,400,30,196,185,null);
-            ArrayList<Actividad> actividades = ActivityDAO.getActividades();
 
+            ArrayList<Actividad> actividades = ActivityDAO.getActividades();
             Actividad a = actividades.get(2);
             Image image = a.getImagen();
             System.out.println(image);

@@ -3,13 +3,17 @@ package server;
 import configuration.PropertiesISW;
 import controler.ActivitiesControler;
 import controler.CustomerControler;
+import controler.ReservaControler;
 import domain.Actividad;
 import domain.Customer;
+import domain.Reserva;
 import message.Message;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Date;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -41,6 +45,7 @@ public class SocketServer extends Thread {
 		    Message mensajeOut=new Message();
 			HashMap<String,Object> session=mensajeIn.getSession();
 			CustomerControler customerControler;
+			ReservaControler reservaControler;
 			String usuario;
 			String contrasena;
 			String perfil;
@@ -51,6 +56,10 @@ public class SocketServer extends Thread {
 			String nombre;
 			String descripcion;
 			String ubicacion;
+			Reserva reserva;
+			String plan;
+			Date fecha;
+			Time hora;
 		    switch (mensajeIn.getContext()) {
 				case "/getPassword":
 					usuario= (String) session.get("usuario");
@@ -145,6 +154,19 @@ public class SocketServer extends Thread {
 					activitiesControler.completeActivity(nombre,descuento);
 					mensajeOut.setContext("/completeActivityResponse");
 					session.put("Actividad",act);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
+				case "/createReservation":
+					usuario= (String) session.get("usuario");
+					plan = (String) session.get("plan");
+					fecha = (Date) session.get("fecha");
+					hora = (Time) session.get("hora");
+					reservaControler=new ReservaControler();
+					reserva = new Reserva(plan,fecha,hora,new Customer(usuario));
+					reservaControler.createReservation(usuario,plan,fecha,hora);
+					mensajeOut.setContext("/createReservationResponse");
+					session.put("Reserva",reserva);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;
