@@ -3,10 +3,10 @@ package server;
 import configuration.PropertiesISW;
 import controler.ActivitiesControler;
 import controler.CustomerControler;
-import controler.ReservaControler;
+//import controler.ReservaControler;
 import domain.Actividad;
 import domain.Customer;
-import domain.Reserva;
+//import domain.Reserva;
 import message.Message;
 
 import java.io.*;
@@ -45,7 +45,7 @@ public class SocketServer extends Thread {
 		    Message mensajeOut=new Message();
 			HashMap<String,Object> session=mensajeIn.getSession();
 			CustomerControler customerControler;
-			ReservaControler reservaControler;
+			//ReservaControler reservaControler;
 			String usuario;
 			String contrasena;
 			String perfil;
@@ -56,7 +56,7 @@ public class SocketServer extends Thread {
 			String nombre;
 			String descripcion;
 			String ubicacion;
-			Reserva reserva;
+			//Reserva reserva;
 			String plan;
 			Date fecha;
 			Time hora;
@@ -162,11 +162,11 @@ public class SocketServer extends Thread {
 					plan = (String) session.get("plan");
 					fecha = (Date) session.get("fecha");
 					hora = (Time) session.get("hora");
-					reservaControler=new ReservaControler();
-					reserva = new Reserva(plan,fecha,hora,new Customer(usuario));
-					reservaControler.createReservation(usuario,plan,fecha,hora);
+					//reservaControler=new ReservaControler();
+					//reserva = new Reserva(plan,fecha,hora,new Customer(usuario));
+					//reservaControler.createReservation(usuario,plan,fecha,hora);
 					mensajeOut.setContext("/createReservationResponse");
-					session.put("Reserva",reserva);
+					//session.put("Reserva",reserva);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;

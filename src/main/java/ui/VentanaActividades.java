@@ -60,11 +60,6 @@ public class VentanaActividades extends JFrame implements ActionListener {
         this.setSize(1300, 900);
         principal.setBackground(oscuro);
 
-        //btn descuentos
-        principal.add(btnDescuentos);
-        btnDescuentos.setPreferredSize(new Dimension(500,50));
-        btnDescuentos.addActionListener(this);
-
 
         //label BIenvenida
         JLabel bienvenida = new JLabel("                              BIENVENIDO A TU PAGINA PERSONAL DE SMARTPLAN");
@@ -357,9 +352,6 @@ public class VentanaActividades extends JFrame implements ActionListener {
         }
         //del resto de categorias que no se ajustan a su perfil no pongo ninguna actividad
 
-        principal.add(btnDescuentos);
-        btnDescuentos.setBounds(500, 1200, 50,50);
-        btnDescuentos.addActionListener(this);
 
         scrollPane.setViewportView(activi);
         scrollPane.getVerticalScrollBar().setUnitIncrement(20);
