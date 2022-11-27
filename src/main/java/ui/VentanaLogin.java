@@ -36,6 +36,7 @@ public class VentanaLogin extends JFrame {
         this.add(pnlLogin);
 
 
+
         JLabel lblIn = new JLabel("INICIO SESIÓN");
         lblIn.setBounds(340,220,500,50);
         lblIn.setFont(new Font("Serif", Font.PLAIN, 40));

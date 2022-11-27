@@ -1,12 +1,18 @@
 package ui;
 import dao.ActivityDAO;
+import dao.ReservaDAO;
 import domain.Actividad;
+import domain.Reserva;
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
+import java.sql.Time;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
 
 /**
  * Clase para crear el panel que se implementará en la ventana de Login
@@ -35,12 +41,7 @@ public class PanelInicio extends JPanel{
         try {
             Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
             g.drawImage(img,400,30,196,185,null);
-
-            ArrayList<Actividad> actividades = ActivityDAO.getActividades();
-            Actividad a = actividades.get(2);
-            Image image = a.getImagen();
-            System.out.println(image);
-            g.drawImage(image,100,30,196,185,null);
+            //ReservaDAO.crearReserva("admin@gmail.com","Fabrik",new Date(2022-1900,11,28),new Time(20,00,00));
 
 
         } catch (IOException e) {
