@@ -47,6 +47,7 @@ public class Client {
 		this.sent(mensajeEnvio,mensajeVuelta);
 		Customer customer;
 		Actividad actividad;
+		Reserva reserva;
 		
 		switch (mensajeVuelta.getContext()) {
 			case "/getPasswordResponse":
@@ -91,6 +92,11 @@ public class Client {
 				session=mensajeVuelta.getSession();
 				actividad =(Actividad) (session.get("Actividad"));
 				System.out.println("He leído el descuento: "+actividad.getDescuento()+" de la actividad: "+actividad.getNombre());
+				break;
+			case "/createReservationResponse":
+				session = mensajeVuelta.getSession();
+				reserva =(Reserva) (session.get("Reserva"));
+				System.out.println("He creado la reserva de " + reserva.getNombrePlan() + "para el dia " + reserva.getFecha() + "y la hora " + reserva.getHora());
 				break;
 
 			default:
