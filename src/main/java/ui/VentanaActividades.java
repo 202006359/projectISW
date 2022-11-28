@@ -161,7 +161,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                     @Override
                     public void actionPerformed(ActionEvent e) {
 
-                        new VentanaReservas(nombreAct);
+                        new VentanaReservas(nombreAct,img);
                     }
                 });
                 JPanel aux = new JPanel();
@@ -234,7 +234,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
 
@@ -302,7 +302,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();
@@ -393,7 +393,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();
@@ -462,7 +462,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
 
@@ -536,7 +536,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();
@@ -605,7 +605,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();
@@ -676,7 +676,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();
@@ -744,7 +744,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();
@@ -812,7 +812,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
 
-                            new VentanaReservas(nombreAct);
+                            new VentanaReservas(nombreAct,img);
                         }
                     });
                     JPanel aux = new JPanel();

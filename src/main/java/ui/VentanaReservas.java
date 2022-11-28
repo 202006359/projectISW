@@ -11,18 +11,21 @@ import java.util.HashMap;
 
 public class VentanaReservas extends JFrame {
     public static void main(String[] args) {
-        new VentanaReservas("");
+        new VentanaReservas("",null);
     }
     String nombre;
+    Image imagen;
+    String descripcion;
+    String ubicacion;
 
-    public VentanaReservas(String nombre){
+    public VentanaReservas(String nombre, Image imagen){
 
         this.nombre = nombre;
+        this.imagen = imagen;
+        descripcion = leerDescripcion("PANDA CLUB");
+        ubicacion = leerUbicacion("PANDA CLUB");
 
-        this.setPreferredSize(new Dimension(700,700));
-
-        //System.out.println(leerDescripcion("PANDA CLUB"));
-        System.out.println(leerUbicacion("PANDA CLUB"));
+        this.setPreferredSize(new Dimension(700,700)); //Se puede cambiar
 
         this.pack();
         this.setVisible(true);
