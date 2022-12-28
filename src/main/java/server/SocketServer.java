@@ -3,10 +3,10 @@ package server;
 import configuration.PropertiesISW;
 import controler.ActivitiesControler;
 import controler.CustomerControler;
-//import controler.ReservaControler;
+import controler.ReservaControler;
 import domain.Actividad;
 import domain.Customer;
-//import domain.Reserva;
+import domain.Reserva;
 import message.Message;
 
 import java.io.*;
@@ -36,16 +36,16 @@ public class SocketServer extends Thread {
 		try {
 			in = socket.getInputStream();
 			out = socket.getOutputStream();
-			
+
 			//first read the object that has been sent
 			ObjectInputStream objectInputStream = new ObjectInputStream(in);
-		    Message mensajeIn= (Message)objectInputStream.readObject();
-		    //Object to return informations 
-		    ObjectOutputStream objectOutputStream = new ObjectOutputStream(out);
-		    Message mensajeOut=new Message();
+			Message mensajeIn= (Message)objectInputStream.readObject();
+			//Object to return informations
+			ObjectOutputStream objectOutputStream = new ObjectOutputStream(out);
+			Message mensajeOut=new Message();
 			HashMap<String,Object> session=mensajeIn.getSession();
 			CustomerControler customerControler;
-			//ReservaControler reservaControler;
+			ReservaControler reservaControler;
 			String usuario;
 			String contrasena;
 			String perfil;
@@ -56,11 +56,11 @@ public class SocketServer extends Thread {
 			String nombre;
 			String descripcion;
 			String ubicacion;
-			//Reserva reserva;
+			Reserva reserva;
 			String plan;
 			Date fecha;
 			Time hora;
-		    switch (mensajeIn.getContext()) {
+			switch (mensajeIn.getContext()) {
 				case "/getPassword":
 					usuario= (String) session.get("usuario");
 					customerControler=new CustomerControler();
@@ -162,28 +162,28 @@ public class SocketServer extends Thread {
 					plan = (String) session.get("plan");
 					fecha = (Date) session.get("fecha");
 					hora = (Time) session.get("hora");
-					//reservaControler=new ReservaControler();
-					//reserva = new Reserva(plan,fecha,hora,new Customer(usuario));
-					//reservaControler.createReservation(usuario,plan,fecha,hora);
+					reservaControler=new ReservaControler();
+					reserva = new Reserva(plan,fecha,hora,new Customer(usuario));
+					reservaControler.createReservation(usuario,plan,fecha,hora);
 					mensajeOut.setContext("/createReservationResponse");
-					//session.put("Reserva",reserva);
+					session.put("Reserva",reserva);
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;
 
 
 				default:
-		    		System.out.println("\nParámetro no encontrado");
-		    		break;
-		    }
-		    
-		    //Lógica del controlador 
-		    //System.out.println("\n1.- He leído: "+mensaje.getContext());
-		    //System.out.println("\n2.- He leído: "+(String)mensaje.getSession().get("Nombre"));
-		    
-		    
-		    
-		    //Prueba para esperar
+					System.out.println("\nParámetro no encontrado");
+					break;
+			}
+
+			//Lógica del controlador
+			//System.out.println("\n1.- He leído: "+mensaje.getContext());
+			//System.out.println("\n2.- He leído: "+(String)mensaje.getSession().get("Nombre"));
+
+
+
+			//Prueba para esperar
 		    /*try {
 		    	System.out.println("Me duermo");
 				Thread.sleep(15000);
@@ -194,7 +194,7 @@ public class SocketServer extends Thread {
 			}*/
 			// create an object output stream from the output stream so we can send an object through it
 			/*ObjectOutputStream objectOutputStream = new ObjectOutputStream(out);
-			
+
 			//Create the object to send
 			String cadena=((String)mensaje.getSession().get("Nombre"));
 			cadena+=" añado información";

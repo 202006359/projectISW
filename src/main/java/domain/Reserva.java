@@ -1,5 +1,6 @@
 package domain;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
 import java.util.ArrayList;
@@ -9,11 +10,12 @@ import java.util.ArrayList;
  *	Clase para definir el objeto Reserva
  */
 
-public class Reserva {
+public class Reserva implements Serializable {
     private String nombrePlan;
     private Date fecha;
     private Time hora;
     private ArrayList<Customer> usuarios = new ArrayList<>();
+    private static final long serialVersionUID = 1L;
 
 
 

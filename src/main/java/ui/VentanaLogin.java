@@ -1,6 +1,7 @@
 package ui;
 
 import client.Client;
+import com.sendemail.SendEmailThroughGmail;
 import dao.ActivityDAO;
 import domain.Customer;
 
@@ -14,7 +15,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.sql.Date;
 import java.util.HashMap;
 /**
  * Clase para visualizar en pantalla la ventana de Inicio de Sesión
@@ -131,12 +134,14 @@ public class VentanaLogin extends JFrame {
             this.registrarse(); //Si no tengo cuenta, me voy a la ventana de Sign In
         });
 
+
         this.pack();
         this.setVisible(true);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
 
 
     public void registrarse() { //Me voy a la ventana de Registro

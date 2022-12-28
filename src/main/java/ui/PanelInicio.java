@@ -7,9 +7,9 @@ import domain.Reserva;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.sql.Time;
+import java.util.Date;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -38,10 +38,11 @@ public class PanelInicio extends JPanel{
 
         g.setColor(Color.WHITE);
         g.fillRoundRect(100,100,800,500,50,50);
+
+
         try {
             Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
             g.drawImage(img,400,30,196,185,null);
-            //ReservaDAO.crearReserva("admin@gmail.com","Fabrik",new Date(2022-1900,11,28),new Time(20,00,00));
 
 
         } catch (IOException e) {

@@ -47,7 +47,7 @@ public class Client {
 		this.sent(mensajeEnvio,mensajeVuelta);
 		Customer customer;
 		Actividad actividad;
-		//Reserva reserva;
+		Reserva reserva;
 		
 		switch (mensajeVuelta.getContext()) {
 			case "/getPasswordResponse":
@@ -95,8 +95,8 @@ public class Client {
 				break;
 			case "/createReservationResponse":
 				session = mensajeVuelta.getSession();
-				//reserva =(Reserva) (session.get("Reserva"));
-				//System.out.println("He creado la reserva de " + reserva.getNombrePlan() + "para el dia " + reserva.getFecha() + "y la hora " + reserva.getHora());
+				reserva =(Reserva) (session.get("Reserva"));
+				System.out.println("He creado la reserva de " + reserva.getNombrePlan() + " para el dia " + reserva.getFecha() + " y la hora " + reserva.getHora());
 				break;
 
 			default:
@@ -142,6 +142,7 @@ public class Client {
 				System.err.println("Unknown host: " + host);
 				System.exit(1);
 			} catch (IOException e) {
+				System.out.println(e.getStackTrace());
 				System.err.println("Unable to get streams from server");
 				System.exit(1);
 			}		

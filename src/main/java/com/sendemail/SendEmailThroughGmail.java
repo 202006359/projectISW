@@ -47,9 +47,5 @@ public class SendEmailThroughGmail {
         }
     }
 
-    public static void main(String[] args) {
-        new SendEmailThroughGmail ("a@gmail.com",
-                "Test Email", "Hi,\n\n This is a test email via " +
-                "Gmail server using TLS connection.");
-    }
+
 }
