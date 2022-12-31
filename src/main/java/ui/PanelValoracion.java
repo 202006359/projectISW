@@ -7,6 +7,11 @@ import javax.swing.*;
 import java.sql.Time;
 import java.util.*;
 import java.awt.event.*;
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
 public class PanelValoracion extends JFrame implements ActionListener{
 
     String nombreActividad;
@@ -65,7 +70,9 @@ public class PanelValoracion extends JFrame implements ActionListener{
         btnCerrar.setBackground(azull);
 
         //fecha
-       fecha = new Date();
+        long millis = System.currentTimeMillis();
+        java.sql.Date fecha = new java.sql.Date(millis);
+
 
         btnCerrar.addActionListener(new ActionListener() {
             @Override
@@ -98,6 +105,8 @@ public class PanelValoracion extends JFrame implements ActionListener{
         cliente.sentMessage(context,session);
 
     }
+
+
 
     @Override
     public void actionPerformed(ActionEvent e){

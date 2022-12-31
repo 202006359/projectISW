@@ -177,7 +177,7 @@ public class VentanaReservas extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e){
 
         if(e.getSource() == btnValorarPlan){
-            PanelValoracion create = new PanelValoracion(usuario, nombreActividad, valoracion, comentario);
+            PanelValoracion create = new PanelValoracion(usuario, nombreActividad);
         }
     }
 

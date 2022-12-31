@@ -10,6 +10,7 @@ import domain.Customer;
 import domain.Reserva;
 import domain.Valoracion;
 import message.Message;
+import controler.*;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -191,7 +192,7 @@ public class SocketServer extends Thread {
 					nota = (float) session.get("nota");
 					fecha = (Date) session.get("fecha");
 					comentario = (String) session.get("comentario");
-					ValoracionControler valoracionControler=new ValoracionControler();
+					ValoracionControler valoracionControler = new ValoracionControler();
 					Valoracion valoracion = new Valoracion(usuario,plan,nota,fecha,comentario);
 					valoracionControler.createValoracion(usuario,plan,nota,fecha,comentario);
 					mensajeOut.setContext("/createValoracionResponse");
