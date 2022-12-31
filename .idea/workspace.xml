@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V1">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22_11_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22_11_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_14_17_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_14_17__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_17_16_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_17_16__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/PanelValoracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Reserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +67,7 @@
       <recent name="test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VentanaReservas">
+  <component name="RunManager" selected="Application.VentanaLogin">
     <configuration name="SendEmailThroughGmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sendemail.SendEmailThroughGmail" />
       <module name="Smartplan" />
@@ -142,17 +133,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.VentanaReservas" />
       <item itemvalue="Application.prueba" />
@@ -162,9 +142,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.VentanaReservas" />
         <item itemvalue="Application.SocketServer" />
-        <item itemvalue="Application.VentanaLogin" />
         <item itemvalue="Application.SendEmailThroughGmail" />
         <item itemvalue="Application.prueba" />
       </list>
@@ -324,22 +304,6 @@
     <MESSAGE value="prueba bea" />
     <MESSAGE value="añado logica reservas V1" />
     <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

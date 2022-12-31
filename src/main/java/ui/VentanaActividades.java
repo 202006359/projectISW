@@ -54,7 +54,6 @@ public class VentanaActividades extends JFrame implements ActionListener {
    }
 
     public VentanaActividades(String usuario) {
-        System.out.println("HE ENTRADDO");
 
         this.usuario=usuario;
         this.setSize(1300, 900);
@@ -147,7 +146,7 @@ public class VentanaActividades extends JFrame implements ActionListener {
         int j = 0;
         for (int i = 0; i < actividades.toArray().length; i++) {
             if ((Objects.equals(actividades.get(i).getCategoria(), perfil1)) == true) {
-                System.out.println(actividades.get(i).getPrecio());
+                //System.out.println(actividades.get(i).getPrecio());
                 Image img = actividades.get(i).getImagen().getScaledInstance(400,200, 1);
                 // System.out.println("prueba:" + img);
                 Icon img2 = new ImageIcon(img);

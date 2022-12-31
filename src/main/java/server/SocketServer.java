@@ -146,6 +146,16 @@ public class SocketServer extends Thread {
 					mensajeOut.setSession(session);
 					objectOutputStream.writeObject(mensajeOut);
 					break;
+				case "/getImagen":
+					nombre = (String) session.get("nombre");
+					activitiesControler = new ActivitiesControler();
+					act = activitiesControler.getLocation(nombre);
+					System.out.println("nombre:"+act.getNombre());
+					mensajeOut.setContext("/getImagenResponse");
+					session.put("Actividad",act);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
 				case "/completeActivity":
 					nombre = (String) session.get("nombre");
 					descuento = (float) session.get("descuento");
