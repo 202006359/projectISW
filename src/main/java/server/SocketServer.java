@@ -4,15 +4,18 @@ import configuration.PropertiesISW;
 import controler.ActivitiesControler;
 import controler.CustomerControler;
 import controler.ReservaControler;
+import controler.ValoracionControler;
 import domain.Actividad;
 import domain.Customer;
 import domain.Reserva;
+import domain.Valoracion;
 import message.Message;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.Date;
+import java.sql.*;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,6 +63,8 @@ public class SocketServer extends Thread {
 			String plan;
 			Date fecha;
 			Time hora;
+			float nota;
+			String comentario;
 			switch (mensajeIn.getContext()) {
 				case "/getPassword":
 					usuario= (String) session.get("usuario");
@@ -115,7 +120,6 @@ public class SocketServer extends Thread {
 					objectOutputStream.writeObject(mensajeOut);
 					System.out.println("ESTOY AQUIIII");
 					break;
-
 				case "/getPerfil":
 					usuario= (String) session.get("usuario");
 					customerControler=new CustomerControler();
@@ -181,6 +185,20 @@ public class SocketServer extends Thread {
 					objectOutputStream.writeObject(mensajeOut);
 					break;
 
+				case "/createValoracion":
+					usuario= (String) session.get("usuario");
+					plan = (String) session.get("plan");
+					nota = (float) session.get("nota");
+					fecha = (Date) session.get("fecha");
+					comentario = (String) session.get("comentario");
+					ValoracionControler valoracionControler=new ValoracionControler();
+					Valoracion valoracion = new Valoracion(usuario,plan,nota,fecha,comentario);
+					valoracionControler.createValoracion(usuario,plan,nota,fecha,comentario);
+					mensajeOut.setContext("/createValoracionResponse");
+					session.put("Valoracion",valoracion);
+					mensajeOut.setSession(session);
+					objectOutputStream.writeObject(mensajeOut);
+					break;
 
 				default:
 					System.out.println("\nParámetro no encontrado");

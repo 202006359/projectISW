@@ -1,20 +1,24 @@
 package ui;
+import client.Client;
+import domain.Valoracion;
+
 import java.awt.*;
 import javax.swing.*;
+import java.sql.Time;
 import java.util.*;
 import java.awt.event.*;
 public class PanelValoracion extends JFrame implements ActionListener{
 
     String nombreActividad;
     String usuario;
-    int valoracion;
-    String comentario;
-    public PanelValoracion(String usuario, String nombreActividad, int valoracion, String comentario){
+    int val;
+    String coment;
+    float nota;
+    Date fecha;
+    public PanelValoracion(String usuario, String nombreActividad){
 
         this.usuario= usuario;
         this.nombreActividad = nombreActividad;
-        this.valoracion = valoracion;
-        this.comentario = comentario;
 
         setSize(400,400);
         setVisible(true);
@@ -38,21 +42,39 @@ public class PanelValoracion extends JFrame implements ActionListener{
         JLabel name = new JLabel(nombreActividad);
         pnlName.add(name);
 
-        JLabel valoracion = new JLabel("Valoracion(1/5): ");
-        JTextField txtValoracion = new JTextField(3);
-        pnlVal.add(valoracion);
-        pnlVal.add(txtValoracion);
+
+        //valoracion
+        JLabel valoracion= new JLabel("Valoracion(1/5): ");
+        JFormattedTextField  txtValoracion= new JFormattedTextField(10);
+        //nota = (float)  txtValoracion.getValue();
+        pnlComent.add(valoracion);
+        pnlComent.add( txtValoracion);
+
+        //comentario
 
         JLabel comentario = new JLabel("Comentario: ");
-        JTextField txtComentario = new JTextField(30);
-        pnlComent.add(comentario);
-        pnlComent.add(txtComentario);
+        JTextField txtComentario = new JTextField(3);
+        coment = txtComentario.getText();
+        pnlVal.add(comentario);
+        pnlVal.add(txtComentario);
+
 
         JButton btnCerrar = new JButton("Guardar Valoracion");
         pnlCerrar.add(btnCerrar);
         btnCerrar.setFont(font1);
         btnCerrar.setBackground(azull);
-        btnCerrar.addActionListener(this);
+
+        //fecha
+       fecha = new Date();
+
+        btnCerrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                new Valoracion(usuario, nombreActividad, 10 , fecha, coment );
+                guardarValoracion();
+            }
+        });
 
         pnlCentral.add(pnlName);
         pnlCentral.add(pnlVal);
@@ -60,6 +82,20 @@ public class PanelValoracion extends JFrame implements ActionListener{
         pnlReview.add(pnlCentral, BorderLayout.CENTER);
         pnlReview.add(pnlCerrar, BorderLayout.SOUTH);
         add(pnlReview);
+
+    }
+
+    public void guardarValoracion()
+    {
+        Client cliente=new Client();
+        HashMap<String,Object> session=new HashMap<>();
+        String context="/createValoracion";
+        session.put("usuario",usuario);
+        session.put("plan", nombreActividad);
+        session.put("nota", nota);
+        session.put("fecha", fecha);
+        session.put("Comentario", coment);
+        cliente.sentMessage(context,session);
 
     }
 

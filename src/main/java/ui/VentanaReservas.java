@@ -64,24 +64,22 @@ public class VentanaReservas extends JFrame implements ActionListener {
         nombreActividad = "PANDA CLUB";
         fechaReserva = new Date(2022-1900,11,28); //Esta info la obtendrá del boton que cree Jaime
         horaReserva = new Time(20,00,00); //Esta info la obtendrá del boton que cree Jaime
-        //this.guardarReserva(usuario, nombreActividad, fechaReserva, horaReserva);
+        this.guardarReserva(usuario, nombreActividad, fechaReserva, horaReserva);
         //FIN GUARDAR RESERVA
 
         //COMO SE MANDA UN CORREO
         usuario = "a@gmail.com";
         nombreActividad = "PANDA CLUB";
-        //this.mandarCorreo(usuario, nombreActividad);
+        this.mandarCorreo(usuario, nombreActividad);
         //FIN MADAR CORREO
 
         btnReservarPlan.setFont(font1);
         btnReservarPlan.setBackground(azull);
-        btnReservarPlan.addActionListener(e->{
-            this.reservar();
-        });
+        btnReservarPlan.addActionListener(this);
 
         btnValorarPlan.setFont(font1);
         btnValorarPlan.setBackground(azull);
-        btnValorarPlan.addActionListener(this); //¿Modificar?
+        btnValorarPlan.addActionListener(this);
 
         construyePanelSuperior();
         construyePanelMedio();
@@ -97,15 +95,6 @@ public class VentanaReservas extends JFrame implements ActionListener {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-    public void reservar() { //Me voy a la ventana de Registro
-        this.exit();
-        new VentanaGestionReserva(usuario,nombreActividad);
-    }
-
-    private void exit(){
-        this.dispose();
-        this.setVisible(false);
     }
 
 
@@ -172,10 +161,30 @@ public class VentanaReservas extends JFrame implements ActionListener {
     }
 
 
+    public void guardarReserva(String usuario,String nombreActividad,Date fechaReserva, Time horaReserva) { //Metodo para guardar en la base de datos la reserva
+
+        Client cliente=new Client();
+        HashMap<String,Object> session=new HashMap<>();
+        String context="/createReservation";
+        session.put("usuario",usuario);
+        session.put("plan", nombreActividad);
+        session.put("fecha", fechaReserva);
+        session.put("hora", horaReserva);
+        cliente.sentMessage(context,session);
+
+    }
+
+
+    public void mandarCorreo(String usuario, String nombreActividad){ //Metodo utilizado para mandar el correo de confirmación
+        new SendEmailThroughGmail(usuario, "Reserva Completada", "Buenas,\n\n Le comunicamos que tu reserva en " + nombreActividad + " se ha realizado correctamente.");
+    }
+
 
     @Override
     public void actionPerformed(ActionEvent e){
-
+        if(e.getSource() == btnReservarPlan){
+            this.mandarCorreo(usuario, nombreActividad);
+        }
         if(e.getSource() == btnValorarPlan){
             PanelValoracion create = new PanelValoracion(usuario, nombreActividad, valoracion, comentario);
         }
