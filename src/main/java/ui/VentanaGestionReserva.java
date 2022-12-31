@@ -172,7 +172,7 @@ public class VentanaGestionReserva extends JFrame {
 
 
 
-    public void salirPrincipal() { //Me voy a la ventana de Registro
+    public void salirPrincipal() { //Me voy a la ventana de actividades
         this.exit();
         new VentanaActividades(usuario);
     }

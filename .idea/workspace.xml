@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="con fallo">
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaValoracion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelValoracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelValoracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelValoracion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaGestionReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaGestionReserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +132,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Smartplan" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Smartplan" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -266,14 +280,7 @@
       <option name="project" value="LOCAL" />
       <updated>1669559654100</updated>
     </task>
-    <task id="LOCAL-00016" summary="con fallo">
-      <created>1672508809768</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1672508809768</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -312,8 +319,7 @@
     <MESSAGE value="logica check user en base datos" />
     <MESSAGE value="prueba bea" />
     <MESSAGE value="añado logica reservas V1" />
-    <MESSAGE value="con fallo" />
-    <option name="LAST_COMMIT_MESSAGE" value="con fallo" />
+    <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

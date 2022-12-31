@@ -12,87 +12,96 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
-public class PanelValoracion extends JFrame implements ActionListener{
+public class VentanaValoracion extends JFrame{
 
+    public static void main(String[] args) {
+        new VentanaValoracion("","");
+    }
     String nombreActividad;
     String usuario;
     int val;
+    Image imagen;
     String coment;
     float nota;
     Date fecha;
-    public PanelValoracion(String usuario, String nombreActividad){
+    public VentanaValoracion(String usuario, String nombreActividad){
 
         this.usuario= usuario;
         this.nombreActividad = nombreActividad;
 
-        setSize(400,400);
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        init();
-    }
 
-    public void init(){
-        Font font1 = new Font("SansSerif", Font.PLAIN, 15);
-        Color azull = new Color(84, 153, 199);
+        JButton btnGuardarValoracion = new JButton("Guardar Valoracion");
+        btnGuardarValoracion.setForeground(Color.WHITE);
+        btnGuardarValoracion.setFont(new Font("Calibri", Font.BOLD, 16));
+        btnGuardarValoracion.setBackground(new Color(30, 46, 64));
 
         JPanel pnlReview = new JPanel(new BorderLayout());
-        JPanel pnlCentral = new JPanel(new GridLayout(4,1));
-
+        JPanel pnlCentral = new JPanel((new GridLayout(4,1)));
         JPanel pnlName = new JPanel(new FlowLayout());
         JPanel pnlVal = new JPanel(new FlowLayout());
         JPanel pnlComent = new JPanel(new FlowLayout());
         JPanel pnlCerrar = new JPanel(new FlowLayout());
 
+        //nombre actividad
         JLabel name = new JLabel(nombreActividad);
+        name.setFont(new Font("Serif", Font.PLAIN, 40));
+        name.setForeground(new Color(30,46,64));
         pnlName.add(name);
-
 
         //valoracion
         JLabel valoracion= new JLabel("Valoracion(1/5): ");
+        valoracion.setFont(new Font("Serif", Font.BOLD, 16));
         JFormattedTextField  txtValoracion= new JFormattedTextField(10);
         //nota = (float)  txtValoracion.getValue();
         pnlComent.add(valoracion);
-        pnlComent.add( txtValoracion);
+        pnlComent.add(txtValoracion);
 
         //comentario
 
         JLabel comentario = new JLabel("Comentario: ");
-        JTextField txtComentario = new JTextField(3);
+        comentario.setFont(new Font("Serif", Font.BOLD, 16));
+
+        JTextField txtComentario = new JTextField(10);
         coment = txtComentario.getText();
         pnlVal.add(comentario);
         pnlVal.add(txtComentario);
-
-
-        JButton btnCerrar = new JButton("Guardar Valoracion");
-        pnlCerrar.add(btnCerrar);
-        btnCerrar.setFont(font1);
-        btnCerrar.setBackground(azull);
 
         //fecha
         long millis = System.currentTimeMillis();
         java.sql.Date fecha = new java.sql.Date(millis);
 
 
-        btnCerrar.addActionListener(new ActionListener() {
+        btnGuardarValoracion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                new Valoracion(usuario, nombreActividad, 10 , fecha, coment );
-                guardarValoracion();
+                new Valoracion(usuario, nombreActividad, nota, fecha, coment);
+                //guardarValoracion(); guarda la valoracion hecha por el usuario
+                salirPrincipal();
             }
         });
+
+
 
         pnlCentral.add(pnlName);
         pnlCentral.add(pnlVal);
         pnlCentral.add(pnlComent);
         pnlReview.add(pnlCentral, BorderLayout.CENTER);
         pnlReview.add(pnlCerrar, BorderLayout.SOUTH);
+        pnlCerrar.add(btnGuardarValoracion);
         add(pnlReview);
 
+
+        this.pack();
+        this.setVisible(true);
+        this.setSize(700,700);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public void guardarValoracion()
+
+    public void guardarValoracion() //guardar valoracion y comentario del usuario
     {
         Client cliente=new Client();
         HashMap<String,Object> session=new HashMap<>();
@@ -106,10 +115,14 @@ public class PanelValoracion extends JFrame implements ActionListener{
 
     }
 
-
-
-    @Override
-    public void actionPerformed(ActionEvent e){
-        //guardarValoracion
+    public void salirPrincipal(){ //me voy a la ventana de actividades
+        this.exit();
+        new VentanaActividades(usuario);
     }
+
+    public void exit(){
+        this.dispose();
+        this.setVisible(false);
+    }
+
 }
