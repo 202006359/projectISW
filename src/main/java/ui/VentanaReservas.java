@@ -12,6 +12,10 @@ import java.sql.Time;
 import java.sql.Date;
 import java.util.HashMap;
 
+/**
+ * Clase para visualizar en pantalla la ventana de Reservar y valorar
+ */
+
 public class VentanaReservas extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new VentanaReservas("","",null);
@@ -24,8 +28,7 @@ public class VentanaReservas extends JFrame implements ActionListener {
     int valoracion;
     String comentario;
 
-    Date fechaReserva; // = new Date(2022-1900,11,28);
-    Time horaReserva; // = new Time(20,00,00));
+
 
     Font font1= new Font("SansSerif", Font.PLAIN, 15);
 
@@ -59,19 +62,6 @@ public class VentanaReservas extends JFrame implements ActionListener {
 
 
 
-        //COMO SE GUARDA UNA RESERVA-> Importante que los formatos de la fecha y la reserva
-        usuario = "admin@gmail.com";
-        nombreActividad = "PANDA CLUB";
-        fechaReserva = new Date(2022-1900,11,28); //Esta info la obtendrá del boton que cree Jaime
-        horaReserva = new Time(20,00,00); //Esta info la obtendrá del boton que cree Jaime
-        //this.guardarReserva(usuario, nombreActividad, fechaReserva, horaReserva);
-        //FIN GUARDAR RESERVA
-
-        //COMO SE MANDA UN CORREO
-        usuario = "a@gmail.com";
-        nombreActividad = "PANDA CLUB";
-        //this.mandarCorreo(usuario, nombreActividad);
-        //FIN MADAR CORREO
 
         btnReservarPlan.setFont(font1);
         btnReservarPlan.setBackground(azull);
