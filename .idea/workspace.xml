@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V4">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaGestionReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaGestionReserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -266,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669559654100</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="añado logica reservas V4">
+      <created>1672508347552</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1672508347553</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -305,7 +310,8 @@
     <MESSAGE value="logica check user en base datos" />
     <MESSAGE value="prueba bea" />
     <MESSAGE value="añado logica reservas V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V1" />
+    <MESSAGE value="añado logica reservas V4" />
+    <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -117,12 +117,6 @@ public class VentanaGestionReserva extends JFrame {
 
 
 
-        usuario = "admin@gmail.com";
-        nombreActividad = "PANDA CLUB";
-        fechaReserva = new Date(2022,11,28); //Esta info la obtendrá del boton que cree Jaime
-        horaReserva = new Time(20,00,00); //Esta info la obtendrá del boton que cree Jaime
-        //this.guardarReserva(usuario, nombreActividad, fechaReserva, horaReserva);
-
 
         this.pack();
         this.setVisible(true);
