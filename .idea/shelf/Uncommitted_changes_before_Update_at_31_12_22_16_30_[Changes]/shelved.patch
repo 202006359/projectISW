@@ -1,0 +1,126 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5f073371-1578-4e2a-81b9-6449b472c313\" name=\"Changes\" comment=\"añado logica reservas V1\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22_11_58_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22_11_58__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_14_17_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_14_17__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_17_16_[Changes]/shelved.patch\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_17_16__Changes_.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/client/Client.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/client/Client.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/domain/Reserva.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/domain/Reserva.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/server/SocketServer.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/server/SocketServer.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/ui/PanelInicio.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/ui/PanelInicio.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JUnit3 Test Class\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"2H0GOutAsN7mAh1Yj0najAVzVPb\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/projectISW/src/test/java&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"junit.framework.TestCase\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"domain\" />\n      <recent name=\"test.java.domain\" />\n      <recent name=\"test\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.VentanaReservas\">\n    <configuration name=\"SendEmailThroughGmail\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.sendemail.SendEmailThroughGmail\" />\n      <module name=\"Smartplan\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.sendemail.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"SocketServer\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"server.SocketServer\" />\n      <module name=\"Smartplan\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"server.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"VentanaLogin\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"ui.VentanaLogin\" />\n      <module name=\"Smartplan\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"ui.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"VentanaReservas\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"ui.VentanaReservas\" />\n      <module name=\"Smartplan\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"ui.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"prueba\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"ui.prueba\" />\n      <module name=\"Smartplan\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"ui.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <list>\n      <item itemvalue=\"Application.VentanaReservas\" />\n      <item itemvalue=\"Application.prueba\" />\n      <item itemvalue=\"Application.SendEmailThroughGmail\" />\n      <item itemvalue=\"Application.SocketServer\" />\n      <item itemvalue=\"Application.VentanaLogin\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.VentanaReservas\" />\n        <item itemvalue=\"Application.SocketServer\" />\n        <item itemvalue=\"Application.VentanaLogin\" />\n        <item itemvalue=\"Application.SendEmailThroughGmail\" />\n        <item itemvalue=\"Application.prueba\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5f073371-1578-4e2a-81b9-6449b472c313\" name=\"Changes\" comment=\"\" />\n      <created>1667414558585</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1667414558585</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"subo pruebas y nueva organizacion de carpetas\">\n      <created>1667503938250</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667503938250</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"actualizo pom\">\n      <created>1667556755102</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667556755103</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"actualizo pom\">\n      <created>1667585201083</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667585201083</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Comentarios ivan +\">\n      <created>1667685239240</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1667685239240</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos\">\n      <created>1668365234926</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668365234926</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"mejora login V1\">\n      <created>1668370067497</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668370067497</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"mejora login V1.1\">\n      <created>1668371556072</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668371556072</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"mejora login V1.2\">\n      <created>1668427938887</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668427938887</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"mejora cuestionario V1.0\">\n      <created>1668521363356</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668521363356</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"fotos base de datos BETA\">\n      <created>1668861256913</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1668861256913</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"logica leer imagenes\">\n      <created>1669201615146</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669201615146</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"logica check user en base datos\">\n      <created>1669487074310</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669487074310</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"prueba bea\">\n      <created>1669487283526</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669487283526</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"prueba bea\">\n      <created>1669487838874</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669487838874</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"añado logica reservas V1\">\n      <created>1669559654100</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1669559654100</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"16\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.History.Properties\">\n    <option name=\"COLUMN_ID_ORDER\">\n      <list>\n        <option value=\"Default.Root\" />\n        <option value=\"Default.Author\" />\n        <option value=\"Default.Date\" />\n        <option value=\"Default.Subject\" />\n        <option value=\"Space.CommitStatus\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"subo pruebas y nueva organizacion de carpetas\" />\n    <MESSAGE value=\"actualizo pom\" />\n    <MESSAGE value=\"Comentarios ivan +\" />\n    <MESSAGE value=\"meto VentanaReservas con los metodos de lectura necesarios para acceder a la base de datos\" />\n    <MESSAGE value=\"mejora login V1\" />\n    <MESSAGE value=\"mejora login V1.1\" />\n    <MESSAGE value=\"mejora login V1.2\" />\n    <MESSAGE value=\"mejora cuestionario V1.0\" />\n    <MESSAGE value=\"fotos base de datos BETA\" />\n    <MESSAGE value=\"logica leer imagenes\" />\n    <MESSAGE value=\"logica check user en base datos\" />\n    <MESSAGE value=\"prueba bea\" />\n    <MESSAGE value=\"añado logica reservas V1\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"añado logica reservas V1\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java</url>\n          <line>87</line>\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java</url>\n          <line>86</line>\n          <option name=\"timeStamp\" value=\"2\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7441a37420167d2f59450a07ece31f923057d2d7)
++++ b/.idea/workspace.xml	(date 1672497922976)
+@@ -4,22 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V1">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22_11_58_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_11_22_11_58__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_14_17_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_14_17__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_17_16_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_22_17_16__Changes_.xml" beforeDir="false" />
++    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V3">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sendemail/SendEmailThroughGmail.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Reserva.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaLogin.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -53,19 +39,19 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/projectISW/src/test/java&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
++    "last_opened_file_path": "/home/ivan/IdeaProjects/projectISW/src/test/java",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CreateTestDialog.Recents.Supers">
+       <recent name="junit.framework.TestCase" />
+@@ -142,17 +128,6 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration default="true" type="JetRunConfigurationType">
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+-      <option name="filePath" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+     <list>
+       <item itemvalue="Application.VentanaReservas" />
+       <item itemvalue="Application.prueba" />
+@@ -284,7 +259,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669559654100</updated>
+     </task>
+-    <option name="localTasksCounter" value="16" />
++    <task id="LOCAL-00016" summary="añado logica reservas V3">
++      <created>1672227278250</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1672227278250</updated>
++    </task>
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.History.Properties">
+@@ -323,23 +305,8 @@
+     <MESSAGE value="logica check user en base datos" />
+     <MESSAGE value="prueba bea" />
+     <MESSAGE value="añado logica reservas V1" />
+-    <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V1" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java</url>
+-          <line>87</line>
+-          <option name="timeStamp" value="1" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java</url>
+-          <line>86</line>
+-          <option name="timeStamp" value="2" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
++    <MESSAGE value="añado logica reservas V3" />
++    <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V3" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
