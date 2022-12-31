@@ -110,8 +110,8 @@ public class VentanaActividades extends JFrame implements ActionListener {
         categorias.add(espiritual);
 
         //btn info usuario
-
-        ImageIcon imm = new ImageIcon("src/main/java/resources/icono.png");
+        ImageIcon imm = new ImageIcon(getClass().getResource("/icono.png"));
+        //ImageIcon imm = new ImageIcon("src/main/java/resources/icono.png");
         Icon icc = new ImageIcon(imm.getImage().getScaledInstance(50,50, Image.SCALE_SMOOTH));
         btnInfoUsuario.setIcon(icc);
         btnInfoUsuario.setBackground(amarillo);

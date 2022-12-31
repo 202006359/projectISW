@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="con fallo">
+    <list default="true" id="5f073371-1578-4e2a-81b9-6449b472c313" name="Changes" comment="añado logica reservas V6">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Smartplan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/SocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelValoracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelValoracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaReservas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PanelInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VentanaActividades.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit3 Test Class" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -43,19 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/projectISW/src/test/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "last_opened_file_path": "/home/ivan/IdeaProjects/projectISW/src/test/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
@@ -145,8 +148,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.VentanaLogin" />
-        <item itemvalue="Application.VentanaGestionReserva" />
         <item itemvalue="Application.SocketServer" />
+        <item itemvalue="Application.VentanaGestionReserva" />
         <item itemvalue="Application.VentanaReservas" />
         <item itemvalue="Application.SendEmailThroughGmail" />
       </list>
@@ -266,14 +269,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669559654100</updated>
     </task>
-    <task id="LOCAL-00016" summary="con fallo">
-      <created>1672508809768</created>
+    <task id="LOCAL-00016" summary="añado logica reservas V4">
+      <created>1672508347552</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1672508809768</updated>
+      <updated>1672508347553</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="añado logica reservas V5">
+      <created>1672508468313</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672508468313</updated>
+    </task>
+    <task id="LOCAL-00018" summary="añado logica reservas V6">
+      <created>1672508605568</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1672508605568</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -312,8 +329,10 @@
     <MESSAGE value="logica check user en base datos" />
     <MESSAGE value="prueba bea" />
     <MESSAGE value="añado logica reservas V1" />
-    <MESSAGE value="con fallo" />
-    <option name="LAST_COMMIT_MESSAGE" value="con fallo" />
+    <MESSAGE value="añado logica reservas V4" />
+    <MESSAGE value="añado logica reservas V5" />
+    <MESSAGE value="añado logica reservas V6" />
+    <option name="LAST_COMMIT_MESSAGE" value="añado logica reservas V6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

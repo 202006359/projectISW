@@ -41,7 +41,8 @@ public class PanelInicio extends JPanel{
 
 
         try {
-            Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
+            Image img =  ImageIO.read(getClass().getResource("/moneda.png"));
+            //Image img =  ImageIO.read(new File("src/main/java/resources/moneda.png"));
             g.drawImage(img,400,30,196,185,null);
 
 
