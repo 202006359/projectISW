@@ -14,7 +14,9 @@ import java.sql.Date;
 import java.sql.Time;
 import java.util.HashMap;
 
-
+/**
+ * Clase para visualizar en pantalla la ventana de Gestionar la fecha y hora de la reserva
+ */
 
 public class VentanaGestionReserva extends JFrame {
 
